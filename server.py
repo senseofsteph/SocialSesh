@@ -29,7 +29,7 @@ def login():
     # user will log in with their Google account using OATH
 
 
-@app.route('/profile')
+@app.route('/profile/<user_id>') # not sure if id is needed when using a google log in
 def profile():
     """Display user profile page"""
 
