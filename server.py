@@ -12,8 +12,7 @@ app = Flask(__name__)
 app.secret_key = "my_first_project"
 app.jinja_env.undefined = StrictUndefined
 
-
-
+# route functions for each webpage
 
 @app.route('/')
 def homepage():
@@ -49,6 +48,13 @@ def local_users():
 
     # display Google map with pinpoint location of the other local users
     # user will select one local user to schedule the social session activity
+
+
+@app.route('/sendmessage')
+def say_hello():
+    """Display selected local user to pair with and suggests the user to send a message to schedule activity"""
+
+    # user can send message to local user to set up activity
 
 
 

@@ -2,13 +2,9 @@
 
 ### Overview
 
-Replace this with a 1–2 sentence summary of your project idea
-
 An app where users can schedule social sessions to  connect, create, and contribute with other local users
 
 ### Technologies required (besides typical Hackbright tech stack)
-
-- List any APIs or data sources you're planning on using here
 
 The Google sign-in API: https://developers.google.com/identity/sign-in/web/sign-in 
 
@@ -17,10 +13,8 @@ The Google maps API: https://developers.google.com/maps/documentation/javascript
 
 ### Data
 
-- List data you'll want to store in your database
-
 - User email, first name, last name, photo, and short bio
-- A list of activites users can select
+- A list of activites the user can select
 
 ### Roadmap
 
@@ -33,12 +27,10 @@ The Google maps API: https://developers.google.com/maps/documentation/javascript
 
 #### 2.0
 
-- List 1–3 2.0 features
-
-- Can tailor activites to stage of life (parents, elderly)
+-  Tailor activites to the stage of life of user (parents, elderly, etc.)
 - Can schedule social sessions with multiple users
-- Policy and background checks to ensure safety amongst users
-- Make the UI prettier with front-end tools
+- Electronic policy signature and background check to ensure safety amongst users
+- Make the UI slick with front-end technologies
 
 #### 3.0
 
@@ -46,4 +38,4 @@ The Google maps API: https://developers.google.com/maps/documentation/javascript
 
 ### Notes
 
-Replace this with anything else about the project
+- Replace this with anything else about the project
