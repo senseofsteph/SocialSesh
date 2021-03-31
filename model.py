@@ -1,5 +1,6 @@
 """Models for social session app."""
 
+
 from flask_sqlalchemy import SQLAlchemy 
 
 db = SQAlchemy()
