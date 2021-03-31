@@ -2,41 +2,36 @@
 
 ### Overview
 
-An app where users can connect, create, and contribute with scheduled social sessions
+An app where a user can connect, create, and contribute
 
 ### Technologies required (besides typical Hackbright tech stack)
 
-The Google sign-in API: https://developers.google.com/identity/sign-in/web/sign-in 
-
-The Google maps API: https://developers.google.com/maps/documentation/javascript/overview 
-
+TBD
 
 ### Data
 
 - User email, first name, last name, photo, and short bio
-- User city / zipcode
-- Activity name, type, and status
+- Interest name and interest type
 
 ### Roadmap
 
 #### MVP
 
-- User can log in with Google email account
-- User can select an activity they want to do for the day
-- User can message and meet with another local user, sharing the same activity
-- User can add social session to Google calendar or receive text message confirmation
+- User can log in with name and email address
+- User can create profile with photo, bio, and interests
+- User can message other users that have the same interest
 
 #### 2.0
 
--  Tailor activity to the user's current stage of life (teenager, parent, elderly, etc.)
-- Can schedule social sessions with multiple users
-- Electronic policy signature and background check to ensure safety amongst users
-- Slicker UI with use of front-end technologies
+- Tailor interest to stage of life (teenager, parent, elderly, etc.)
+- User can schedule in-person social sessions based on interest
+- Maps that auto-generate local users based on city / zipcode
 
 #### 3.0
 
-- User profile customization
-- Automated matching 
+- Policy e-signature and background check to ensure safety
+- Automated matching of user with the same interest
+- Slicker UI with use of front-end technologies
 
 ### Notes
 
