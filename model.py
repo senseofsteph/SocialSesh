@@ -11,19 +11,19 @@ class User(db.Model):
     __tablename__ = 'users'
 
 
-class Activity(db.Model):
-    """An activity."""
+class Interest(db.Model):
+    """An interest."""
 
-    __tablename__ = 'activities'
+    __tablename__ = 'interests'
 
 
 class User_Activity(db.Model):
-    """A user's activity."""
+    """A user's interest."""
 
-    __tablename__ = 'user_activity'
+    __tablename__ = 'user_interest'
 
 
-def connect_to_db(flask_app, db_uri='postgresql:///user_activity', echo=True):
+def connect_to_db(flask_app, db_uri='postgresql:///user_interest', echo=True):
     flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
     flask_app.config['SQLALCHEMY_ECHO'] = False
     flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -41,6 +41,6 @@ if __name__ == '__main__':
     # too annoying; this will tell SQLAlchemy not to print out every
     # query it executes.
 
-    # connect_to_db(app)
+    connect_to_db(app)
 
     # db.create_all()

@@ -19,13 +19,13 @@ TBD
 
 - User can log in with name and email address
 - User can create profile with photo, bio, and interests
-- User can message other users that have the same interest
+- User can place comments about specified interest
 
 #### 2.0
 
 - Tailor interest to stage of life (teenager, parent, elderly, etc.)
 - User can schedule in-person social sessions based on interest
-- Maps that auto-generate local users based on city / zipcode
+- Map that auto-generates local users based on city / zipcode
 
 #### 3.0
 
