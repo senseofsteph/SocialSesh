@@ -4,7 +4,7 @@
 from flask_sqlalchemy import SQLAlchemy 
 from datetime import datetime
 
-db = SQAlchemy()
+db = SQLAlchemy()
 
 
 class User(db.Model):
@@ -13,19 +13,19 @@ class User(db.Model):
     __tablename__ = 'users'
 
     user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    fname = db.Column(db.String)
-    lname = db.Column(db.String)
-    email = db.Column(db.String, unique=True)
-    password = db.Column(db.String, unique=True)
-    phone = db.Column(db.String)
-    user_photo = db.Column(db.String)
-    user_bio = db.Column(db.Text)
-    user_zipcode = db.Column(db.Integer)
+    fname = db.Column(db.String, nullable=False)
+    lname = db.Column(db.String, nullable=False)
+    email = db.Column(db.String, nullable=False, unique=True)
+    password = db.Column(db.String, nullable=False, unique=True)
+    phone = db.Column(db.String, nullable=False)
+    user_photo = db.Column(db.String, nullable=False)
+    user_bio = db.Column(db.Text, nullable=False)
+    user_zipcode = db.Column(db.Integer, nullable=False)
 
-    def __repr__(self):
+    def __repr__(self): 
         """Show info about user."""
 
-        return f'<User user_id={self.user_id} firstname={self.fname} lastname={self.lname} email={self.email} phone={self.phone}>'
+        return f'<User user_id={self.user_id} fname={self.fname} lname={self.lname} email={self.email} phone={self.phone}>'
 
     
 class Event(db.Model):
@@ -34,15 +34,17 @@ class Event(db.Model):
     __tablename__ = 'events'
 
     event_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    event_type_id = db.Column(db.Integer) # a foreign key?
-    event_name = db.Column(db.String)
-    event_date = db.Column(db.DateTime)
-    event_start_time = db.Column(db.String)
-    event_duration = db.Column(db.Integer)
-    event_description = db.Column(db.Text)
-    event_location = db.Column(db.String)
-    event_zipcode = db.Column(db.Integer)
-    event_photo = db.Column(db.String)
+    event_type_id = db.Column(db.Integer,
+                              db.ForeignKey('event_types.event_type_id'), 
+                              nullable=False)
+    event_name = db.Column(db.String, nullable=False)
+    event_date = db.Column(db.DateTime, nullable=False)
+    event_start_time = db.Column(db.String, nullable=False)
+    event_duration = db.Column(db.Integer, nullable=False)
+    event_description = db.Column(db.Text, nullable=False)
+    event_location = db.Column(db.String, nullable=False)
+    event_zipcode = db.Column(db.Integer, nullable=False)
+    event_photo = db.Column(db.String, nullable=False)
 
     def __repr__(self):
         """Show info about the event."""
@@ -56,8 +58,15 @@ class User_Event(db.Model):
     __tablename__ = 'users_events'
 
     users_events_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    user_id = db.Column(db.Integer)
-    event_id = db.Column(db.Integer)
+    user_id = db.Column(db.Integer, 
+                        db.ForeignKey('users.user_id'),
+                        nullable=False)
+    event_id = db.Column(db.Integer, 
+                         db.ForeignKey('events.event_id'),
+                         nullable=False)
+
+    user = db.relationship('User', backref='users_events')
+    event = db.relationship('Event', backref='users_events')
 
     def __repr__(self):
         """Show info about users created events."""
@@ -72,8 +81,8 @@ class Event_Type(db.Model):
     __tablename__ = 'event_types'
 
     event_type_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    event_type_name = db.Column(db.String)
-    event_type_description = db.Column(db.Text)
+    event_type_name = db.Column(db.String, nullable=False)
+    event_type_description = db.Column(db.Text, nullable=False)
 
     def __repr__(self):
         """Show info about event category type"""
@@ -82,7 +91,7 @@ class Event_Type(db.Model):
 
 
 
-def connect_to_db(flask_app, db_uri='postgresql:///users_events', echo=True):
+def connect_to_db(flask_app, db_uri='postgresql:///socialsesh', echo=True):
     flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
     flask_app.config['SQLALCHEMY_ECHO'] = False
     flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -104,4 +113,4 @@ if __name__ == '__main__':
 
     connect_to_db(app)
 
-    # db.create_all()
+    db.create_all()

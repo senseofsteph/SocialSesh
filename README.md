@@ -18,7 +18,7 @@ TBD
 #### MVP
 
 - User can create a event under a particular category
-_ User can search for an event, by filling out a form, under a particular category
+- User can search for an event, by filling out a form, under a particular category
 
 #### 2.0
 
