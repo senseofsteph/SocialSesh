@@ -28,13 +28,13 @@ def get_user_by_id(user_id):
 
 
 def get_user_by_email(email):
-    """Return a user by email"""
+    """Return a user by email."""
 
     return User.query.filter(User.email == email).first()
 
 
 def create_event(event_name, event_date, event_start_date, event_duration, event_description, event_location, event_zipcode,event_photo):
-    """Create and return a new event"""
+    """Create and return a new event."""
 
     event = Event(event_name=event_name, event_date=event_date, event_start_date=event_start, event_duration=event_duration, event_description=event_description, event_location=event_location, event_zipcode=event_zipcode,event_photo=event_photo)
 
@@ -51,11 +51,29 @@ def get_events():
 
 
 def get_event_by_id(event_id):
-    """Return an event by primary key"""
+    """Return an event by primary key."""
 
     return Event.query.get(event_id)
 
-    
+
+def get_event_by_user(users_events_id):
+    """Return all the users events by id."""
+
+    return User_Event.query.get(users_events_id)
+
+
+def create_event_type(event_type_id, event_type_name, event_type_description):
+    """Create an event type category."""
+
+    event_type = Event_Type(event_type_id=event_type_id, event_type_name=event_type_name, event_type_description=event_type_description)
+
+
+def get_event_types():
+    """Return all event types."""
+
+    return Event_Type.query.all()
+
+
 
 
 if __name__ == '__main__':
