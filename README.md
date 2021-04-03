@@ -23,7 +23,7 @@ TBD
 #### 2.0
 
 - Users can select which events they want to attend
-- Attendee text message confirmation to user who created the event
+- Attendee text message confirmation sent to user who created the event
 
 #### 3.0
 
