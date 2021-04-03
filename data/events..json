@@ -1,0 +1,92 @@
+[ 
+  {
+    "event_name": "Live Concert",
+    "event_date": "2021-05-08",
+    "event_start_time": "7pm pst",
+    "event_duration": "2 hours",
+    "event_description": "Full access to The Weeknd on tour-After Hours World Tour",
+    "event_location": "Online(Virtual)",
+    "event_photo": "https://s1.ticketm.net/dam/a/3e7/dc88d812-ab5d-416d-96a4-0d41e3e5c3e7_1400451_TABLET_LANDSCAPE_LARGE_16_9.jpg?width=800&height=450&fit=crop&auto=webp"
+  },
+  {
+    "event_name": "Movie Night",
+    "event_date": "2021-07-05",
+    "event_start_time": "8pm pst",
+    "event_duration": "2 hours",
+    "event_description": "Grab your popcorn and candy, we're streaming Harry Potter",
+    "event_location": "Online (Virtual)",
+    "event_photo": "https://pixabay.com/images/id-2974645/"
+  },
+  {
+    "event_name": "Mindful Yoga",
+    "event_date": "2021-03-05",
+    "event_start_time": "10am pst",
+    "event_duration": "1 hour",
+    "event_description": "Join us for a relaxing, healthy workout session",
+    "event_location": "Online(Virtual)",
+    "event_photo": "https://pixabay.com/images/id-2116093/"
+  },
+  {
+    "event_name": "Learn How to Code in Python",
+    "event_date": "2021-11-05",
+    "event_start_time": "1pm pst",
+    "event_duration": "2 hours",
+    "event_description": "An intro to coding in the computer programming language Python",
+    "event_location": "Online(Virtual)",
+    "event_photo": "https://pixabay.com/images/id-1084923/"
+  },
+  {
+    "event_name": "Cooking Class",
+    "event_date": "2021-10-05",
+    "event_start_time": "4pm pst",
+    "event_duration": "1.5 hours",
+    "event_description": "Join us as we make a homemade pizza for dinner. Yum!",
+    "event_location": "Online(Virtual)",
+    "event_photo": "https://pixabay.com/images/id-2068272/"
+  },
+  {
+    "event_name": "Speed Dating",
+    "event_date": "2021-14-05",
+    "event_start_time": "7pm pst",
+    "event_duration": "2 hours",
+    "event_description": "In the climate we're in, it's hard to meet in person. Why not give speed dating a shot? Meet with others truly looking for love",
+    "event_location": "Online(Virtual)",
+    "event_photo": "https://pixabay.com/images/id-1030744/"
+  },
+  {
+    "event_name": "Learn How to Set Up A Financial Budget",
+    "event_date": "2021-17-05",
+    "event_start_time": "7pm pst",
+    "event_duration": "1.5 hours",
+    "event_description": "Racking up your credit cards and don't know how to make a monthly budget? Join us as we teach you how to get a grasp of your spending",
+    "event_location": "Online(Virtual)",
+    "event_photo": "https://pixabay.com/images/id-6087334/"
+  },
+  {
+    "event_name": "Hackbright Graduation",
+    "event_date": "2021-13-05",
+    "event_start_time": "6pm pst",
+    "event_duration": "2 hours",
+    "event_description": "Congratulations to cohort 34! Join us as we celebrate the acheivements of our future software engineers",
+    "event_location": "Online(Virtual)",
+    "event_photo": "https://images.app.goo.gl/3WAPgsXimSUHS3fL8"
+  },
+  {
+    "event_name": "An Intro into Piano Playing",
+    "event_date": "2021-18-05",
+    "event_start_time": "6pm pst",
+    "event_duration": "1.5 hours",
+    "event_description": "A beginners intro to piano lesson. We will go over Clocks by Coldplay sheet music",
+    "event_location": "Online (Virtual)",
+    "event_photo": "https://pixabay.com/images/id-3957650/"
+  },
+  {
+    "event_name": "Bible Study",
+    "event_date": "2021-26-05",
+    "event_start_time": "7pm pst",
+    "event_duration": "1 hour",
+    "event_description": " Well Christian Church Family Bible Study",
+    "event_location": "Online (Virtual)",
+    "event_photo": "https://pixabay.com/images/id-945422/"
+  }
+]

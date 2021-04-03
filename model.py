@@ -20,7 +20,7 @@ class User(db.Model):
     phone = db.Column(db.String, nullable=False)
     user_photo = db.Column(db.String, nullable=False)
     user_bio = db.Column(db.Text, nullable=False)
-    user_zipcode = db.Column(db.Integer, nullable=False)
+    
 
     # users_events = a list of User_Event objects
 
@@ -45,7 +45,6 @@ class Event(db.Model):
     event_duration = db.Column(db.Integer, nullable=False)
     event_description = db.Column(db.Text, nullable=False)
     event_location = db.Column(db.String, nullable=False)
-    event_zipcode = db.Column(db.Integer, nullable=True)
     event_photo = db.Column(db.String, nullable=False)
 
     # users_events = a list of User_Event objects
@@ -87,7 +86,7 @@ class Event_Type(db.Model):
     event_type_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     event_type_name = db.Column(db.String, nullable=False)
     event_type_description = db.Column(db.Text, nullable=False)
-    event_poster_path = db.Column(db.String, nullable=False)
+    
 
     def __repr__(self):
         """Show info about event category type"""

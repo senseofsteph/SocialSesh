@@ -1,32 +1,22 @@
 [
   {
       "event_type_name": "Activity",
-      "event_type_description": "Physical or Non-physical",
-      "event_poster_path": "https://pixabay.com/images/id-570881/"
-
+      "event_type_description": "Physical or Non-physical"
   },
   {
     "event_type_name": "Celebration",
-    "event_type_description": "Congrats!...Cheers!...Hooray!",
-    "event_poster_path": "https://pixabay.com/images/id-1283608/"
-
+    "event_type_description": "Congrats!...Cheers!...Hooray!"
   },
   {
       "event_type_name": "Educational",
-      "event_type_description": "It's time to learn",
-      "event_poster_path": "https://pixabay.com/images/id-1746275/"
-
+      "event_type_description": "It's time to learn"
   },
   {
     "event_type_name": "Entertainment",
-    "event_type_description": "Music, happy hour, and much more",
-    "event_poster_path": "https://pixabay.com/images/id-768722/"
-
+    "event_type_description": "Music, happy hour, and much more"
   },
   {
     "event_type_name": "Other",
-    "event_type_description": "blah, blah, blah",
-    "event_poster_path": "https://"
-
+    "event_type_description": "Anything else that's creative and fun"
   }
 ]

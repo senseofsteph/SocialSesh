@@ -2,7 +2,7 @@
 
 ### Overview
 
-An app where a user can connect, create, and contribute, through events
+An app where users can connect, create, and contribute, through virtual events
 
 ### Technologies required (besides typical Hackbright tech stack)
 
@@ -10,8 +10,8 @@ TBD
 
 ### Data
 
-- User first name, last name, email, password, photo, breif personal bio, phone number and zipcode
-- Event name, type, date, start time, duration, description, location, zipcode, photo
+- User first name, last name, email, password, photo, breif personal bio, phone number
+- Event name, type, date, start time, duration, description, location, photo
 
 ### Roadmap
 
