@@ -18,9 +18,14 @@ class User(db.Model):
     email = db.Column(db.String, nullable=False, unique=True)
     password = db.Column(db.String, nullable=False, unique=True)
     phone = db.Column(db.String, nullable=False)
-    user_photo = db.Column(db.String, nullable=False)
-    user_bio = db.Column(db.Text, nullable=False)
     
+    def __init__(self, user_id , event_date, event_start_time, event_description, event_photo):
+        self.event_type_id=event_type_id
+        self.event_name=event_name
+        self.event_date=event_date
+        self.event_start_time=event_start_time
+        self.event_description=event_description
+        self.event_photo=event_photo
 
     # users_events = a list of User_Event objects
 
@@ -36,23 +41,29 @@ class Event(db.Model):
     __tablename__ = 'events'
 
     event_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    event_type_id = db.Column(db.Integer,
-                              db.ForeignKey('event_types.event_type_id'), 
+    event_type = db.Column(db.String,
+                              db.ForeignKey('event_types.event_type'), 
                               nullable=False)
     event_name = db.Column(db.String, nullable=False)
     event_date = db.Column(db.DateTime, nullable=False)
     event_start_time = db.Column(db.String, nullable=False)
-    event_duration = db.Column(db.Integer, nullable=False)
     event_description = db.Column(db.Text, nullable=False)
-    event_location = db.Column(db.String, nullable=False)
     event_photo = db.Column(db.String, nullable=False)
+
+    def __init__(self, event_type, event_name, event_date, event_start_time, event_description, event_photo):
+        self.event_type = event_type
+        self.event_name = event_name
+        self.event_date=event_date
+        self.event_start_time=event_start_time
+        self.event_description=event_description
+        self.event_photo=event_photo
 
     # users_events = a list of User_Event objects
 
     def __repr__(self):
         """Show info about the event."""
 
-        return f'<Event event_id={self.event_id} event_type_id={self.event_type_id} event_name={self.event_name}>'
+        return f'<Event event_id={self.event_id} event_type_id={self.event_type} event_name={self.event_name}>'
 
 
 class User_Event(db.Model):
@@ -71,6 +82,12 @@ class User_Event(db.Model):
     user = db.relationship('User', backref='users_events')
     event = db.relationship('Event', backref='users_events')
 
+    def __init__(self, user_id, event_id):
+        self.user_id=user_id
+        self.event_id=event_id
+        
+    
+
     def __repr__(self):
         """Show info about users created events."""
 
@@ -83,15 +100,18 @@ class Event_Type(db.Model):
 
     __tablename__ = 'event_types'
 
-    event_type_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    event_type_name = db.Column(db.String, nullable=False)
+    event_type = db.Column(db.String, primary_key=True)
     event_type_description = db.Column(db.Text, nullable=False)
     
+    def __init__(self, event_type, event_type_description):
+        self.event_type = event_type
+        self.event_type_description = event_type_description
+
 
     def __repr__(self):
         """Show info about event category type"""
 
-        return f'<Event_Type event_type_id={self.event_type_id} event_type_name={self.event_type_name}>'
+        return f'<Event_Type event_type_id={self.event_type} event_type_name={self.event_type_description}>'
 
 
 
@@ -118,3 +138,4 @@ if __name__ == '__main__':
     connect_to_db(app)
 
     db.create_all()
+

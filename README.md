@@ -11,23 +11,25 @@ Python Faker Library: https://faker.readthedocs.io/en/master/
 
 ### Data
 
-- User first name, last name, email, password, photo, breif personal bio, phone number
-- Event name, type, date, start time, duration, description, location, photo
+- User first name, last name, email, password, and phone number
+- Event name, type, date, start time, description, and photo
 
 ### Roadmap
 
 #### MVP
 
-- User can create a event under a particular category
-- User can search for an event, by filling out a form, under a particular category
+- User can search for a virtual event under a particular category
+- User can "attend" an event by clicking on registration button / form
+- User will receive text message of event confirmation
 
 #### 2.0
 
-- Users can select which events they want to attend
+- User can create their own virtual event
 - Attendee text message confirmation sent to user who created the event
 
 #### 3.0
 
+- User can attend event in person based on zipcode
 - Maps to pinpoint in-person event location
 - Slicker UI with use of front-end technologies
 

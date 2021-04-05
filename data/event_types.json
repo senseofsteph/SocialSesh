@@ -1,23 +1,23 @@
 [
   {
-      "event_type_name": "Activity",
-      "event_type_description": "Physical or Non-physical"
+      "event_type": "Activity",
+      "event_type_description": "Physical or Non-physical."
   },
   {
-      "event_type_name": "Celebration",
+      "event_type": "Celebration",
       "event_type_description": "Congrats!...Cheers!...Hooray!"
   },
   {
-      "event_type_name": "Educational",
-      "event_type_description": "It's time to learn"
+      "event_type": "Educational",
+      "event_type_description": "It's time to learn."
   },
   {
-      "event_type_name": "Entertainment",
-      "event_type_description": "Music, happy hour, and much more"
+      "event_type": "Entertainment",
+      "event_type_description": "Music, happy hour, and much more."
   },
   {
-      "event_type_name": "Other",
-      "event_type_description": "Anything else that's creative and fun"
+      "event_type": "Other",
+      "event_type_description": "Anything else that's creative and fun."
   }
 ]
 
