@@ -21,7 +21,7 @@ with open('data/events.json') as e:
   event_data = json.loads(e.read())
 
 # Create events, store them in a list so we can use them 
-# to create artificial searches
+# to create artificial events and searches
 events_in_db = []
 for event in event_data:
     event_name, event_duration, event_description, event_location = (event['event_name'],
@@ -35,7 +35,7 @@ for event in event_data:
 
     events_in_db.append(db_event)
 
-
+# create fake users 10 using python faker library, call crud functions in to seed into database
 
  
 

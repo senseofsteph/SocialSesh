@@ -36,20 +36,6 @@ def profile():
     # user can see profile page
 
 
-@app.route('/')
-def pick_interest():
-    """User can select an interest."""
-
-    # user will select an interest to comment on
-
-
-@app.route('/sendmessage')
-def send_message():
-    """User can comment of specified interest."""
-
-    # user can send a comment or feedback on interest
-    # text, photo, resourceful link
-
 
 
 if __name__ == '__main__':
