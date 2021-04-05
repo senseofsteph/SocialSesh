@@ -6,7 +6,8 @@ An app where users can connect, create, and contribute, through virtual events
 
 ### Technologies required (besides typical Hackbright tech stack)
 
-TBD
+Twilio SMS API: https://www.twilio.com/docs/sms/api
+Python Faker Library: https://faker.readthedocs.io/en/master/
 
 ### Data
 
