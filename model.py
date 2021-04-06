@@ -87,7 +87,6 @@ class User_Event(db.Model):
         self.event_id=event_id
         
     
-
     def __repr__(self):
         """Show info about users created events."""
 
@@ -112,7 +111,6 @@ class Event_Type(db.Model):
         """Show info about event category type"""
 
         return f'<Event_Type event_type_id={self.event_type} event_type_name={self.event_type_description}>'
-
 
 
 def connect_to_db(flask_app, db_uri='postgresql:///socialsesh', echo=True):

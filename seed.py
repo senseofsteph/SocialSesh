@@ -35,12 +35,13 @@ with open('data/events.json') as f:
 
 for event in events_data:
     
+    event_type = event["event_type"]
     event_name  = event['event_name']
     event_description = event['event_description']
     event_date = datetime.strptime(event['event_date'],'%Y-%m-%d')
     event_start_time = datetime.strptime(event['event_start_time'], '%H:%M')
     event_photo = event["event_photo"]
-    event_type = event["event_type"]
+    
 
     crud.create_event(event_type, event_name, event_date, event_start_time, event_description, event_photo)
 

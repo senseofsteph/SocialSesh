@@ -14,25 +14,30 @@ app.jinja_env.undefined = StrictUndefined
 
 # route functions for each webpage
 
-@app.route('/')
-def homepage():
-    """Display homepage."""
-
-    return render_template('index.html')
+@app.route("/")
+def index():
+    """Show homepage with two buttons for the user to select, create profile or log in."""
 
 
-@app.route('/create')
-def create_profile():
-    """User can create into profile."""
+
+    return render_template("index.html")
+
+
+@app.route("/profile", methods=["POST"])
+def profile():
+    """User can create a profile account."""
 
     # user will create profile with full name, email, password and phone number
+    return render_template("profile.html")
 
 
-@app.route('/login') 
+@app.route("/login") 
 def login():
     """Display page for user to login to."""
 
-    # user can see profile page
+    # user can log into account profile page
+
+
 
 
 
