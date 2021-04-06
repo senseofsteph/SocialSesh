@@ -12,23 +12,29 @@ app = Flask(__name__)
 app.secret_key = "socialsesh"
 app.jinja_env.undefined = StrictUndefined
 
-# route functions for each webpage
+
+
 
 @app.route("/")
 def index():
     """Show homepage with two buttons for the user to select, create profile or log in."""
 
-
-
     return render_template("index.html")
 
 
-@app.route("/profile", methods=["POST"])
+@app.route("/profile")
 def profile():
     """User can create a profile account."""
 
-    # user will create profile with full name, email, password and phone number
+
     return render_template("profile.html")
+
+
+@app.route("/profile", methods=["POST"])
+def create_profile():
+    """TODO"""
+    pass
+
 
 
 @app.route("/login") 

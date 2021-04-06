@@ -3,5 +3,8 @@
 // Index html file
 
 // document.querySelector("#create").addEventListener("click", (evt) => {
-//   const createBtn = evt.target;
+  // evt.preventDefault();
+
+//   console.log("HI");
+  // $.get("/profile");
 // })
