@@ -5,6 +5,21 @@
 {% block body %} 
 <h1>SocialSesh</h1>
 <h2>Connect. Create. Contribute.</h2>
+<h3>Please Log-In</h4>
 
+
+<form action="/dashboard">
+  <p>
+    <label for="email">Email</label>
+    <input type="text" name="email">
+  </p>
+  <p>
+    <label for="password">Password</label>
+    <input type="text" name="password">
+  </p>
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+</form> 
 
 {% endblock %} 

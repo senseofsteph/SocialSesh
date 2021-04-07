@@ -19,13 +19,12 @@ class User(db.Model):
     password = db.Column(db.String, nullable=False, unique=True)
     phone = db.Column(db.String, nullable=False)
     
-    def __init__(self, user_id , event_date, event_start_time, event_description, event_photo):
-        self.event_type_id=event_type_id
-        self.event_name=event_name
-        self.event_date=event_date
-        self.event_start_time=event_start_time
-        self.event_description=event_description
-        self.event_photo=event_photo
+    def __init__(self, fname, lname, email, password, phone):
+        self.fname = fname
+        self.lname = lname
+        self.email = email
+        self.password = password
+        self.phone = phone
 
     # users_events = a list of User_Event objects
 
@@ -53,10 +52,10 @@ class Event(db.Model):
     def __init__(self, event_type, event_name, event_date, event_start_time, event_description, event_photo):
         self.event_type = event_type
         self.event_name = event_name
-        self.event_date=event_date
-        self.event_start_time=event_start_time
-        self.event_description=event_description
-        self.event_photo=event_photo
+        self.event_date = event_date
+        self.event_start_time = event_start_time
+        self.event_description = event_description
+        self.event_photo = event_photo
 
     # users_events = a list of User_Event objects
 

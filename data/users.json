@@ -1,0 +1,30 @@
+[
+  {
+    "fname": "Alice",
+    "lname": "Smith",
+    "email": "awalker@test.com",
+    "password": "test123",
+    "phone": "202-555-0135"
+  },
+  {
+    "fname": "Nadine",
+    "lname": "Williams",
+    "email": "nwilliams@test.com",
+    "password": "test456",
+    "phone": "202-555-0196"
+  },
+  {
+    "fname": "Stephen",
+    "lname": "Johnson",
+    "email": "sjohnson@test.com",
+    "password": "test789",
+    "phone": "202-555-0136"
+  },
+  {
+    "fname": "Aaron",
+    "lname": "George",
+    "email": "ageorge@test.com",
+    "password": "test101",
+    "phone": "202-555-0166"
+  }
+]

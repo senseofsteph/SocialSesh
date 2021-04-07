@@ -13,62 +13,65 @@ app.secret_key = "socialsesh"
 app.jinja_env.undefined = StrictUndefined
 
 
-
-
 @app.route("/")
 def index():
-    """Show homepage with two buttons for the user to select, create profile or log in."""
+    """Display homepage with one button to create profile and another button to log in."""
 
     return render_template("index.html")
 
 
 @app.route("/profile")
 def profile():
-    """Display form to create a profile account."""
+    """Display form to create a new profile account."""
     
     # if "user" in session:
         # show their profile
+
 
     return render_template("profile.html")
 
 
 @app.route("/profile", methods=["POST"])
 def create_profile():
-    """Once form is submitted, reroute user to log-in page."""
+    """Create a new profile account."""
 
     firstname = request.form['fname']
     lastname = request.form['lname']
     email = request.form['email']
     password = request.form['password']
     phone = request.form['phone']
-
+    
     #TODO verify that the password is something sane email, etc. 
 
-    ## if password is less than 7 letters
-        ## flash message: password must be 7 letters
+    if len(password) < 7 or len(password) > 12:
+        return flash("Password should be at least 7 characters and less than 12 characters")
 
-    ## if email is not an actual email
-       ## flash message: 
+    
 
     #TODO add user to db
-    # user = crud.create_user(fname=firstname, lname= , email, password, phone)
+    user = crud.create_user(fname=firstname,lname=lastname, email=email, password=password, phone=phone)
+
+    session['user'] = user
 
     # # Login them in 
     # if user != null
     #     session["user"] = email
     
-    # return redirect("/profile")
+    return redirect("/login")
 
 
 @app.route("/login") 
 def login():
     """Display page for user to login to."""
 
+
     # if "user" in session:
     # TODO if the user key is in session then show logout 
     # TODO else show login promt 
     
     # user can log into account profile page
+
+    return render_template("login.html")
 
 @app.route("/dashboard")
 def dashboard():

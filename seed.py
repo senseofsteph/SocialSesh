@@ -17,6 +17,23 @@ model.connect_to_db(server.app)
 model.db.create_all()
 
 
+
+
+# Load users data from JSON file
+with open('data/users.json') as u:
+  users_data = json.loads(u.read())
+
+for user in users_data:
+
+  fname = user['fname']
+  lname = user['lname']
+  email = user['email']
+  password = user['password']
+  phone = user['phone']
+
+  crud.create_user(fname, lname, email, password, phone)
+
+
 # Load event types data from JSON file
 with open('data/event_types.json') as e:
   event_types_data = json.loads(e.read())
