@@ -20,39 +20,33 @@ def show_homepage():
     return render_template("index.html")
 
 
-@app.route("/profile")
+@app.route("/form")
 def show_create_profile_form():
     """Display form to create a new profile account."""
     
-    # if "user" in session:
-        # show their profile
-    return render_template("profile.html")
+    return render_template("form.html")
 
 
-@app.route("/profile", methods=["POST"])
-def create_profile():
+@app.route("/form", methods=["POST"])
+def create_user_profile():
     """Create a new profile account."""
+
+    #TODO verify is password length and email are accurate
 
     firstname = request.form['fname']
     lastname = request.form['lname']
     email = request.form['email']
     password = request.form['password']
     phone = request.form['phone']
+
+    #TODO add user to db
+    user = crud.create_user(fname=firstname,lname=lastname, email=email, password=password, phone=phone)
     
     #TODO verify if the user is in the db.
     # if not add user to db 
 
-    if len(password) < 7 or len(password) > 12:
-        return flash("Password should be at least 7 characters and less than 12 characters")
-
-    #TODO add user to db
-    user = crud.create_user(fname=firstname,lname=lastname, email=email, password=password, phone=phone)
 
     session['user'] = user
-
-    # # Login them in 
-    # if user != null
-    #     session["user"] = email
     
     return redirect("/login")
 
@@ -60,17 +54,17 @@ def create_profile():
 @app.route("/login")
 def show_login():
     """Display page for user to login to."""
-    
 
-    return render_template("login.html")
+    if "user_id" in session and session["user_id"]:
+        session_id = session["user_id"]
+        return redirect("/profile")
+    else: 
+        return render_template("login.html")
 
 
 @app.route("/login", methods=["POST"]) 
-def get_login():
-    """Display page for user to login to."""
-
-      # if "user" in session:
-        # show their profile
+def login_user():
+    """Log user into profile."""
 
     email = request.form['email']
     password = request.form['password']
@@ -82,10 +76,10 @@ def get_login():
     else:
         session['user_id'] = user.user_id
         flash("Welcome, you're logged in")
-        return redirect("/dashboard")
+        return redirect("/profile")
 
     
-@app.route("/dashboard")
+@app.route("/profile")
 def dashboard():
     """Display user profile account page"""
 
@@ -93,7 +87,7 @@ def dashboard():
     # TODO if the user key is in session then show logout 
     # TODO else show login prompt
 
-    return render_template("dashboard.html")
+    return render_template("profile.html")
 
 
 

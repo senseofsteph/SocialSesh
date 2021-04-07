@@ -9,7 +9,7 @@ def create_user(fname, lname, email, password, phone):
 
     user = User(fname=fname, lname=lname, email=email, password=password, phone=phone)
 
-    
+
     db.session.add(user)
     db.session.commit()
 
@@ -36,6 +36,11 @@ def get_user_by_email(email):
 
 def get_user_by_email_and_password(email, password):
     """Return a user by email and password."""
+
+    if user.password == password:
+        return user
+    else:
+        return "Wrong email or password"
 
     return User.query.filter((User.email == email).first() and (User.password == password).first())
 

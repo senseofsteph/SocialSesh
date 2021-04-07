@@ -7,7 +7,6 @@ An app where users can connect, create, and contribute, through virtual events
 ### Technologies required (besides typical Hackbright tech stack)
 
 Twilio SMS API: https://www.twilio.com/docs/sms/api
-Python Faker Library: https://faker.readthedocs.io/en/master/
 
 ### Data
 
@@ -19,17 +18,18 @@ Python Faker Library: https://faker.readthedocs.io/en/master/
 #### MVP
 
 - User can search for a virtual event under a particular category
-- User can "attend" an event by clicking on registration button / form
-- User will receive text message of event confirmation
+- User can "attend" an event by clicking on registration button
+- User will receive an event confirmation text message
 
 #### 2.0
 
-- User can create their own virtual event
+- User can create their own virtual event under a particular category
 - Attendee text message confirmation sent to user who created the event
+- More event categories
 
 #### 3.0
 
-- User can attend event in person based on zipcode
+- User can attend events in person based on zipcode
 - Maps to pinpoint in-person event location
 - Slicker UI with use of front-end technologies
 
