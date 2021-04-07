@@ -34,6 +34,13 @@ def get_user_by_email(email):
     return User.query.filter(User.email == email).first()
 
 
+def get_user_by_email_and_password(email, password):
+    """Return a user by email and password."""
+
+    return User.query.filter((User.email == email).first() and (User.password == password).first())
+
+
+
 def create_event(event_type, event_name, event_date, event_start_time, event_description, event_photo):
     """Create and return a new event."""
 

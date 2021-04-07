@@ -14,20 +14,18 @@ app.jinja_env.undefined = StrictUndefined
 
 
 @app.route("/")
-def index():
+def show_homepage():
     """Display homepage with one button to create profile and another button to log in."""
 
     return render_template("index.html")
 
 
 @app.route("/profile")
-def profile():
+def show_create_profile_form():
     """Display form to create a new profile account."""
     
     # if "user" in session:
         # show their profile
-
-
     return render_template("profile.html")
 
 
@@ -41,12 +39,11 @@ def create_profile():
     password = request.form['password']
     phone = request.form['phone']
     
-    #TODO verify that the password is something sane email, etc. 
+    #TODO verify if the user is in the db.
+    # if not add user to db 
 
     if len(password) < 7 or len(password) > 12:
         return flash("Password should be at least 7 characters and less than 12 characters")
-
-    
 
     #TODO add user to db
     user = crud.create_user(fname=firstname,lname=lastname, email=email, password=password, phone=phone)
@@ -60,24 +57,43 @@ def create_profile():
     return redirect("/login")
 
 
-@app.route("/login") 
-def login():
+@app.route("/login")
+def show_login():
     """Display page for user to login to."""
-
-
-    # if "user" in session:
-    # TODO if the user key is in session then show logout 
-    # TODO else show login promt 
     
-    # user can log into account profile page
 
     return render_template("login.html")
 
+
+@app.route("/login", methods=["POST"]) 
+def get_login():
+    """Display page for user to login to."""
+
+      # if "user" in session:
+        # show their profile
+
+    email = request.form['email']
+    password = request.form['password']
+
+    user = crud.get_user_by_email_and_password(email, password)
+
+    if not user:
+        flash("Invalid email and/or password")
+    else:
+        session['user_id'] = user.user_id
+        flash("Welcome, you're logged in")
+        return redirect("/dashboard")
+
+    
 @app.route("/dashboard")
 def dashboard():
     """Display user profile account page"""
 
-    # flash message to user: you are logged in!
+     # if "user" in session:
+    # TODO if the user key is in session then show logout 
+    # TODO else show login prompt
+
+    return render_template("dashboard.html")
 
 
 
