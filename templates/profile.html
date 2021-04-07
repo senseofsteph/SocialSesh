@@ -10,24 +10,29 @@
 <h3>Let's Create Your Profile</h3>
 <h4>Please fill out the following:</h4>
 
-  <form action="/login">
+  <form action="/login" name="createprofile">
     <p>
-      First Name<input type="text" fname="fname">
+      <label for="fname">First name</label>
+      <input type="text" name="fname">
     </p>
     <p>
-      Last Name<input type="text" lname="lname">
+      <label for="lname">Last name</label>
+      <input type="text" name="lname">
     </p>
     <p>
-      Email<input type="text" email="email">
+      <label for="email">Email</label>
+      <input type="text" name="email">
     </p>
     <p>
-      Password <input type="text" password="password">
+      <label for="password">Password</label>
+      <input type="text" name="password">
     </p>
     <p>
-      Phone Number<input type="text" phone="phone">
+      <label for="phone">Phone number</label>
+      <input type="text" phone="phone">
     </p>
     <p>
-      <input type="submit">
+      <button type="submit">Submit</button>
     </p>
   </form> 
 
