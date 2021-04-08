@@ -29,7 +29,7 @@ def show_create_profile_form():
 
 @app.route("/form", methods=["POST"])
 def create_user_profile():
-    """Create a new profile account."""
+    """Create a new user profile."""
 
     #TODO verify is password length and email are accurate
 
@@ -39,14 +39,14 @@ def create_user_profile():
     password = request.form['password']
     phone = request.form['phone']
 
-    #TODO add user to db
-    user = crud.create_user(fname=firstname,lname=lastname, email=email, password=password, phone=phone)
-    
-    #TODO verify if the user is in the db.
-    # if not add user to db 
+    user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
-
-    session['user'] = user
+    if user:
+        crud.create_user(firstname,lastname,email,password,phone)
+        flash('Account created! Please log in.')
+    else:
+        flash('Invalid. Please try again or create an account.')
+        return redirect("/form")
     
     return redirect("/login")
 
@@ -54,12 +54,8 @@ def create_user_profile():
 @app.route("/login")
 def show_login():
     """Display page for user to login to."""
-
-    if "user_id" in session and session["user_id"]:
-        session_id = session["user_id"]
-        return redirect("/profile")
-    else: 
-        return render_template("login.html")
+ 
+    return render_template("login.html")
 
 
 @app.route("/login", methods=["POST"]) 
@@ -69,18 +65,21 @@ def login_user():
     email = request.form['email']
     password = request.form['password']
 
-    user = crud.get_user_by_email_and_password(email, password)
+    registered = crud.validate_user_email_and_password(email, password)
 
-    if not user:
-        flash("Invalid email and/or password")
-    else:
-        session['user_id'] = user.user_id
-        flash("Welcome, you're logged in")
+    if registered:
+        session['user_id'] = email
+        flash("You're logged in!")
         return redirect("/profile")
+
+    else:
+        flash("Invalid email and/or password")
+        return redirect("/login")
+
 
     
 @app.route("/profile")
-def dashboard():
+def profile():
     """Display user profile account page"""
 
      # if "user" in session:
@@ -89,6 +88,21 @@ def dashboard():
 
     return render_template("profile.html")
 
+
+@app.route("/category")
+def show_event_catergory():
+    """Display a drop down menu of the event categoty"""
+
+    # TODO show the event type with drop down list
+
+
+@app.route("/event", methods=["GET"])
+def show_event():
+    """Display an event based on the category"""
+
+    # TODO show the exact events from the selected category
+
+    # TODO 
 
 
 

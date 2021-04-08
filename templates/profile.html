@@ -3,6 +3,11 @@
 {% block title %}SocialSesh{% endblock %} 
 
 {% block body %} 
+<h1>Welcome, you're logged in!</h1>
 
+<form action="/category">
+  <label>Select your type social event: <input type="text" name="person"></label>
+  <input type="submit">
+</form>
 
 {% endblock %} 

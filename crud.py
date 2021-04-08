@@ -7,13 +7,18 @@ from datetime import datetime
 def create_user(fname, lname, email, password, phone):
     """Create and return a new user."""
 
-    user = User(fname=fname, lname=lname, email=email, password=password, phone=phone)
+    # Check if the email is already being used
+    user = User.query.filter(User.email == email).first()
 
+    # If not, add the user
+    if user == None:
 
-    db.session.add(user)
-    db.session.commit()
+        db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
+        db.session.commit()
+        return True
 
-    return user
+    else:
+        return False
 
 
 def get_users():
@@ -34,17 +39,16 @@ def get_user_by_email(email):
     return User.query.filter(User.email == email).first()
 
 
-def get_user_by_email_and_password(email, password):
+def validate_user_email_and_password(email, password):
     """Return a user by email and password."""
 
-    if user.password == password:
-        return user
-    else:
-        return "Wrong email or password"
+    user = User.query.filter(User.email == email, User.password == password).first()
 
-    return User.query.filter((User.email == email).first() and (User.password == password).first())
-
-
+    if user != None:
+        return True
+    
+    return False
+    
 
 def create_event(event_type, event_name, event_date, event_start_time, event_description, event_photo):
     """Create and return a new event."""

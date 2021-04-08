@@ -16,7 +16,7 @@ class User(db.Model):
     fname = db.Column(db.String, nullable=False)
     lname = db.Column(db.String, nullable=False)
     email = db.Column(db.String, nullable=False, unique=True)
-    password = db.Column(db.String, nullable=False, unique=True)
+    password = db.Column(db.String, nullable=False)
     phone = db.Column(db.String, nullable=False)
     
     def __init__(self, fname, lname, email, password, phone):
@@ -24,7 +24,7 @@ class User(db.Model):
         self.lname = lname
         self.email = email
         self.password = password
-        self.phone = phone
+        self.phone = str(phone)
 
     # users_events = a list of User_Event objects
 
