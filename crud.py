@@ -45,9 +45,10 @@ def validate_user_email_and_password(email, password):
 
     user = User.query.filter(User.email == email, User.password == password).first()
 
-    if user != None:
+    # if user != None:
+    # if user.email and user.password:
+    if user.fname:
         return True
-    
     else:
         return False
     
@@ -96,6 +97,12 @@ def get_event_types():
     """Return all event types."""
 
     return Event_Type.query.all()
+
+
+def get_event_type(event_type):
+    """Return events under each event type."""
+
+    return Event_Type.query.get(event_type)
 
 
 def get_event_type_by_id(event_type_id):

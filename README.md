@@ -19,7 +19,7 @@ Twilio SMS API: https://www.twilio.com/docs/sms/api
 
 - User can search for a virtual event under a particular category
 - User can "attend" an event by clicking on registration button
-- User will receive an event confirmation text message
+- User can receive an event confirmation text message
 
 #### 2.0
 

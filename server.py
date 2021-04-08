@@ -43,9 +43,9 @@ def create_user_profile():
 
     if user:
         crud.create_user(firstname,lastname,email,password,phone)
-        flash('Account created! Please log in.')
+        flash('Account created! Please log in')
     else:
-        flash('Invalid. Please try again or create an account.')
+        flash('Invalid. Please try again or create an account')
         return redirect("/form")
     
     return redirect("/login")
@@ -69,7 +69,7 @@ def login_user():
 
     if registered:
         session['user_id'] = email
-        flash("You're logged in!")
+        flash("You're logged in.")
         return redirect("/profile")
 
     else:
@@ -79,29 +79,46 @@ def login_user():
 
 @app.route("/profile")
 def show_profile():
-    """Display user profile page"""
+    """Display user profile page."""
 
      # if "user" in session:
     # TODO if the user key is in session then show logout 
     # TODO else show login prompt
-    # TODO add user name at hello
+    # TODO add user name at hello using jinja
 
     return render_template("profile.html")
 
 
 @app.route("/profile", methods=["POST"])
-def show_profile_menu():
-    """Display select menu of event categories"""
+def get_event_type():
+    """Display different event types for user to select."""
 
-    # TODO show the event type with drop down list
-
-    # return redirect("/event")
+    return redirect("/events")
 
 
+@app.route("/events")
+def show_event():
+    """View all events."""
 
-@app.route("/event")
-def show_event_catergory():
-    """Display a drop down menu of the event categoty"""
+    events = crud.get_events()
+
+    return render_template("all_events.html",events=events)
+
+
+@app.route("/events", methods=["POST"])
+def get_event():
+    """View details about specific event."""
+
+    # TODO show the exact event
+
+    # TODO 
+
+    #return render_template("event_details.html", event=event)
+
+
+@app.route("/events/<event_type>")
+def show_event_type(event_type):
+    """Show details of event in particular category."""
 
     # TODO show the selected event type and event
     # TODO add crud function
@@ -109,14 +126,12 @@ def show_event_catergory():
     # if user select activity:
         # show all db event under activity
 
+    event = crud.get_event_type(event_type)
 
-@app.route("/event", methods=["POST"])
-def show_event():
-    """Display an event based on the category"""
+    return render_template("event_details.html", event=event)
 
-    # TODO show the exact events from the selected category
 
-    # TODO 
+
 
 
 

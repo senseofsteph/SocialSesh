@@ -4,7 +4,9 @@
 
 {% block body %} 
 
-<h4>Hello!</h4>
+<!-- #TODO: Add a jinja hello to user -->
+
+<h4>Hello!</h4> 
 
 <form action="/profile" method="POST">
   What type of social event are you interested in?
@@ -16,6 +18,7 @@
       <option value="entertainment">Entertainment</option>
       <option value="other">Other</option>
     </select>
+    <button type="submit">Submit</button>
 </form>
 
 {% endblock %} 
