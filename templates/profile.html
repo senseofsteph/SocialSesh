@@ -1,13 +1,21 @@
 {% extends 'base.html' %} 
 
-{% block title %}SocialSesh{% endblock %} 
+{% block title %} {% endblock %} 
 
 {% block body %} 
-<h1>Welcome, you're logged in!</h1>
 
-<form action="/category">
-  <label>Select your type social event: <input type="text" name="person"></label>
-  <input type="submit">
+<h4>Hello!</h4>
+
+<form action="/profile" method="POST">
+  What type of social event are you interested in?
+    <select name="types">
+      <option value="select">Select</option>
+      <option value="activity">Activity</option>
+      <option value="celebration">Celebration</option>
+      <option value="educational">Educational</option>
+      <option value="entertainment">Entertainment</option>
+      <option value="other">Other</option>
+    </select>
 </form>
 
 {% endblock %} 

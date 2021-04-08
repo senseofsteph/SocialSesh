@@ -4,6 +4,7 @@
 from model import db, User, Event, User_Event, Event_Type, connect_to_db
 from datetime import datetime
 
+
 def create_user(fname, lname, email, password, phone):
     """Create and return a new user."""
 
@@ -47,7 +48,8 @@ def validate_user_email_and_password(email, password):
     if user != None:
         return True
     
-    return False
+    else:
+        return False
     
 
 def create_event(event_type, event_name, event_date, event_start_time, event_description, event_photo):

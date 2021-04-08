@@ -77,26 +77,40 @@ def login_user():
         return redirect("/login")
 
 
-    
 @app.route("/profile")
-def profile():
-    """Display user profile account page"""
+def show_profile():
+    """Display user profile page"""
 
      # if "user" in session:
     # TODO if the user key is in session then show logout 
     # TODO else show login prompt
+    # TODO add user name at hello
 
     return render_template("profile.html")
 
 
-@app.route("/category")
-def show_event_catergory():
-    """Display a drop down menu of the event categoty"""
+@app.route("/profile", methods=["POST"])
+def show_profile_menu():
+    """Display select menu of event categories"""
 
     # TODO show the event type with drop down list
 
+    # return redirect("/event")
 
-@app.route("/event", methods=["GET"])
+
+
+@app.route("/event")
+def show_event_catergory():
+    """Display a drop down menu of the event categoty"""
+
+    # TODO show the selected event type and event
+    # TODO add crud function
+
+    # if user select activity:
+        # show all db event under activity
+
+
+@app.route("/event", methods=["POST"])
 def show_event():
     """Display an event based on the category"""
 
