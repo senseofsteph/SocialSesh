@@ -143,6 +143,12 @@ def confirmation():
     return render_template("thank_you.html")
 
 
+@app.route("/confirmation", methods=["POST"])
+def send_confirmation():
+    """Send text message confirmation of event registration."""
+
+    return render_template("thank_you.html")
+
 
 
 
