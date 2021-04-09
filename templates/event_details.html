@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ event.event_type }} - Details{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
-<h1>{{ event.event_type }}</h1>
+<h3>{{ event.event_name }}</h3>
 
 <p>
-  {{ event.description }}
+  {{ event.event_description }}
 </p>
 
-<!-- <img src="{{ movie.poster_path }}"> -->
+<p>
+  {{ event.event_date }} {{ event.event_date }} 
+</p>
+
+<img src="{{event.event_photo}}">
+ 
 {% endblock %}

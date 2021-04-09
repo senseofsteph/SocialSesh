@@ -13,7 +13,7 @@
     "event_date": "2021-05-07",
     "event_start_time": "8:00",
     "event_description": "Grab your popcorn and candy, we're streaming Harry Potter",
-    "event_photo": "https://pixabay.com/images/id-2974645/"
+    "event_photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.marketplace.org%2F2019%2F03%2F14%2Fpeek-behind-curtain-movie-ticket-prices%2F&psig=AOvVaw0LEF8dsV0cqfuXB548n4im&ust=1618016863935000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIjG3YL97-8CFQAAAAAdAAAAABAD"
   },
   {
     "event_type": "Activity",
@@ -50,10 +50,10 @@
   {
     "event_type": "Educational",
     "event_name": "Learn How to Set Up A Financial Budget",
-    "event_date": "2021-05-17",
+    "event_date": "2021-05-18",
     "event_start_time": "7:00",
     "event_description": "Racking up your credit cards and don't know how to make a monthly budget? Join us as we teach you how to get a grasp of your spending",
-    "event_photo": "https://pixabay.com/images/id-6087334/"
+    "event_photo": "https://picsum.photos/id/119/200/300"
   },
   {
     "event_type": "Celebration",
@@ -66,7 +66,7 @@
   {
     "event_type": "Activity",
     "event_name": "An Intro to Piano Playing",
-    "event_date": "2021-05-18",
+    "event_date": "2021-05-17",
     "event_start_time": "6:00",
     "event_description": "A beginners intro to piano lesson. We will go over Clocks by Coldplay sheet music",
     "event_photo": "https://pixabay.com/images/id-3957650/"
