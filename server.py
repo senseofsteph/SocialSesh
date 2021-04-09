@@ -81,10 +81,11 @@ def login_user():
 def show_profile():
     """Display user profile page."""
 
-     # if "user" in session:
+    # if "user" in session:
     # TODO if the user key is in session then show logout 
     # TODO else show login prompt
     # TODO add user name at hello using jinja
+
 
     return render_template("profile.html")
 
@@ -114,20 +115,32 @@ def show_event(event_id):
     return render_template("event_details.html", event=event)
 
 
-# @app.route("/events/<event_type>")
-# def show_event_type(event_type):
-#     """Show details of event in particular category."""
+@app.route("/events/<event_type>", methods=["POST"])
+def get_registration():
+    """Register for event."""
 
-#     # TODO show the selected event type and event
-#     # TODO add crud function
+    return redirect("/register")
 
-#     # if user select activity:
-#         # show all db event under activity
 
-#     event_type = crud.get_event_by_type(event_type)
+@app.route("/register")
+def show_registration():
+    """Display form to register for event."""
 
-#     return render_template("event_details.html", event_type=event_type)
+    return render_template("register.html")
 
+
+@app.route("/register", methods=["POST"])
+def registration():
+    """Display form to register for event."""
+
+    return render_template("register.html")
+
+
+@app.route("/confirmation")
+def confirmation():
+    """Display confirmation of event registration."""
+
+    return render_template("thank_you.html")
 
 
 

@@ -40,6 +40,12 @@ def get_user_by_email(email):
     return User.query.filter(User.email == email).first()
 
 
+def get_user_by_fname(fname):
+    """Return a user by first name."""
+
+    return User.query.get(fname)
+
+
 def validate_user_email_and_password(email, password):
     """Return a user by email and password."""
 

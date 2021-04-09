@@ -1,22 +1,25 @@
 'use strict';
 
-// Profile html file
 
-// FIRST
-// const profileForm = document.querySelector("#createprofile");
-
-// profileForm.addEventListener("submit", (evt) => {
-//   const password = document.querySelector("input[name='password']");
-
-//   if (password.value.length < 7) {
-//     evt.preventDefault()
-//     alert("make me longer!")
-//   }
-
-// })
+// JAVASCRIPT FOR TEMPLATE FILES
 
 
-// SECOND
+// profile.html
+
+document.querySelector('#logout-button').addEventListener('click', (evt) => {
+  const loginBtn = evt.target;
+  console.log(evt.target);
+
+  if (loginBtn.innerHTML === 'Log Out') {
+    loginBtn.innerHTML = 'Log In';
+  } else {
+    loginBtn.innerHTML = 'Log Out';
+  }
+}); 
+
+
+// form.html
+
 // $(function(){
 //   $("form[id='createprofile']").validate({
 //     rules: {

@@ -4,11 +4,20 @@
 
 {% block body %} 
 
-<!-- #TODO: Add a jinja hello to user -->
 
-<h4>Hello!</h4> 
+<h4>Hello...</h4> <!-- #TODO: Add a jinja hello to user -->
 
-<form action="/profile" method="POST">
+<p>Thank you for stopping by!</p> 
+<p>As you safely social distance, we have several events to keep you <strong>virtually</strong> close to others.</p> 
+<p>Check out all of our events below</p>
+
+<p><a href="/events">View Events</a></p>
+
+<section id="logout">
+  <button id="logout-button">Log Out</button>
+</section>
+
+<!-- <form action="/profile" method="POST">
   What type of social event are you interested in?
     <select name="types">
       <option value="select">Select</option>
@@ -19,6 +28,6 @@
       <option value="other">Other</option>
     </select>
     <button type="submit">Submit</button>
-</form>
+</form> -->
 
 {% endblock %} 
