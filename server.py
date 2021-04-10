@@ -126,7 +126,10 @@ def show_registration():
 def registration():
     """Display form to register for event."""
 
-    return render_template("register.html")
+    # with the phone number on form
+    # send a text message to user
+
+    return redirect("/register")
 
 
 @app.route("/confirmation")
@@ -140,17 +143,17 @@ def confirmation():
 def send_confirmation():
     """Send SMS text message confirmation of event registration."""
 
-    return redirect("/thank_you")
+    return redirect("/confirmation")
 
 
-@app.route("/confirmation", methods=["POST"])
-def sms_reply():
-    """Send SMS text message response to user."""
+# @app.route("/confirmation", methods=["POST"])
+# def sms_reply():
+#     """Send SMS text message response to user."""
 
-    resp = MessagingResponse()
-    resp.message("You're welcome. Feel free to Reach out to SocialSesh for any questions and/or feedback")
+#     resp = MessagingResponse()
+#     resp.message("You're welcome. Feel free to Reach out to SocialSesh for any questions and/or feedback")
 
-    return str(resp)
+#     return str(resp)
 
 
 
