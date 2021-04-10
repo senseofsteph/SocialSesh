@@ -33,7 +33,7 @@ class User(db.Model):
 
         return f'<User user_id={self.user_id} fname={self.fname} lname={self.lname} email={self.email} phone={self.phone}>'
 
-    
+
 class Event(db.Model):
     """An event."""
 

@@ -1,8 +1,8 @@
 """Server for social sessions app."""
 
-
 from flask import Flask
 from flask import (Flask, render_template, request, flash, session, redirect)
+from twilio.twiml.messaging_response import MessagingResponse
 from model import connect_to_db
 import crud 
 
@@ -30,8 +30,6 @@ def show_create_profile_form():
 @app.route("/form", methods=["POST"])
 def create_user_profile():
     """Create a new user profile."""
-
-    #TODO verify is password length and email are accurate
 
     firstname = request.form['fname']
     lastname = request.form['lname']
@@ -80,12 +78,6 @@ def login_user():
 @app.route("/profile")
 def show_profile():
     """Display user profile page."""
-
-    # if "user" in session:
-    # TODO if the user key is in session then show logout 
-    # TODO else show login prompt
-    # TODO add user name at hello using jinja
-
 
     return render_template("profile.html")
 
@@ -145,9 +137,19 @@ def confirmation():
 
 @app.route("/confirmation", methods=["POST"])
 def send_confirmation():
-    """Send text message confirmation of event registration."""
+    """Send SMS text message confirmation of event registration."""
 
-    return render_template("thank_you.html")
+    return redirect("/thank_you")
+
+
+@app.route("/confirmation", methods=["POST"])
+def sms_reply():
+    """Send SMS text message response to user."""
+
+    resp = MessagingResponse()
+    resp.message("You're welcome. Feel free to Reach out to SocialSesh for any questions and/or feedback")
+
+    return str(resp)
 
 
 

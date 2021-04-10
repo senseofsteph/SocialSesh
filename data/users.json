@@ -4,27 +4,27 @@
     "lname": "Smith",
     "email": "awalker@test.com",
     "password": "test123",
-    "phone": "2025550135"
+    "phone": "+12025550135"
   },
   {
     "fname": "Nadine",
     "lname": "Williams",
     "email": "nwilliams@test.com",
     "password": "test456",
-    "phone": "2025550196"
+    "phone": "+12025550196"
   },
   {
     "fname": "Stephen",
     "lname": "Johnson",
     "email": "sjohnson@test.com",
     "password": "test789",
-    "phone": "2025550136"
+    "phone": "+12025550136"
   },
   {
     "fname": "Aaron",
     "lname": "George",
     "email": "ageorge@test.com",
     "password": "test101",
-    "phone": "2025550166"
+    "phone": "+12025550166"
   }
 ]
