@@ -1,5 +1,6 @@
 """Server for social sessions app."""
 
+
 from flask import Flask
 from flask import (Flask, render_template, request, flash, session, redirect)
 from twilio.twiml.messaging_response import MessagingResponse
@@ -43,7 +44,7 @@ def create_user_profile():
         crud.create_user(firstname,lastname,email,password,phone)
         flash('Account created! Please log in')
     else:
-        flash('Invalid. Please try again or create an account')
+        flash('Invalid. Please fill out entire form to create an account')
         return redirect("/form")
     
     return redirect("/login")

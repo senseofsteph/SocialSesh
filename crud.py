@@ -2,7 +2,7 @@
 
 
 from model import db, User, Event, User_Event, Event_Type, connect_to_db
-from datetime import datetime
+from datetime import datetime, date, time
 
 
 def create_user(fname, lname, email, password, phone):
@@ -20,6 +20,14 @@ def create_user(fname, lname, email, password, phone):
 
     else:
         return False
+
+    # if user or user == nullable:
+    #     return False
+
+    # else:
+    #     db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
+    #     db.session.commit()
+    #     return True
 
 
 def get_users():

@@ -2,7 +2,7 @@
 
 
 from flask_sqlalchemy import SQLAlchemy 
-from datetime import datetime
+from datetime import datetime, date, time
 
 db = SQLAlchemy()
 

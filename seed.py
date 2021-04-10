@@ -4,7 +4,7 @@
 import os
 import json
 from random import choice, randint
-from datetime import datetime
+from datetime import datetime, date, time
 
 import crud
 import model
@@ -15,8 +15,6 @@ os.system('createdb socialsesh')
 
 model.connect_to_db(server.app)
 model.db.create_all()
-
-
 
 
 # Load users data from JSON file
@@ -32,18 +30,6 @@ for user in users_data:
   phone = user['phone']
 
   crud.create_user(fname, lname, email, password, phone)
-
-
-# Load event types data from JSON file
-with open('data/event_types.json') as e:
-  event_types_data = json.loads(e.read())
-
-for types in event_types_data:
-
-    event_type = types['event_type']
-    event_type_description = types['event_type_description']
-
-    crud.create_event_type(event_type, event_type_description)
     
 
 # Load events data from JSON file
@@ -62,6 +48,17 @@ for event in events_data:
 
     crud.create_event(event_type, event_name, event_date, event_start_time, event_description, event_photo)
 
+
+# Load event types data from JSON file
+with open('data/event_types.json') as e:
+  event_types_data = json.loads(e.read())
+
+for types in event_types_data:
+
+    event_type = types['event_type']
+    event_type_description = types['event_type_description']
+
+    crud.create_event_type(event_type, event_type_description)
     
 
 
