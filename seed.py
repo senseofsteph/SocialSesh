@@ -38,29 +38,28 @@ with open('data/events.json') as f:
 
 for event in events_data:
     
-    event_type = event["event_type"]
+    event_type = event['event_type']
     event_name  = event['event_name']
+    event_date = datetime.strptime(event['event_date'],'%Y-%m-%d')
+    event_start_time = datetime.strptime(event['event_start_time'], '%H:%M')
     event_description = event['event_description']
-    event_date = datetime.date(event['event_date'],'%Y-%m-%d')
-    event_start_time = datetime.time.hour(event['event_start_time'], '%H:%M')
-    # event_date = datetime.strptime(event['event_date'],'%Y-%m-%d')
-    # event_start_time = datetime.strptime(event['event_start_time'], '%H:%M')
-    event_photo = event["event_photo"]
+    # event_date = datetime.date(event['event_date'],'%Y-%m-%d')
+    # event_start_time = time.strftime(event['event_start_time'], '%H:%M')
+    event_photo = event['event_photo']
     
-
     crud.create_event(event_type, event_name, event_date, event_start_time, event_description, event_photo)
 
 
 # Load event types data from JSON file
-with open('data/event_types.json') as e:
-  event_types_data = json.loads(e.read())
+# with open('data/event_types.json') as e:
+#   event_types_data = json.loads(e.read())
 
-for types in event_types_data:
+# for types in event_types_data:
 
-    event_type = types['event_type']
-    event_type_description = types['event_type_description']
+#     event_type = types['event_type']
+#     event_type_description = types['event_type_description']
 
-    crud.create_event_type(event_type, event_type_description)
+#     crud.create_event_type(event_type, event_type_description)
     
 
 

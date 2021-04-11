@@ -1,7 +1,7 @@
 """CRUD (create, read, update, delete) operations."""
 
 
-from model import db, User, Event, User_Event, Event_Type, connect_to_db
+from model import db, User, Event, User_Event, connect_to_db
 from datetime import datetime, date, time
 
 
@@ -20,14 +20,6 @@ def create_user(fname, lname, email, password, phone):
 
     else:
         return False
-
-    # if user or user == nullable:
-    #     return False
-
-    # else:
-    #     db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
-    #     db.session.commit()
-    #     return True
 
 
 def get_users():
@@ -48,12 +40,6 @@ def get_user_by_email(email):
     return User.query.filter(User.email == email).first()
 
 
-def get_user_by_fname(fname):
-    """Return a user by first name."""
-
-    return User.query.get(fname)
-
-
 def validate_user_email_and_password(email, password):
     """Return a user by email and password."""
 
@@ -70,12 +56,16 @@ def validate_user_email_and_password(email, password):
 def create_event(event_type, event_name, event_date, event_start_time, event_description, event_photo):
     """Create and return a new event."""
 
-    event = Event(event_type=event_type,event_name=event_name, event_date=event_date, event_start_time=event_start_time, event_description=event_description, event_photo=event_photo)
+    event = Event.query.all()
 
-    db.session.add(event)
-    db.session.commit()
+    if event == None:
 
-    return event
+        db.session.add(Event(event_type=event_type, event_name=event_name, event_date=event_date, event_start_time=event_start_time, event_description=event_description, event_photo=event_photo))
+        db.session.commit()
+        return True
+
+    else:
+        return False
 
 
 def get_events():
@@ -94,29 +84,6 @@ def get_event_by_user(users_events_id):
     """Return all the users events by id."""
 
     return User_Event.query.get(users_events_id)
-
-
-def create_event_type(event_type, event_type_description):
-    """Create an event type category."""
-
-    event_type_name = Event_Type(event_type=event_type, event_type_description=event_type_description)
-
-    db.session.add(event_type_name)
-    db.session.commit()
-
-    return event_type_name
-
-
-def get_event_types():
-    """Return all event types."""
-
-    return Event_Type.query.all()
-
-
-def get_event_type_by_id(event_type_id):
-    """Return event type by id."""
-
-    return Event_Type.query.get(event_type_id)
 
 
 def get_event_by_type(event_type):

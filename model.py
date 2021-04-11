@@ -18,6 +18,8 @@ class User(db.Model):
     email = db.Column(db.String, nullable=False, unique=True)
     password = db.Column(db.String, nullable=False)
     phone = db.Column(db.String, nullable=False)
+
+     # users_events = a list of User_Event objects
     
     def __init__(self, fname, lname, email, password, phone):
         self.fname = fname
@@ -25,8 +27,6 @@ class User(db.Model):
         self.email = email
         self.password = password
         self.phone = str(phone)
-
-    # users_events = a list of User_Event objects
 
     def __repr__(self): 
         """Show info about user."""
@@ -40,14 +40,10 @@ class Event(db.Model):
     __tablename__ = 'events'
 
     event_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    event_type = db.Column(db.String,
-                              db.ForeignKey('event_types.event_type'), 
-                              nullable=False)
+    event_type = db.Column(db.String,nullable=False)
     event_name = db.Column(db.String, nullable=False)
-    event_date = db.Column(db.Date, nullable=False)
-    event_start_time = db.Column(db.Time, nullable=False)
-    # event_date = db.Column(db.DateTime, nullable=False)
-    # event_start_time = db.Column(db.String, nullable=False)
+    event_date = db.Column(db.DateTime, nullable=False)
+    event_start_time = db.Column(db.String, nullable=False)
     event_description = db.Column(db.Text, nullable=False)
     event_photo = db.Column(db.String, nullable=False)
 
@@ -59,12 +55,10 @@ class Event(db.Model):
         self.event_description = event_description
         self.event_photo = event_photo
 
-    # users_events = a list of User_Event objects
-
     def __repr__(self):
         """Show info about the event."""
 
-        return f'<Event event_id={self.event_id} event_type_id={self.event_type} event_name={self.event_name}>'
+        return f'<Event event_id={self.event_id} event_type={self.event_type} event_name={self.event_name}>'
 
 
 class User_Event(db.Model):
@@ -95,25 +89,6 @@ class User_Event(db.Model):
 
 
 
-class Event_Type(db.Model):
-    """A type of event category."""
-
-    __tablename__ = 'event_types'
-
-    event_type = db.Column(db.String, primary_key=True)
-    event_type_description = db.Column(db.Text, nullable=False)
-    
-    def __init__(self, event_type, event_type_description):
-        self.event_type = event_type
-        self.event_type_description = event_type_description
-
-
-    def __repr__(self):
-        """Show info about event category type"""
-
-        return f'<Event_Type event_type_id={self.event_type} event_type_name={self.event_type_description}>'
-
-
 def connect_to_db(flask_app, db_uri='postgresql:///socialsesh', echo=True):
     flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
     flask_app.config['SQLALCHEMY_ECHO'] = False
@@ -129,12 +104,6 @@ def connect_to_db(flask_app, db_uri='postgresql:///socialsesh', echo=True):
 
 if __name__ == '__main__':
     from server import app
-
-    # Call connect_to_db(app, echo=False) if your program output gets
-    # too annoying; this will tell SQLAlchemy not to print out every
-    # query it executes.
-
     connect_to_db(app)
 
-    db.create_all()
 
