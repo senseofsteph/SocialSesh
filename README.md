@@ -1,4 +1,4 @@
-## Project Proposal
+## Software Engineering Project Proposal
 
 ### Overview
 

@@ -13,7 +13,7 @@
     "event_date": "2021-05-07",
     "event_start_time": "8:00",
     "event_description": "Grab your popcorn and candy, we're streaming Harry Potter",
-    "event_photo": "https://cdn.pixabay.com/photo/2017/11/24/10/43/admission-2974645_1280.jpg?width=400&height=400&fit=crop&auto=webp"
+    "event_photo": "https://cdn.pixabay.com/photo/2017/11/24/10/43/admission-2974645_1280.jpg"
   },
   {
     "event_type": "Activity",
@@ -21,7 +21,7 @@
     "event_date": "2021-05-03",
     "event_start_time": "10:00",
     "event_description": "Join us for a relaxing, healthy workout session",
-    "event_photo": "https://cdn.pixabay.com/photo/2017/03/04/14/00/yoga-2116093_1280.jpg?width=400&height=400&fit=crop&auto=webp"
+    "event_photo": "https://cdn.pixabay.com/photo/2017/03/04/14/00/yoga-2116093_1280.jpg"
   },
   {
     "event_type": "Educational",
@@ -29,7 +29,7 @@
     "event_date": "2021-05-11",
     "event_start_time": "1:00",
     "event_description": "An intro to coding in the computer programming language Python",
-    "event_photo": "https://cdn.pixabay.com/photo/2015/12/09/15/51/code-1084923_1280.png?width=400&height=400&fit=crop&auto=webp"
+    "event_photo": "https://cdn.pixabay.com/photo/2015/12/09/15/51/code-1084923_1280.png"
   },
   {
     "event_type": "Activity",
@@ -37,7 +37,7 @@
     "event_date": "2021-05-05",
     "event_start_time": "4:00",
     "event_description": "Join us as we make a homemade pizza for dinner. Yum!",
-    "event_photo": "https://cdn.pixabay.com/photo/2017/02/15/10/57/pizza-2068272_1280.jpg?width=400&height=400&fit=crop&auto=webp"
+    "event_photo": "https://cdn.pixabay.com/photo/2017/02/15/10/57/pizza-2068272_1280.jpg"
   },
   {
     "event_type": "Activity",
@@ -45,7 +45,7 @@
     "event_date": "2021-05-14",
     "event_start_time": "7:00",
     "event_description": "In the climate we're in, it's hard to meet in person. Why not give speed dating a shot? Meet with others truly looking for love",
-    "event_photo": "https://cdn.pixabay.com/photo/2015/11/07/11/01/couple-1030744_1280.jpg?width=400&height=400&fit=crop&auto=webp"
+    "event_photo": "https://cdn.pixabay.com/photo/2015/11/07/11/01/couple-1030744_1280.jpg"
   },
   {
     "event_type": "Educational",
@@ -53,7 +53,7 @@
     "event_date": "2021-05-18",
     "event_start_time": "7:00",
     "event_description": "Racking up your credit cards and don't know how to make a monthly budget? Join us as we teach you how to get a grasp of your spending",
-    "event_photo": "https://cdn.pixabay.com/photo/2017/07/13/12/51/puzzle-2500328_1280.jpg?width=400&height=400&fit=crop&auto=webp"
+    "event_photo": "https://cdn.pixabay.com/photo/2017/07/13/12/51/puzzle-2500328_1280.jpg"
   },
   {
     "event_type": "Celebration",
@@ -61,7 +61,7 @@
     "event_date": "2021-05-13",
     "event_start_time": "6:00",
     "event_description": "Congratulations to cohort 34! Join us as we celebrate the acheivements of our future software engineers",
-    "event_photo": "https://images.app.goo.gl/3WAPgsXimSUHS3fL8?width=400&height=400&fit=crop&auto=webp"
+    "event_photo": "https://images.app.goo.gl/3WAPgsXimSUHS3fL8"
   },
   {
     "event_type": "Activity",
@@ -69,7 +69,7 @@
     "event_date": "2021-05-17",
     "event_start_time": "6:00",
     "event_description": "A beginners intro to piano lesson. We will go over Clocks by Coldplay sheet music",
-    "event_photo": "https://cdn.pixabay.com/photo/2019/01/27/09/18/piano-3957650_1280.jpg?width=400&height=400&fit=crop&auto=webp"
+    "event_photo": "https://cdn.pixabay.com/photo/2019/01/27/09/18/piano-3957650_1280.jpg"
   },
   {
     "event_type": "Educational",
@@ -77,6 +77,6 @@
     "event_date": "2021-05-26",
     "event_start_time": "7:00",
     "event_description": "The Well Christian Church Family Bible Study",
-    "event_photo": "https://cdn.pixabay.com/photo/2015/09/18/11/37/child-945422_1280.jpg?width=400&height=400&fit=crop&auto=webp"
+    "event_photo": "https://cdn.pixabay.com/photo/2015/09/18/11/37/child-945422_1280.jpg"
   }
 ]

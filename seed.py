@@ -42,7 +42,7 @@ for event in events_data:
     event_name  = event['event_name']
     event_description = event['event_description']
     event_date = datetime.date(event['event_date'],'%Y-%m-%d')
-    event_start_time = datetime.time(event['event_start_time'], '%H:%M')
+    event_start_time = datetime.time.hour(event['event_start_time'], '%H:%M')
     # event_date = datetime.strptime(event['event_date'],'%Y-%m-%d')
     # event_start_time = datetime.strptime(event['event_start_time'], '%H:%M')
     event_photo = event["event_photo"]
