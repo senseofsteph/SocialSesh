@@ -14,9 +14,9 @@
     "phone": "+12025550196"
   },
   {
-    "fname": "Stephen",
+    "fname": "Chris",
     "lname": "Johnson",
-    "email": "sjohnson@test.com",
+    "email": "cjohnson@test.com",
     "password": "test789",
     "phone": "+12025550136"
   },
@@ -26,5 +26,12 @@
     "email": "ageorge@test.com",
     "password": "test101",
     "phone": "+12025550166"
+  },
+  {
+    "fname": "Stephanie",
+    "lname": "Ogamba",
+    "email": "sogamba@test.com",
+    "password": "test112",
+    "phone": "+12025550167"
   }
 ]

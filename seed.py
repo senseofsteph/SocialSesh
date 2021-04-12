@@ -21,7 +21,11 @@ model.db.create_all()
 with open('data/users.json') as u:
   users_data = json.loads(u.read())
 
+ 
+
   for user in users_data:
+
+    
 
     fname = user['fname']
     lname = user['lname']
@@ -29,7 +33,7 @@ with open('data/users.json') as u:
     password = user['password']
     phone = user['phone']
 
-  crud.create_user(fname, lname, email, password, phone)
+    crud.create_user(fname, lname, email, password, phone)
     
 
 # Load events data from JSON file
@@ -44,8 +48,8 @@ with open('data/events.json') as e:
     event_start_time = datetime.strptime(event['event_start_time'], '%H:%M')
     event_description = event['event_description']
     event_photo = event['event_photo']
-    
-  crud.create_event(event_type, event_name, event_date, event_start_time, event_description, event_photo)
+
+    crud.create_event(event_type, event_name, event_date, event_start_time, event_description, event_photo)
 
 
 

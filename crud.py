@@ -56,7 +56,7 @@ def validate_user_email_and_password(email, password):
 def create_event(event_type, event_name, event_date, event_start_time, event_description, event_photo):
     """Create and return a new event."""
 
-    event = Event.query.all()
+    event = Event.query.filter(Event.event_type == event_type, Event.event_name == event_name, Event.event_date == event_date, Event.event_start_time == event_start_time, Event.event_description == event_description, Event.event_photo == event_photo).first()
 
     if event == None:
 

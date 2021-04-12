@@ -43,7 +43,7 @@ class Event(db.Model):
     event_type = db.Column(db.String,nullable=False)
     event_name = db.Column(db.String, nullable=False)
     event_date = db.Column(db.DateTime, nullable=False)
-    event_start_time = db.Column(db.String, nullable=False)
+    event_start_time = db.Column(db.DateTime, nullable=False)
     event_description = db.Column(db.Text, nullable=False)
     event_photo = db.Column(db.String, nullable=False)
 
