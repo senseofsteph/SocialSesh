@@ -3,33 +3,25 @@
 {% block title %}{% endblock %}
 
 {% block body %}
+
 <h3>{{ event.event_name }}</h3>
 
-<p>
-  {{ event.event_description }}
-</p>
-
-<p>
-  {{ event.event_date }} {{ event.event_date }} 
-</p>
-
-<img src="{{ event.event_photo }}">
-
-<!-- {% for event in events %}
-      <li>
-        <a href="/events/{{ event.event_photo }}"> -->
-
-<!-- <img src="{{ event.event_photo }}"> -->
-
-
-<!-- <img src="{{ url_for('static', filename = 'css/images/icons/resultset_previous.png') }}" width="16" height="16" alt="previous" title="Previous" border="0"> -->
-
- 
-</form> 
-<form action="/register" method="POST">
   <p>
-    <button id="register">Register</button> 
+  {{ event.event_description }}
   </p>
-</form> 
+  
+  <p>
+  {{ event.event_date }} {{ event.event_date }} 
+  </p>
+
+  <p>
+    <img src="{{ event.event_photo }}">
+  </p>
+ 
+  <form action="/register" method="POST">
+    <p>
+      <button id="register">Register</button> 
+    </p>
+  </form> 
 
 {% endblock %}

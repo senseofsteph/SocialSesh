@@ -43,10 +43,10 @@ def get_user_by_email(email):
 def validate_user_email_and_password(email, password):
     """Return a user by email and password."""
 
+    # check if user email and password in database
     user = User.query.filter(User.email == email, User.password == password).first()
 
-    # if user != None:
-    # if user.email and user.password:
+    # if there is a first name in user obj, return true
     if user.fname:
         return True
     else:
@@ -92,8 +92,6 @@ def get_event_by_type(event_type):
     return Event_Type.query.get(event_type)
 
   
-
-
 
 
 if __name__ == '__main__':

@@ -1,7 +1,6 @@
 """Server for social sessions app."""
 
 
-from flask import Flask
 from flask import (Flask, render_template, request, flash, session, redirect)
 from twilio.twiml.messaging_response import MessagingResponse
 from model import connect_to_db
@@ -126,6 +125,7 @@ def show_registration():
 def registration():
     """Display form to register for event."""
 
+    phone = request.form['phone']
     # with the phone number on form
     # send a text message to user
 

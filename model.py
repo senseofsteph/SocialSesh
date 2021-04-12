@@ -19,7 +19,7 @@ class User(db.Model):
     password = db.Column(db.String, nullable=False)
     phone = db.Column(db.String, nullable=False)
 
-     # users_events = a list of User_Event objects
+    # users_events = a list of User_Event objects
     
     def __init__(self, fname, lname, email, password, phone):
         self.fname = fname
@@ -46,6 +46,8 @@ class Event(db.Model):
     event_start_time = db.Column(db.String, nullable=False)
     event_description = db.Column(db.Text, nullable=False)
     event_photo = db.Column(db.String, nullable=False)
+
+    # users_events = a list of User_Event objects
 
     def __init__(self, event_type, event_name, event_date, event_start_time, event_description, event_photo):
         self.event_type = event_type
@@ -83,10 +85,9 @@ class User_Event(db.Model):
         
     
     def __repr__(self):
-        """Show info about users created events."""
+        """Show info about events created by users."""
 
         return f'<User_Event users_events_id={self.user_events_id} user_id={self.user_id} event_id={self.event_id}>'
-
 
 
 def connect_to_db(flask_app, db_uri='postgresql:///socialsesh', echo=True):
@@ -104,6 +105,8 @@ def connect_to_db(flask_app, db_uri='postgresql:///socialsesh', echo=True):
 
 if __name__ == '__main__':
     from server import app
+    
     connect_to_db(app)
+    db.create_all()
 
 
