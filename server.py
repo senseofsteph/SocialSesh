@@ -8,11 +8,15 @@ from twilio.twiml.messaging_response import MessagingResponse
 import send_sms
 from model import connect_to_db
 import crud 
+import os
 
 from jinja2 import StrictUndefined
 
+
+os.system('source secrets.sh')
+
 app = Flask(__name__)
-app.secret_key = "socialsesh"
+app.secret_key = os.environ["SECRET_KEY"]
 app.jinja_env.undefined = StrictUndefined
 
 
@@ -128,13 +132,13 @@ def show_registration():
 def registration():
     """Display form to register for event."""
 
-    phone = request.form['phone']
+    # phone = request.form['phone']
 
-    confirmed = send_sms.send_sms.to(phone=phone)
+    # confirmed = send_sms.send_sms.to(phone=phone)
 
-    if confirmed:
-        send_sms.send_sms_to(phone)
-        flash('Phone number verified')
+    # if confirmed:
+    #     send_sms.send_sms_to(phone)
+    #     flash('Phone number verified')
 
     return redirect("/register")
 
