@@ -21,11 +21,7 @@ model.db.create_all()
 with open('data/users.json') as u:
   users_data = json.loads(u.read())
 
- 
-
   for user in users_data:
-
-    
 
     fname = user['fname']
     lname = user['lname']

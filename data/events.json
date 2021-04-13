@@ -61,7 +61,7 @@
     "event_date": "2021-05-13",
     "event_start_time": "6:00",
     "event_description": "Congratulations to cohort 34! Join us as we celebrate the acheivements of our future software engineers",
-    "event_photo": "/static/img/hackbright_graduation.jpg"
+    "event_photo": "/static/img/dawn-1840298_1280.jpg"
   },
   {
     "event_type": "Activity",
@@ -85,6 +85,6 @@
     "event_date": "2021-05-26",
     "event_start_time": "7:00",
     "event_description": "The Family Bible Study",
-    "event_photo": "static/img/child-945422_1280.jpg"
+    "event_photo": "/static/img/child-945422_1280.jpg"
   }
 ]

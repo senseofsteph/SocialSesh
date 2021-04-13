@@ -2,7 +2,9 @@
 
 
 from flask import (Flask, render_template, request, flash, session, redirect)
+from twilio.rest import Client
 from twilio.twiml.messaging_response import MessagingResponse
+import send_sms
 from model import connect_to_db
 import crud 
 
@@ -126,8 +128,12 @@ def registration():
     """Display form to register for event."""
 
     phone = request.form['phone']
-    # with the phone number on form
-    # send a text message to user
+
+    confirmed = send_sms.send_sms.to(phone=phone)
+
+    if confirmed:
+        send_sms.send_sms_to(phone)
+        flash('Phone number verified')
 
     return redirect("/register")
 
@@ -136,7 +142,7 @@ def registration():
 def confirmation():
     """Display confirmation of event registration."""
 
-    return render_template("thank_you.html")
+    return render_template("thanks.html")
 
 
 @app.route("/confirmation", methods=["POST"])

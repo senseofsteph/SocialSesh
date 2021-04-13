@@ -8,7 +8,7 @@ account_sid = os.environ['TWILIO_ACCOUNT_SID']
 auth_token = os.environ['TWILIO_AUTH_TOKEN']
 client = Client(account_sid, auth_token)
 
-def send_sms_to(phone='+12099147702'):
+def send_sms_to(phone ='+12099147702'):
   
   number = re.search(r'^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$', phone)
   print(type(number.group(0)))
@@ -19,13 +19,12 @@ def send_sms_to(phone='+12099147702'):
   # should be at least 10 or up to 12 chars
   # check 1st two chars of string, should be: +1
   
-  
   if phone != None:
     message = client.messages \
       .create(
-        body='Thank you for registering your social session. Be safe and enjoy your virtual event!',
-        from_='+16282004021',
-        to=phone 
+        body ='Thank you for registering your social session. Be sure to save the date and time!',
+        from_ ='+16282004021',
+        to = phone 
       )
 
 

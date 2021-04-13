@@ -14,14 +14,14 @@
   {{ event.event_date }} {{ event.event_date }} 
   </p>
 
-  <p>
-    <img src={{ event.event_photo }}>
-  </p>
- 
   <form action="/register" method="POST">
     <p>
       <button id="register">Register</button> 
     </p>
   </form> 
+
+  <p>
+    <img src="{{ event.event_photo }}">
+  </p>
 
 {% endblock %}
