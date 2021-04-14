@@ -132,15 +132,18 @@ def show_registration():
 def registration():
     """Display form to register for event."""
 
-    # phone = request.form['phone']
+    phone = request.form['phone']
 
-    # confirmed = send_sms.send_sms.to(phone=phone)
+    confirmed = send_sms.send_sms_to(phone)
 
-    # if confirmed:
-    #     send_sms.send_sms_to(phone)
-    #     flash('Phone number verified')
+    if confirmed:
+        send_sms.send_sms_to(phone)
+        flash("Phone number verified")
+        return redirect("/confirmation")
 
-    return redirect("/register")
+    else:
+        flash("Invalid phone number. Please try again")
+        return redirect("/register")
 
 
 @app.route("/confirmation")
