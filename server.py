@@ -58,14 +58,14 @@ def create_user_profile():
 
 @app.route("/login")
 def show_login():
-    """Display page for user to login to."""
+    """Display form for user to login to."""
  
     return render_template("login.html")
 
 
 @app.route("/login", methods=["POST"]) 
 def login_user():
-    """Log user into profile."""
+    """Log user into profile account."""
 
     email = request.form['email']
     password = request.form['password']
@@ -91,7 +91,7 @@ def show_profile():
 
 @app.route("/profile", methods=["POST"])
 def get_event_type():
-    """Display different event types for user to select."""
+    """Display events for user to browse."""
 
     return redirect("/events")
 
@@ -114,7 +114,7 @@ def show_event(event_id):
     return render_template("event_details.html", event=event)
 
 
-@app.route("/events/<event_type>", methods=["POST"])
+@app.route("/events/<event_type>", methods=["GET"])
 def get_registration():
     """Register for event."""
 
@@ -130,7 +130,7 @@ def show_registration():
 
 @app.route("/register", methods=["POST"])
 def registration():
-    """Display form to register for event."""
+    """Validates user phone number to register for event."""
 
     phone = request.form['phone']
 
@@ -153,21 +153,12 @@ def confirmation():
     return render_template("thanks.html")
 
 
-@app.route("/confirmation", methods=["POST"])
+@app.route("/confirmation", methods=["GET"])
 def send_confirmation():
-    """Send SMS text message confirmation of event registration."""
+    """Display redirect options to user."""
 
     return redirect("/confirmation")
 
-
-# @app.route("/confirmation", methods=["POST"])
-# def sms_reply():
-#     """Send SMS text message response to user."""
-
-#     resp = MessagingResponse()
-#     resp.message("You're welcome. Feel free to Reach out to SocialSesh for any questions and/or feedback")
-
-#     return str(resp)
 
 
 
