@@ -159,13 +159,16 @@ def send_confirmation():
     return redirect("/confirmation")
 
 
-# @app.route("/logout")
-# def logout():
-#     """Log user out of profile account."""
+@app.route("/logout")
+def logout():
+    """Log user out of profile account."""
 
-# confirm if this route is needed
+    print("Before", session)
+    session.pop('user_id', None)
+    print("After", session)
+    flash("You've been logout. See you soon!")
 
-
+    return redirect("/")
 
 
 
