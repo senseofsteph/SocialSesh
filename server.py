@@ -12,8 +12,7 @@ import os
 
 from jinja2 import StrictUndefined
 
-
-os.system('source secrets.sh')
+os.system("source secrets.sh")
 
 app = Flask(__name__)
 app.secret_key = os.environ["SECRET_KEY"]
