@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+<ul>
+  {% for type in event_type %}
+    <li>
+      <a href="/category/{{ type.event_id }}">
+        {{ type.event_name }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+
+{% block title %} {% endblock %} 
+
+{% block body %} 
+
+What type of virtual event are you interested in?
+  <form action="/category" method="POST">
+      <select name="types">
+        <option value="select">Select</option>
+        <option value="activity">Activity</option>
+        <option value="celebration">Celebration</option>
+        <option value="educational">Educational</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="other">Other</option>
+      </select>
+      <button type="submit">Submit</button>
+  </form>
+  </p>
+
+{% endblock %} 
