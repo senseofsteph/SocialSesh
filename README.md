@@ -18,13 +18,12 @@ Twilio SMS API: https://www.twilio.com/docs/sms/api
 #### MVP
 
 - User can browse through all virtual events
-- User can "attend" an event by clicking on a button
-- User can receive an event confirmation text message
+- User can register to "attend" a virtual event
+- User receives an event confirmation text message
 
 #### 2.0
 
 - User can search for a virtual event under a particular category
-- User can create their own virtual event under a particular category
 - User can customize their profile with created events and interests
 
 #### 3.0

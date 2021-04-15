@@ -205,10 +205,10 @@ def send_confirmation():
 def logout():
     """Log user out of profile account."""
 
-    print("Before", session)
+    # print("Before", session)
     session.pop('user_id', None)
-    print("After", session)
-    flash("You've been logout. See you soon!")
+    # print("After", session)
+    flash("You've been logged out. See you soon!")
 
     return redirect("/")
 
