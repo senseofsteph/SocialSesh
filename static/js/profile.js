@@ -6,16 +6,16 @@
 
 // profile.html
 
-document.querySelector('#logout-button').addEventListener('click', (evt) => {
-  const loginBtn = evt.target;
-  console.log(evt.target);
+// document.querySelector('#logout-button').addEventListener('click', (evt) => {
+//   const loginBtn = evt.target;
+//   console.log(evt.target);
 
-  if (loginBtn.innerHTML === 'Log Out') {
-    loginBtn.innerHTML = 'Log In';
-  } else {
-    loginBtn.innerHTML = 'Log Out';
-  }
-}); 
+//   if (loginBtn.innerHTML === 'Log Out') {
+//     loginBtn.innerHTML = 'Log In';
+//   } else {
+//     loginBtn.innerHTML = 'Log Out';
+//   }
+// }); 
 
 
 // form.html

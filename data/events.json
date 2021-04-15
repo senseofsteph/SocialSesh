@@ -12,7 +12,7 @@
     "event_name": "Movie Night",
     "event_date": "2021-05-07",
     "event_start_time": "8:00",
-    "event_description": "Grab your popcorn and candy, we're streaming Harry Potter",
+    "event_description": "Grab your popcorn and candy, we're streaming a romantic comedy. Tune in to find out",
     "event_photo": "/static/img/admission-2974645_1280.jpg"
   },
   {
@@ -22,6 +22,14 @@
     "event_start_time": "10:00",
     "event_description": "Join us for a relaxing, healthy workout session",
     "event_photo": "/static/img/yoga-2116093_1280.jpg"
+  },
+  {
+    "event_type": "Celebration",
+    "event_name": "Wedding Bells",
+    "event_date": "2021-05-15",
+    "event_start_time": "4:00",
+    "event_description": "Virtual wedding of Alex and Amber Jenkins. Til' death do you part!",
+    "event_photo": "/static/img/heart-529607_1280.jpg"
   },
   {
     "event_type": "Educational",
@@ -86,5 +94,29 @@
     "event_start_time": "7:00",
     "event_description": "The Family Bible Study",
     "event_photo": "/static/img/child-945422_1280.jpg"
+  },
+  {
+    "event_type": "Activity",
+    "event_name": "Knit Knacks",
+    "event_date": "2021-05-30",
+    "event_start_time": "6:00",
+    "event_description": "An Intro to crochet knitting. Join us as we make a scarf",
+    "event_photo": "/static/img/yarn-2565067_1280.jpg"
+  },
+  {
+    "event_type": "Celebration",
+    "event_name": "Baby Shower",
+    "event_date": "2021-05-23",
+    "event_start_time": "2:00",
+    "event_description": "Pretty in pink. Welcoming our baby girl",
+    "event_photo": "/static/img/booties-2047596_1280.jpg"
+  },
+  {
+    "event_type": "Educational",
+    "event_name": "Crypto Currency",
+    "event_date": "2021-05-03",
+    "event_start_time": "1:00",
+    "event_description": "Discussion on Bitcoin, Ethereum, and other digital assests",
+    "event_photo": "/static/img/business-3159208_1280.jpg"
   }
 ]

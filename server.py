@@ -49,7 +49,7 @@ def create_user_profile():
         crud.create_user(firstname,lastname,email,password,phone)
         flash('Account created! Please log in')
     else:
-        flash('Invalid. Please fill out entire form to create an account')
+        flash('Invalid entry. Please fill out entire form to create an account')
         return redirect("/form")
     
     return redirect("/login")
@@ -88,11 +88,36 @@ def show_profile():
     return render_template("profile.html")
 
 
-@app.route("/profile", methods=["POST"])
-def get_event_type():
-    """Display events for user to browse."""
+# TODO: Confirm route removal
 
-    return redirect("/events")
+# @app.route("/profile", methods=["GET"])
+# def get_event_type():
+#     """Display events for user to browse."""
+
+#     return redirect("/events")
+
+
+@app.route("/category")
+def select_event_category():
+    """Display form for user to select event category"""
+
+    return render_template("category_events.html")
+
+
+@app.route("/category", methods=["GET"])
+def get_event_by_category():
+    """Get user event category selection from form"""
+
+    return redirect("/category/<event_type>")
+
+
+@app.route("/category/<event_type>")
+def show_event_by_category(event_type):
+    """Display all events under selected category"""
+
+    event_type = crud.get_event_by_type(event_type)
+
+    return render_template("event_types.html", event_type=event_type)
 
 
 @app.route("/events")
