@@ -4,10 +4,12 @@
 
 {% block body %}
 
+<!-- TODO: Fix this document. For loop may not be the correct approach -->
+
 <ul>
   {% for type in event_type %}
     <li>
-      <a href="/category/{{ type.event_id }}">
+      <a href="/event_type{{ type.event_type }}">
         {{ type.event_name }}
       </a>
     </li>

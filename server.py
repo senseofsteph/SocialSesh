@@ -104,20 +104,37 @@ def select_event_category():
     return render_template("category_events.html")
 
 
-@app.route("/category", methods=["GET"])
+@app.route("/category", methods=["POST"])
 def get_event_by_category():
     """Get user event category selection from form"""
+
+    # if select value == activity
+        # show all events with activity as event_type
+    #  elif select value == celebration
+        # ...
+    #  elif select value == educational
+        # ...
+    #  elif select value == entertainment
+        # ...
+    #  else:
+        #  flash statement- no other type of event at this time
 
     return redirect("/category/<event_type>")
 
 
 @app.route("/category/<event_type>")
-def show_event_by_category(event_type):
+def show_categories(event_type):
     """Display all events under selected category"""
 
-    event_type = crud.get_event_by_type(event_type)
-
     return render_template("event_types.html", event_type=event_type)
+
+
+@app.route("/category/<event_type>", methods=["GET"])
+def show_event_in_category():
+
+    # event_type = crud.get_event_by_type(event_type)
+
+    return redirect("/register")
 
 
 @app.route("/events")
