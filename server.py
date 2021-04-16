@@ -37,11 +37,11 @@ def show_create_profile_form():
 def create_user_profile():
     """Create a new user profile."""
 
-    firstname = request.form['fname']
-    lastname = request.form['lname']
-    email = request.form['email']
-    password = request.form['password']
-    phone = request.form['phone']
+    firstname = request.form.get('fname')
+    lastname = request.form.get('lname')
+    email = request.form.get('email')
+    password = request.form.get('password')
+    phone = request.form.get('phone')
 
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
@@ -66,8 +66,9 @@ def show_login():
 def login_user():
     """Log user into profile account."""
 
-    email = request.form['email']
-    password = request.form['password']
+    # add a name variable to great user on profile
+    email = request.form.get('email')
+    password = request.form.('password')
 
     registered = crud.validate_user_email_and_password(email, password)
 
@@ -110,7 +111,7 @@ def select_event_category():
 def get_event_by_category():
     """Get user event category selection from form"""
 
-    selected_event_type = request.form['types']
+    selected_event_type = request.form.get('types')
 
     return redirect("/category/" + selected_event_type)
   
@@ -180,7 +181,7 @@ def show_registration():
 def registration():
     """Validates user phone number to register for event."""
 
-    phone = request.form['phone']
+    phone = request.form.get('phone')
 
     confirmed = send_sms.send_sms_to(phone)
 
