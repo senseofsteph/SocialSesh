@@ -68,7 +68,7 @@ def login_user():
 
     # add a name variable to great user on profile
     email = request.form.get('email')
-    password = request.form.('password')
+    password = request.form('password')
 
     registered = crud.validate_user_email_and_password(email, password)
 
@@ -109,7 +109,7 @@ def select_event_category():
 
 @app.route("/category", methods=["POST"])
 def get_event_by_category():
-    """Get user event category selection from form"""
+    """Get event category selection"""
 
     selected_event_type = request.form.get('types')
 
@@ -120,9 +120,14 @@ def get_event_by_category():
 def show_categories(event_type):
     """Display all events under selected category"""
 
-    # event_type = crud.get_event_by_type(event_type)
 
     template = ""
+
+    # events = crud.get_event_by_category()
+    events = crud.get_event_by_type(event_type.title())
+
+    print("Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii")
+    print(events)
 
     if event_type == "activity":
         template = "type_activity.html"
@@ -133,14 +138,14 @@ def show_categories(event_type):
     elif event_type == "entertainment":
         template = "type_entertainment.html"
 
-    return render_template(template, event_type=event_type)
+
+    return render_template(template, events=events)
 
 
 
 @app.route("/category/<event_type>", methods=["GET"])
 def show_event_in_category():
 
-    # event_type = crud.get_event_by_type(event_type)
 
     return redirect("/register")
 

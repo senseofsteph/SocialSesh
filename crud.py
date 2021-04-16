@@ -80,16 +80,17 @@ def get_event_by_id(event_id):
     return Event.query.get(event_id)
 
 
+def get_event_by_type(event_type):
+    """Return an event by event type."""
+
+    return Event.query.filter(Event.event_type == event_type).all()
+
+
 def get_event_by_user(users_events_id):
     """Return all the users events by id."""
 
     return User_Event.query.get(users_events_id)
 
-
-def get_event_by_type(event_type):
-    """Return events under each event type."""
-
-    return Event_Type.query.get(event_type)
 
   
 
