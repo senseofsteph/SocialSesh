@@ -85,6 +85,8 @@ def login_user():
 def show_profile():
     """Display user profile page."""
 
+     # TODO: find a way to get user name so hello is personalized
+
     return render_template("profile.html")
 
 
@@ -108,25 +110,28 @@ def select_event_category():
 def get_event_by_category():
     """Get user event category selection from form"""
 
-    # if select value == activity
-        # show all events with activity as event_type
-    #  elif select value == celebration
-        # ...
-    #  elif select value == educational
-        # ...
-    #  elif select value == entertainment
-        # ...
-    #  else:
-        #  flash statement- no other type of event at this time
+    selected_event_type = request.form['types']
 
-    return redirect("/category/<event_type>")
-
+    return redirect("/category/" + selected_event_type)
+  
 
 @app.route("/category/<event_type>")
 def show_categories(event_type):
     """Display all events under selected category"""
 
-    return render_template("event_types.html", event_type=event_type)
+    template = ""
+
+    if event_type = "activity":
+        template = "type_activity.html"
+    elif event_type = "celebration":
+        template = "type_celebration.html"
+    elif event_type = "educational":
+        template = "type_educational.html"
+    elif event_type = "entertainment":
+        template = "type_entertainment.html"
+
+    return render_template(template)
+
 
 
 @app.route("/category/<event_type>", methods=["GET"])
