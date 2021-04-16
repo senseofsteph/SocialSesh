@@ -120,14 +120,9 @@ def get_event_by_category():
 def show_categories(event_type):
     """Display all events under selected category"""
 
-
     template = ""
 
-    # events = crud.get_event_by_category()
     events = crud.get_event_by_type(event_type.title())
-
-    print("Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii")
-    print(events)
 
     if event_type == "activity":
         template = "type_activity.html"
@@ -137,17 +132,16 @@ def show_categories(event_type):
         template = "type_educational.html"
     elif event_type == "entertainment":
         template = "type_entertainment.html"
-
-
+    
     return render_template(template, events=events)
 
 
-
 @app.route("/category/<event_type>", methods=["GET"])
-def show_event_in_category():
+def show_event_in_category(event_id):
 
+    event = crud.get_event_by_id(event_id)
 
-    return redirect("/register")
+    return redirect("/events/<event_id>", event=event)   
 
 
 @app.route("/events")
