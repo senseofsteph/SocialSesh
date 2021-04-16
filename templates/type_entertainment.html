@@ -1,0 +1,16 @@
+{% block title %}{% endblock %}
+
+{% block body %}
+
+<h1>All Events</h1>
+<ul>
+  {% for type in event_type %}
+    <li>
+      <a href="category/event_type{{ type.event_id }}">
+        {{ type.event_name }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

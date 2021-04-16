@@ -119,18 +119,20 @@ def get_event_by_category():
 def show_categories(event_type):
     """Display all events under selected category"""
 
+    # event_type = crud.get_event_by_type(event_type)
+
     template = ""
 
-    if event_type = "activity":
+    if event_type == "activity":
         template = "type_activity.html"
-    elif event_type = "celebration":
+    elif event_type == "celebration":
         template = "type_celebration.html"
-    elif event_type = "educational":
+    elif event_type == "educational":
         template = "type_educational.html"
-    elif event_type = "entertainment":
+    elif event_type == "entertainment":
         template = "type_entertainment.html"
 
-    return render_template(template)
+    return render_template(template, event_type=event_type)
 
 
 
