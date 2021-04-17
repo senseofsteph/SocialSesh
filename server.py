@@ -91,15 +91,6 @@ def show_profile():
     return render_template("profile.html")
 
 
-# TODO: Confirm route removal
-
-# @app.route("/profile", methods=["GET"])
-# def get_event_type():
-#     """Display events for user to browse."""
-
-#     return redirect("/events")
-
-
 @app.route("/category")
 def select_event_category():
     """Display form for user to select event category"""
@@ -212,9 +203,8 @@ def send_confirmation():
 def logout():
     """Log user out of profile account."""
 
-    # print("Before", session)
-    session.pop('user_id', None)
-    # print("After", session)
+    session.pop('user_id', None) 
+
     flash("You've been logged out. See you soon!")
 
     return redirect("/")
