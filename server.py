@@ -68,7 +68,7 @@ def login_user():
 
     # add a name variable to great user on profile
     email = request.form.get('email')
-    password = request.form('password')
+    password = request.form.get('password')
 
     registered = crud.validate_user_email_and_password(email, password)
 
