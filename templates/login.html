@@ -1,23 +1,23 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
-{% block title %} {% endblock %} 
+{% block title %} {% endblock %}
 
-{% block body %} 
+{% block body %}
 
 <h4>To view profile, please log-in:</h4>
 
-  <form action="/login" method="POST">
-    <p>
-      <label for="email">Email</label>
-      <input type="text" name="email">
-    </p>
-    <p>
-      <label for="password">Password</label>
-      <input type="text" name="password">
-    </p>
-    <p>
-      <button type="submit">Submit</button>
-    </p>
-  </form> 
+<form action="/login" method="POST">
+  <p>
+    <label for="email">Email</label>
+    <input type="text" name="email" required>
+  </p>
+  <p>
+    <label for="password">Password</label>
+    <input type="text" name="password" required>
+  </p>
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+</form>
 
-{% endblock %} 
+{% endblock %}

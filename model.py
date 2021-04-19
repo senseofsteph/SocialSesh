@@ -15,7 +15,7 @@ class User(db.Model):
     user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     fname = db.Column(db.String, nullable=False)
     lname = db.Column(db.String, nullable=False)
-    email = db.Column(db.String, nullable=False, unique=True)
+    email = db.Column(db.String, nullable=False, unique=True, index=True)
     password = db.Column(db.String, nullable=False)
     phone = db.Column(db.String, nullable=False)
 

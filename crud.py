@@ -17,7 +17,6 @@ def create_user(fname, lname, email, password, phone):
         db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
         db.session.commit()
         return True
-
     else:
         return False
 
@@ -40,18 +39,18 @@ def get_user_by_email(email):
     return User.query.filter(User.email == email).first()
 
 
-def validate_user_email_and_password(email, password):
-    """Return a user by email and password."""
+def is_email_and_password_valid(email, password):
+    """Return True if email and password are valid."""
 
     # check if user email and password in database
-    user = User.query.filter(User.email == email, User.password == password).first()
+    user = User.query.filter(
+        User.email == email
+    ).filter(
+        User.password == password
+    ).first()
+    # if email and password found, return the user
+    return user is not None
 
-    # if there is a first name in user obj, return true
-    if user.fname:
-        return True
-    else:
-        return False
-    
 
 def create_event(event_type, event_name, event_date, event_start_time, event_description, event_photo):
     """Create and return a new event."""
@@ -59,11 +58,9 @@ def create_event(event_type, event_name, event_date, event_start_time, event_des
     event = Event.query.filter(Event.event_type == event_type, Event.event_name == event_name, Event.event_date == event_date, Event.event_start_time == event_start_time, Event.event_description == event_description, Event.event_photo == event_photo).first()
 
     if event == None:
-
         db.session.add(Event(event_type=event_type, event_name=event_name, event_date=event_date, event_start_time=event_start_time, event_description=event_description, event_photo=event_photo))
         db.session.commit()
         return True
-
     else:
         return False
 
@@ -92,7 +89,7 @@ def get_event_by_user(users_events_id):
     return User_Event.query.get(users_events_id)
 
 
-  
+
 
 
 if __name__ == '__main__':

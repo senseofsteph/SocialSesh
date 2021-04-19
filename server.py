@@ -70,13 +70,13 @@ def login_user():
     email = request.form.get('email')
     password = request.form.get('password')
 
-    registered = crud.validate_user_email_and_password(email, password)
-
-    if registered:
+    # is_valid = crud.is_email_and_password_valid(email, password)
+    # if login credentials valid, log in user by updating
+    if crud.is_email_and_password_valid(email, password):
+        # session['user_id'] and setting it to email
         session['user_id'] = email
         flash("You're logged in.")
         return redirect("/profile")
-
     else:
         flash("Invalid email and/or password")
         return redirect("/login")
