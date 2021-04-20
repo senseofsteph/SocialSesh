@@ -115,19 +115,14 @@ def select_event_category():
     return render_template("category_events.html")
 
 
-@app.route("/category", methods=["POST"])
+@app.route("/api/category", methods=["POST"])
 def get_event_by_category():
     """Get event category selection"""
 
     selected_event_type = request.form.get('types')
 
-    return redirect("/category/" + selected_event_type)
-  
-
-@app.route("/category/<event_type>")
-def show_categories(event_type):
-    """Display all events under selected category"""
-
+    # return redirect("/category/" + selected_event_type)
+    
     template = ""
 
     events = crud.get_event_by_type(event_type.title())
@@ -142,14 +137,34 @@ def show_categories(event_type):
         template = "type_entertainment.html"
     
     return render_template(template, events=events)
+  
+
+# @app.route("/category/<event_type>")
+# def show_categories(event_type):
+#     """Display all events under selected category"""
+
+#     template = ""
+
+#     events = crud.get_event_by_type(event_type.title())
+
+#     if event_type == "activity":
+#         template = "type_activity.html"
+#     elif event_type == "celebration":
+#         template = "type_celebration.html"
+#     elif event_type == "educational":
+#         template = "type_educational.html"
+#     elif event_type == "entertainment":
+#         template = "type_entertainment.html"
+    
+#     return render_template(template, events=events)
 
 
-@app.route("/category/<event_type>", methods=["GET"])
-def show_event_in_category(event_id):
+# @app.route("/category/<event_type>", methods=["GET"])
+# def show_event_in_category(event_id):
 
-    event = crud.get_event_by_id(event_id)
+#     event = crud.get_event_by_id(event_id)
 
-    return redirect("/events/<event_id>", event=event)   
+#     return redirect("/events/<event_id>", event=event)   
 
 
 @app.route("/events")
