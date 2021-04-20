@@ -5,20 +5,20 @@ from model import db, User, Event, User_Event, connect_to_db
 from datetime import datetime, date, time
 
 
-def is_new_user(fname, lname, email, password, phone):
-    """Return True if user email is valid."""
+# def is_new_user(fname, lname, email, password, phone):
+#     """Return True if user email is valid."""
 
-    user = User.query.filter(User.email == email).first()
+#     user = User.query.filter(User.email == email).first()
 
     # if email found, return the user
-    return user is not None
+    # return user is not None
 
 
-# def create_user(fname, lname, email, password, phone):
+def create_user(fname, lname, email, password, phone):
     """Create and return a new user."""
     
     # Check if the email is already being used
-    # user = User.query.filter(User.email == email).first()
+    user = User.query.filter(User.email == email).first()
 
     # is_user
     # return user is not None
@@ -30,14 +30,13 @@ def is_new_user(fname, lname, email, password, phone):
     #     return True
 
     # if not, add the user
+    if user == None:
 
-    # if user == None:
-
-    #     db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
-    #     db.session.commit()
-    #     return True
-    # else:
-    #     return False
+        db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
+        db.session.commit()
+        return True
+    else:
+        return False
 
     
 def get_users():

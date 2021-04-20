@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+
+{% block body %} 
+
+<link rel="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.js"></script>
+{% block title %} {% endblock %} 
+
+<div id="calendar"></div>
+  <script>
+    let calendarEl = document.getElementById("calendar");
+    let calendar = new FullCalendar.Calendar(calendarEl, {});
+    calendar.render();
+  </script>
+
+{% endblock %} 

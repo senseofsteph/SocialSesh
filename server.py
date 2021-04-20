@@ -43,27 +43,27 @@ def create_user_profile():
     password = request.form.get('password')
     phone = request.form.get('phone')
 
-    # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
+    user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
-    if crud.is_new_user(fname, lname, email, password, phone): 
-        flash('Invalid entry. Please fill out entire form to create an account')
-        return redirect("/form")
-        
-    else:
-        user = crud.is_new_user(db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone)))
-        db.session.commit()
-        flash('Account created! Please log in')
-        
-    return redirect("/login")
-
-    # if user:
-    #     crud.create_user(firstname,lastname,email,password,phone)
-    #     flash('Account created! Please log in')
-    # else:
+    # if crud.is_new_user(fname, lname, email, password, phone): 
     #     flash('Invalid entry. Please fill out entire form to create an account')
     #     return redirect("/form")
-    
+        
+    # else:
+    #     user = crud.is_new_user(db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone)))
+    #     db.session.commit()
+    #     flash('Account created! Please log in')
+        
     # return redirect("/login")
+
+    if user:
+        crud.create_user(firstname,lastname,email,password,phone)
+        flash('Account created! Please log in')
+    else:
+        flash('Invalid entry. Please fill out entire form to create an account')
+        return redirect("/form")
+    
+    return redirect("/login")
 
 
 @app.route("/login")
@@ -80,7 +80,7 @@ def login_user():
     # add a name variable to great user on profile
     email = request.form.get('email')
     password = request.form.get('password')
-    
+
     # if login credentials valid, log in user by updating
     if crud.is_email_and_password_valid(email, password):
         # session['user_id'] and setting it to email
@@ -99,6 +99,13 @@ def show_profile():
      # TODO: find a way to get user name so hello is personalized
 
     return render_template("profile.html")
+
+
+@app.route("/calendar")
+def calendar():
+    """Display calendar of scheduled virtual events"""
+
+    return render_template("calendar.html")
 
 
 @app.route("/category")
