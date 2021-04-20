@@ -1,11 +1,37 @@
+<!-- <!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link href='fullcalendar/main.css' rel='stylesheet' />
+    <script src='fullcalendar/main.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
+  </head>
+  <body>
+    <div id='calendar'></div>
+  </body>
+</html> -->
+
 {% extends 'base.html' %} 
 
+{% block title %} {% endblock %} 
 
-{% block body %} 
+<title>Calendar of Events</title>
+
+{% block body %}  -->
+
 
 <link rel="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.css">
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.js"></script>
-{% block title %} {% endblock %} 
 
 <div id="calendar"></div>
   <script>
@@ -14,4 +40,6 @@
     calendar.render();
   </script>
 
-{% endblock %} 
+
+
+{% endblock %}
