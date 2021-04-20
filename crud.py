@@ -5,22 +5,41 @@ from model import db, User, Event, User_Event, connect_to_db
 from datetime import datetime, date, time
 
 
-def create_user(fname, lname, email, password, phone):
-    """Create and return a new user."""
+def is_new_user(fname, lname, email, password, phone):
+    """Return True if user email is valid."""
 
-    # Check if the email is already being used
     user = User.query.filter(User.email == email).first()
 
-    # If not, add the user
-    if user == None:
-
-        db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
-        db.session.commit()
-        return True
-    else:
-        return False
+    # if email found, return the user
+    return user is not None
 
 
+# def create_user(fname, lname, email, password, phone):
+    """Create and return a new user."""
+    
+    # Check if the email is already being used
+    # user = User.query.filter(User.email == email).first()
+
+    # is_user
+    # return user is not None
+    # if user is not None:
+    #     return False
+    # else:
+    #     db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
+    #     db.session.commit()
+    #     return True
+
+    # if not, add the user
+
+    # if user == None:
+
+    #     db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
+    #     db.session.commit()
+    #     return True
+    # else:
+    #     return False
+
+    
 def get_users():
     """Return all users."""
 
@@ -87,6 +106,7 @@ def get_event_by_user(users_events_id):
     """Return all the users events by id."""
 
     return User_Event.query.get(users_events_id)
+
 
 
 
