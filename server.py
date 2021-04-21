@@ -1,7 +1,7 @@
 """Server for social sessions app."""
 
 
-from flask import (Flask, render_template, request, flash, session, redirect)
+from flask import (Flask, flash, jsonify, render_template, request, redirect, session)
 from twilio.rest import Client
 from twilio.twiml.messaging_response import MessagingResponse
 
@@ -161,7 +161,8 @@ def get_event_by_category():
             "event_photo": event.event_photo
         }
         
-    return test_dict
+    return jsonify(test_dict)
+    # return test_dict
     # return render_template(template, events=events)
     # return (events, ) python doesn't like the tuple return 
   

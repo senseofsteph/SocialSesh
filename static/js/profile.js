@@ -19,9 +19,11 @@ $("#category").on("submit", (evt) => {
         "types" : $("#types").val()
 //  Key values the form
     };
+
     $.post("/api/category", formData, (res) => {
         const eventCategories = [];
-        console.log(res);
+        console.log("**************")
+        console.log(typeof res);
         for (const category of res.results) { 
             eventCategories.push(category.name);
         } 

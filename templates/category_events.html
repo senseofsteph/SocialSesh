@@ -5,7 +5,7 @@
 {% block body %} 
 
 <p>Choose the virtual event category you would like to view:</p>
-  <form id ="category" method = "POST">
+  <form id ="category" action="/api/category" method = "POST">
       <select name="types" id = "types">
         <option value="select">Select</option>
         <option value="activity">Activity</option>
