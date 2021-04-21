@@ -117,13 +117,27 @@ def select_event_category():
 
 @app.route("/api/category", methods=["POST"])
 def get_event_by_category():
-    """Get event category selection"""
+    """Return information about event category"""
 
     selected_event_type = request.form.get('types')
 
     # return redirect("/category/" + selected_event_type)
 
-    # create events dict and iterate through events object list 
+    events = crud.get_event_by_type(selected_event_type.title())
+    print(events)
+    
+    template = ""
+
+    if selected_event_type == "activity":
+        template = "type_activity.html"
+    elif selected_event_type == "celebration":
+        template = "type_celebration.html"
+    elif selected_event_type == "educational":
+        template = "type_educational.html"
+    elif selected_event_type == "entertainment":
+        template = "type_entertainment.html"
+
+# create events dict and iterate through events object list 
     # for event in events:
     # events_dict = {
     # event_name: {
@@ -135,33 +149,21 @@ def get_event_by_category():
         # "event_photo": "/static/img/concert-768722_1280.jpg"
     #   }
     # }
-    
-    template = ""
-
-    events = crud.get_event_by_type(selected_event_type.title())
-    print(events)
-
-    if selected_event_type == "activity":
-        template = "type_activity.html"
-    elif selected_event_type == "celebration":
-        template = "type_celebration.html"
-    elif selected_event_type == "educational":
-        template = "type_educational.html"
-    elif selected_event_type == "entertainment":
-        template = "type_entertainment.html"
-
 
     test_dict = {}
 
     for event in events:
         test_dict[event.event_name] = {
             'event_name': event.event_name,
-            'event_description': event.event_description
+            "event_date": event.event_date,
+            "event_start_time": event.event_start_time,
+            "event_description": event.event_description,
+            "event_photo": event.event_photo
         }
         
     return test_dict
     # return render_template(template, events=events)
-    # return (events, )
+    # return (events, ) python doesn't like the tuple return 
   
 
 # @app.route("/category/<event_type>")
