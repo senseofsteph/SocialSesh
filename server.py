@@ -122,21 +122,46 @@ def get_event_by_category():
     selected_event_type = request.form.get('types')
 
     # return redirect("/category/" + selected_event_type)
+
+    # create events dict and iterate through events object list 
+    # for event in events:
+    # events_dict = {
+    # event_name: {
+        # "event_type": event["event_type"],
+        # "event_name": event["event_name"],
+        # "event_date": "2021-05-08",
+        # "event_start_time": "7:00",
+        # "event_description": "Full access to The Weeknd on tour-After Hours World Tour",
+        # "event_photo": "/static/img/concert-768722_1280.jpg"
+    #   }
+    # }
     
     template = ""
 
-    events = crud.get_event_by_type(event_type.title())
+    events = crud.get_event_by_type(selected_event_type.title())
+    print(events)
 
-    if event_type == "activity":
+    if selected_event_type == "activity":
         template = "type_activity.html"
-    elif event_type == "celebration":
+    elif selected_event_type == "celebration":
         template = "type_celebration.html"
-    elif event_type == "educational":
+    elif selected_event_type == "educational":
         template = "type_educational.html"
-    elif event_type == "entertainment":
+    elif selected_event_type == "entertainment":
         template = "type_entertainment.html"
-    
-    return render_template(template, events=events)
+
+
+    test_dict = {}
+
+    for event in events:
+        test_dict[event.event_name] = {
+            'event_name': event.event_name,
+            'event_description': event.event_description
+        }
+        
+    return test_dict
+    # return render_template(template, events=events)
+    # return (events, )
   
 
 # @app.route("/category/<event_type>")
