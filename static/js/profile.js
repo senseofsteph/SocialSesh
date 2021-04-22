@@ -19,13 +19,11 @@ $("#category").on("submit", (evt) => {
         console.log("**************")
         console.log(res);
         for (const event of res) { 
-            eventCategories.push(event.event_name);
+            eventCategories.push("<li><a href=/events/"+ event.event_id +">" + event.event_name +"</a></li>");
         } 
-        $("#event_results").append(eventCategories.join(", "));
+        $("#event_results").html(eventCategories.join(" "))
     });
 });
-
-// line 20 and 24 for changes with displaying info 
 
 
 

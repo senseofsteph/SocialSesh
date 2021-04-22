@@ -113,6 +113,7 @@ def get_event_by_category():
     # return redirect("/category/" + selected_event_type)
 
     events = crud.get_event_by_type(selected_event_type.title())
+    
     print(events)
     
     # template = ""
@@ -126,11 +127,14 @@ def get_event_by_category():
     # elif selected_event_type == "entertainment":
     #     template = "type_entertainment.html"
 
-    test_dict = []
+    test_list = []
 
     for event in events:
-        test_dict.append(
-            {'event_name': event.event_name,
+        test_list.append(
+
+            {
+            'event_id': event.event_id,
+            'event_name': event.event_name,
             "event_date": event.event_date,
             "event_start_time": event.event_start_time,
             "event_description": event.event_description,
@@ -147,7 +151,7 @@ def get_event_by_category():
     #         "event_photo": event.event_photo
     #     }
  
-    return jsonify(test_dict)
+    return jsonify(test_list)
     # return test_dict
     # return render_template(template, events=events)
     # return (events, ) python doesn't like the tuple return 
