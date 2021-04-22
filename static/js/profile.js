@@ -2,9 +2,7 @@
 
 // JAVASCRIPT FOR TEMPLATE FILES
 
-
 // category_events.html
-// 1st approach
 
 const eventResults = document.querySelector("#event_results");
 
@@ -23,16 +21,11 @@ $("#category").on("submit", (evt) => {
         for (const event of res) { 
             eventCategories.push(event.event_name);
         } 
-        $("#category").append(eventCategories.join(", "));
+        $("#event_results").append(eventCategories.join(", "));
     });
 });
 
 // line 20 and 24 for changes with displaying info 
-
-// const formValues = $("#category").serialize();
-
-// $.post("/category/event/" + event_id, formValues, resultHandler);
-// });
 
 
 
