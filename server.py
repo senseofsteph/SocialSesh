@@ -45,17 +45,6 @@ def create_user_profile():
 
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
-    # if crud.is_new_user(fname, lname, email, password, phone): 
-    #     flash('Invalid entry. Please fill out entire form to create an account')
-    #     return redirect("/form")
-        
-    # else:
-    #     user = crud.is_new_user(db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone)))
-    #     db.session.commit()
-    #     flash('Account created! Please log in')
-        
-    # return redirect("/login")
-
     if user:
         crud.create_user(firstname,lastname,email,password,phone)
         flash('Account created! Please log in')
@@ -77,11 +66,11 @@ def show_login():
 def login_user():
     """Log user into profile account."""
 
-    # add a name variable to great user on profile
+    # TODO: add a name variable to great user on profile
     email = request.form.get('email')
     password = request.form.get('password')
 
-    # if login credentials valid, log in user by updating
+    # if login credentials valid, log in user by updating 
     if crud.is_email_and_password_valid(email, password):
         # session['user_id'] and setting it to email
         session['user_id'] = email
@@ -136,19 +125,6 @@ def get_event_by_category():
     #     template = "type_educational.html"
     # elif selected_event_type == "entertainment":
     #     template = "type_entertainment.html"
-
-# create events dict and iterate through events object list 
-    # for event in events:
-    # events_dict = {
-    # event_name: {
-        # "event_type": event["event_type"],
-        # "event_name": event["event_name"],
-        # "event_date": "2021-05-08",
-        # "event_start_time": "7:00",
-        # "event_description": "Full access to The Weeknd on tour-After Hours World Tour",
-        # "event_photo": "/static/img/concert-768722_1280.jpg"
-    #   }
-    # }
 
     test_dict = []
 
