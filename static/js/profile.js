@@ -2,13 +2,9 @@
 
 // JAVASCRIPT FOR TEMPLATE FILES
 
+
 // category_events.html
-
-
 // 1st approach
-// const event_id = $().value()?
-
-// 2nd approach
 
 const eventResults = document.querySelector("#event_results");
 
@@ -23,19 +19,20 @@ $("#category").on("submit", (evt) => {
     $.post("/api/category", formData, (res) => {
         const eventCategories = [];
         console.log("**************")
-        console.log(typeof res);
-        for (const category of res.results) { 
-            eventCategories.push(category.name);
+        console.log(res);
+        for (const event of res) { 
+            eventCategories.push(event.event_name);
         } 
-
-        // for (const category of Object.keys(eventResults)) {
-        // }
-
         $("#category").append(eventCategories.join(", "));
     });
 });
+
+// line 20 and 24 for changes with displaying info 
 
 // const formValues = $("#category").serialize();
 
 // $.post("/category/event/" + event_id, formValues, resultHandler);
 // });
+
+
+

@@ -126,16 +126,16 @@ def get_event_by_category():
     events = crud.get_event_by_type(selected_event_type.title())
     print(events)
     
-    template = ""
+    # template = ""
 
-    if selected_event_type == "activity":
-        template = "type_activity.html"
-    elif selected_event_type == "celebration":
-        template = "type_celebration.html"
-    elif selected_event_type == "educational":
-        template = "type_educational.html"
-    elif selected_event_type == "entertainment":
-        template = "type_entertainment.html"
+    # if selected_event_type == "activity":
+    #     template = "type_activity.html"
+    # elif selected_event_type == "celebration":
+    #     template = "type_celebration.html"
+    # elif selected_event_type == "educational":
+    #     template = "type_educational.html"
+    # elif selected_event_type == "entertainment":
+    #     template = "type_entertainment.html"
 
 # create events dict and iterate through events object list 
     # for event in events:
@@ -150,17 +150,27 @@ def get_event_by_category():
     #   }
     # }
 
-    test_dict = {}
+    test_dict = []
 
     for event in events:
-        test_dict[event.event_name] = {
-            'event_name': event.event_name,
+        test_dict.append(
+            {'event_name': event.event_name,
             "event_date": event.event_date,
             "event_start_time": event.event_start_time,
             "event_description": event.event_description,
             "event_photo": event.event_photo
-        }
-        
+            })
+
+    # test_dict = {}
+    # for event in events:
+    #     test_dict[event.event_name] = {
+    #         'event_name': event.event_name,
+    #         "event_date": event.event_date,
+    #         "event_start_time": event.event_start_time,
+    #         "event_description": event.event_description,
+    #         "event_photo": event.event_photo
+    #     }
+ 
     return jsonify(test_dict)
     # return test_dict
     # return render_template(template, events=events)
