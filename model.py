@@ -3,6 +3,7 @@
 
 from flask_sqlalchemy import SQLAlchemy 
 from datetime import datetime, date, time
+from werkzeug.security import generate_password_hash, check_password_hash
 
 db = SQLAlchemy()
 
@@ -13,14 +14,27 @@ class User(db.Model):
     __tablename__ = 'users'
 
     user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    fname = db.Column(db.String, nullable=False)
-    lname = db.Column(db.String, nullable=False)
-    email = db.Column(db.String, nullable=False, unique=True, index=True)
-    password = db.Column(db.String, nullable=False)
+    fname = db.Column(db.String(100), nullable=False)
+    lname = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(100), nullable=False, unique=True, index=True)
+    password = db.Column(db.String(100), nullable=False)
+    password_hash = db.Column(db.String(100))
     phone = db.Column(db.String, nullable=False)
 
     # users_events = a list of User_Event objects
     
+    def set_password(self, password):
+        """Creates hash of password"""
+
+        self.password_hash = generate_password_hash(password)
+
+
+    def check_password(self, password):
+        """Confirms if password is hashed"""
+
+        return check_password_hash(self.password_hash, password)
+    
+
     def __init__(self, fname, lname, email, password, phone):
         self.fname = fname
         self.lname = lname
@@ -40,14 +54,15 @@ class Event(db.Model):
     __tablename__ = 'events'
 
     event_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    event_type = db.Column(db.String,nullable=False)
-    event_name = db.Column(db.String, nullable=False)
+    event_type = db.Column(db.String(50),nullable=False)
+    event_name = db.Column(db.String(100), nullable=False)
     event_date = db.Column(db.DateTime, nullable=False)
     event_start_time = db.Column(db.DateTime, nullable=False)
     event_description = db.Column(db.Text, nullable=False)
     event_photo = db.Column(db.String, nullable=False)
 
     # users_events = a list of User_Event objects
+
 
     def __init__(self, event_type, event_name, event_date, event_start_time, event_description, event_photo):
         self.event_type = event_type
