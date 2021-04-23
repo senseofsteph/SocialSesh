@@ -42,10 +42,8 @@ def create_user_profile():
     email = request.form.get('email')
     password = request.form.get('password')
     phone = request.form.get('phone')
-
+    
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
-
-    user.set_password(password)
 
     if user:
         crud.create_user(firstname,lastname,email,password,phone)
@@ -99,6 +97,26 @@ def calendar():
     return render_template("calendar.html")
 
 
+@app.route("/api/calendar", methods=["POST"])
+def show_events_on_calendar():
+    """Display all scheduled events on full calendar"""
+
+    # selected_event_type = request.form.get('types')
+
+    events = crud.get_event_by_id(event_id)
+    
+    calendar_list = []
+
+    for event in events:
+        calendar_list.append({
+            "title": event.event_name,
+            "start": event.event_date,
+            "end": event.event_start_time,
+            })
+
+    return jsonify(calendar_list)
+
+
 @app.route("/category")
 def select_event_category():
     """Display form for user to select event category"""
@@ -114,10 +132,10 @@ def get_event_by_category():
 
     events = crud.get_event_by_type(selected_event_type.title())
     
-    test_list = []
+    category_list = []
 
     for event in events:
-        test_list.append({
+        category_list.append({
             'event_id': event.event_id,
             'event_name': event.event_name,
             "event_date": event.event_date,
@@ -126,7 +144,7 @@ def get_event_by_category():
             "event_photo": event.event_photo
             })
 
-    return jsonify(test_list)
+    return jsonify(category_list)
       
 
 @app.route("/events")

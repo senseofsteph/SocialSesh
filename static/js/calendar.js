@@ -5,9 +5,21 @@
 // calendar.html
 
 document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
+  const calendarEl = document.getElementById('calendar');
+// make ajax request to pass to events key of unamed obj
+// save variable (eventsFromDatabase)
 
-  var calendar = new FullCalendar.Calendar(calendarEl, {
+$.post("/api/calendar", Data, (res) => {
+  const eventsFromDatabase = [];
+  // console.log("**************")
+  // console.log(res);
+  for (const event of res) { 
+      eventsFromDatabase.push(event.event_name, event.event_date, event.event_start_time);
+  } 
+  // $("#calendar").html(eventsFromDatabase.join(" "))
+});
+
+  const calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     initialDate: '2021-04-07',
     headerToolbar: {
@@ -24,16 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         title: 'Long Event',
         start: '2021-04-07',
         end: '2021-04-10'
-      },
-      {
-        groupId: '999',
-        title: 'Repeating Event',
-        start: '2021-04-09T16:00:00'
-      },
-      {
-        groupId: '999',
-        title: 'Repeating Event',
-        start: '2021-04-16T16:00:00'
       },
       {
         title: 'Conference',

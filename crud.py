@@ -7,12 +7,15 @@ from datetime import datetime, date, time
 
 def create_user(fname, lname, email, password, phone):
     """Create and return a new user."""
+
     
     # Check if the email is already being used
     user = User.query.filter(User.email == email).first()
 
     # if not, add the user
     if user == None:
+
+        user.set_password(password)
 
         db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
 
