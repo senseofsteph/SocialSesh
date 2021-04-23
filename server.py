@@ -110,29 +110,12 @@ def get_event_by_category():
 
     selected_event_type = request.form.get('types')
 
-    # return redirect("/category/" + selected_event_type)
-
     events = crud.get_event_by_type(selected_event_type.title())
     
-    print(events)
-    
-    # template = ""
-
-    # if selected_event_type == "activity":
-    #     template = "type_activity.html"
-    # elif selected_event_type == "celebration":
-    #     template = "type_celebration.html"
-    # elif selected_event_type == "educational":
-    #     template = "type_educational.html"
-    # elif selected_event_type == "entertainment":
-    #     template = "type_entertainment.html"
-
     test_list = []
 
     for event in events:
-        test_list.append(
-
-            {
+        test_list.append({
             'event_id': event.event_id,
             'event_name': event.event_name,
             "event_date": event.event_date,
@@ -141,49 +124,8 @@ def get_event_by_category():
             "event_photo": event.event_photo
             })
 
-    # test_dict = {}
-    # for event in events:
-    #     test_dict[event.event_name] = {
-    #         'event_name': event.event_name,
-    #         "event_date": event.event_date,
-    #         "event_start_time": event.event_start_time,
-    #         "event_description": event.event_description,
-    #         "event_photo": event.event_photo
-    #     }
- 
     return jsonify(test_list)
-    # return test_dict
-    # return render_template(template, events=events)
-    # return (events, ) python doesn't like the tuple return 
-  
-
-# @app.route("/category/<event_type>")
-# def show_categories(event_type):
-#     """Display all events under selected category"""
-
-#     template = ""
-
-#     events = crud.get_event_by_type(event_type.title())
-
-#     if event_type == "activity":
-#         template = "type_activity.html"
-#     elif event_type == "celebration":
-#         template = "type_celebration.html"
-#     elif event_type == "educational":
-#         template = "type_educational.html"
-#     elif event_type == "entertainment":
-#         template = "type_entertainment.html"
-    
-#     return render_template(template, events=events)
-
-
-# @app.route("/category/<event_type>", methods=["GET"])
-# def show_event_in_category(event_id):
-
-#     event = crud.get_event_by_id(event_id)
-
-#     return redirect("/events/<event_id>", event=event)   
-
+      
 
 @app.route("/events")
 def all_events():
