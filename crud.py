@@ -5,7 +5,7 @@ from model import db, User, Event, User_Event, connect_to_db
 from datetime import datetime, date, time
 
 
-#**** -------- User queries -------- ****#
+#**** --------- User queries -------- ****#
 
 #**** ------------------------------- ****#
 
@@ -13,14 +13,15 @@ from datetime import datetime, date, time
 def create_user(fname, lname, email, password, phone):
     """Create and return a new user."""
 
-    
     # Check if the email is already being used
     user = User.query.filter(User.email == email).first()
 
     # if not, add the user
     if user == None:
 
-        db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
+        db.session.add(User(fname=fname, lname=lname,
+                            email=email, password=password, 
+                            phone=phone))
 
         user.set_password(password)
 
@@ -51,13 +52,12 @@ def get_user_by_email(email):
 def is_email_and_password_valid(email, password):
     """Return True if email and password are valid."""
 
-    # check if user email and password in database
     user = User.query.filter(
         User.email == email
     ).filter(
         User.password == password
     ).first()
-    # if email and password found, return the user
+   
     return user is not None
 
 
@@ -69,10 +69,19 @@ def is_email_and_password_valid(email, password):
 def create_event(event_type, event_name, event_start_date, event_end_date, event_description, event_photo):
     """Create and return a new event."""
 
-    event = Event.query.filter(Event.event_type == event_type, Event.event_name == event_name, Event.event_start_date == event_start_date, Event.event_end_date == event_end_date, Event.event_description == event_description, Event.event_photo == event_photo).first()
+    event = Event.query.filter(Event.event_type == event_type,
+                               Event.event_name == event_name, 
+                               Event.event_start_date == event_start_date, 
+                               Event.event_end_date == event_end_date, 
+                               Event.event_description == event_description, 
+                               Event.event_photo == event_photo).first()
 
     if event == None:
-        db.session.add(Event(event_type=event_type, event_name=event_name, event_start_date=event_start_date, event_end_date=event_end_date, event_description=event_description, event_photo=event_photo))
+        db.session.add(Event(event_type=event_type, event_name=event_name, 
+                             event_start_date=event_start_date, 
+                             event_end_date=event_end_date,
+                             event_description=event_description, 
+                             event_photo=event_photo))
         db.session.commit()
         return True
     else:
