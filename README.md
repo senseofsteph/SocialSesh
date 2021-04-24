@@ -1,17 +1,19 @@
-## Software Engineering Project Proposal
+## SocialSesh - Software Engineering Project Proposal
 
 ### Overview
 
-A web app where users can connect, create, and contribute, through virtual events
+A web app where users can connect, create, and contribute, through online virtual events
 
 ### Technologies required (besides typical Hackbright tech stack)
 
 Twilio SMS API: https://www.twilio.com/docs/sms/api
 
+FullCalendar: https://fullcalendar.io
+
 ### Data
 
 - User first name, last name, email, password, and phone number
-- Event name, type, date, start time, description, and photo
+- Event name, type, start date, end date, description, and photo
 
 ### Roadmap
 
@@ -24,12 +26,5 @@ Twilio SMS API: https://www.twilio.com/docs/sms/api
 #### 2.0
 
 - User can search for a virtual event under a particular category
-- User can customize their profile with created events and interests
+- User can search for all virtual events on calendar
 
-#### 3.0
-
-- Slicker UI with use of front-end technologies
-
-### Notes
-
-- More to come!

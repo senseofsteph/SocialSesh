@@ -17,6 +17,8 @@ def create_user(fname, lname, email, password, phone):
 
         db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
 
+        user.set_password(password)
+
         db.session.commit()
         return True
     else:
