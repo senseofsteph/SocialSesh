@@ -5,6 +5,11 @@ from model import db, User, Event, User_Event, connect_to_db
 from datetime import datetime, date, time
 
 
+#**** -------- User queries -------- ****#
+
+#**** ------------------------------- ****#
+
+
 def create_user(fname, lname, email, password, phone):
     """Create and return a new user."""
 
@@ -56,6 +61,11 @@ def is_email_and_password_valid(email, password):
     return user is not None
 
 
+#**** -------- Event queries -------- ****#
+
+#**** ------------------------------- ****#
+
+
 def create_event(event_type, event_name, event_start_date, event_end_date, event_description, event_photo):
     """Create and return a new event."""
 
@@ -93,8 +103,9 @@ def get_event_by_user(users_events_id):
     return User_Event.query.get(users_events_id)
 
 
+#**** ------------------------------- ****#
 
-
+#**** ------------------------------- ****#
 
 
 if __name__ == '__main__':

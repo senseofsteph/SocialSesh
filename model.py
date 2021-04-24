@@ -8,6 +8,11 @@ from werkzeug.security import generate_password_hash, check_password_hash
 db = SQLAlchemy()
 
 
+#**** -------- User Models --------- ****#
+
+#**** ------------------------------- ****#
+
+
 class User(db.Model):
     """A user."""
 
@@ -48,6 +53,11 @@ class User(db.Model):
         return f'<User user_id={self.user_id} fname={self.fname} lname={self.lname} email={self.email} phone={self.phone}>'
 
 
+#**** -------- Event Model --------- ****#
+
+#**** ------------------------------- ****#
+
+
 class Event(db.Model):
     """An event."""
 
@@ -78,6 +88,11 @@ class Event(db.Model):
         return f'<Event event_id={self.event_id} event_type={self.event_type} event_name={self.event_name}>'
 
 
+#**** ------ User_Event Model ------- ****#
+
+#**** ------------------------------- ****#
+
+
 class User_Event(db.Model):
     """A user's list of events."""
 
@@ -105,6 +120,11 @@ class User_Event(db.Model):
         return f'<User_Event users_events_id={self.user_events_id} user_id={self.user_id} event_id={self.event_id}>'
 
 
+#**** ----- Connect to Database ----- ****#
+
+#**** ------------------------------- ****#
+
+
 def connect_to_db(flask_app, db_uri='postgresql:///socialsesh', echo=True):
     flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
     flask_app.config['SQLALCHEMY_ECHO'] = False
@@ -116,6 +136,9 @@ def connect_to_db(flask_app, db_uri='postgresql:///socialsesh', echo=True):
     print('Connected to the db!')
 
 
+#**** ------------------------------- ****#
+
+#**** ------------------------------- ****#
 
 
 if __name__ == '__main__':

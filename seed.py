@@ -17,7 +17,11 @@ model.connect_to_db(server.app)
 model.db.create_all()
 
 
-# Load users data from JSON file
+#**** --------- Users Data ---------- ****#
+
+#**** ------------------------------- ****#
+
+
 with open('data/users.json') as u:
   users_data = json.loads(u.read())
 
@@ -31,9 +35,13 @@ with open('data/users.json') as u:
     phone = user['phone']
 
     crud.create_user(fname, lname, email, password, phone)
-    
 
-# Load events data from JSON file
+
+#**** --------- Events Data --------- ****#
+
+#**** ------------------------------- ****#
+
+
 with open('data/events.json') as e:
   events_data = json.loads(e.read())
 

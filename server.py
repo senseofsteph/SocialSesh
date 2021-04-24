@@ -26,6 +26,11 @@ def show_homepage():
     return render_template("index.html")
 
 
+#**** ---- Create Profile Routes ---- ****#
+
+#**** ------------------------------- ****#
+
+
 @app.route("/form")
 def show_create_profile_form():
     """Display form to create a new profile account."""
@@ -55,6 +60,11 @@ def create_user_profile():
     return redirect("/login")
 
 
+#**** -------- Log-in Routes -------- ****#
+
+#**** ------------------------------- ****#
+
+
 @app.route("/login")
 def show_login():
     """Display form for user to login to."""
@@ -81,6 +91,11 @@ def login_user():
         return redirect("/login")
 
 
+#**** ---- Profile Account Route ---- ****#
+
+#**** ------------------------------- ****#
+
+
 @app.route("/profile")
 def show_profile():
     """Display user profile page."""
@@ -90,6 +105,11 @@ def show_profile():
     return render_template("profile.html")
 
 
+#**** -- Events on Calendar Routes -- ****#
+
+#**** ------------------------------- ****#
+
+
 @app.route("/calendar")
 def calendar():
     """Display calendar of scheduled virtual events"""
@@ -97,23 +117,15 @@ def calendar():
     return render_template("calendar.html")
 
 
-
-
 @app.route("/api/calendar")
 def show_events_on_calendar():
     """Display all scheduled events on full calendar"""
 
-    # selected_event_type = request.form.get('types')
-
-   # crud function by date or all the event
-   # user input - what month? upcoming events   
-
     events = crud.get_events()
     
-    # intial date - get the accurate date
     calendar = {
         'initialView': 'dayGridMonth',
-        'initialDate': '2021-04-07', 
+        'initialDate': '2021-05-01', 
         'headerToolbar': {
                 'left': 'prev,next today',
                 'center': 'title',
@@ -130,6 +142,11 @@ def show_events_on_calendar():
             })
 
     return jsonify(calendar)     
+
+
+#**** -- Events by Category Routes -- ****#
+
+#**** ------------------------------- ****#
 
 
 @app.route("/category")
@@ -160,7 +177,12 @@ def get_event_by_category():
             })
 
     return jsonify(category_list)
-      
+
+
+#**** ------ All Events Routes ------ ****#
+
+#**** ------------------------------- ****#
+
 
 @app.route("/events")
 def all_events():
@@ -185,6 +207,11 @@ def get_registration():
     """Register for event."""
 
     return redirect("/register")
+
+
+#**** -- Event Registration Routes -- ****#
+
+#**** ------------------------------- ****#
 
 
 @app.route("/register")
@@ -237,6 +264,9 @@ def logout():
     return redirect("/")
 
 
+#**** ------------------------------- ****#
+
+#**** ------------------------------- ****#
 
 
 if __name__ == '__main__':
