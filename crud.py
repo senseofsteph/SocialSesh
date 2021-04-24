@@ -15,8 +15,6 @@ def create_user(fname, lname, email, password, phone):
     # if not, add the user
     if user == None:
 
-        user.set_password(password)
-
         db.session.add(User(fname=fname, lname=lname, email=email, password=password, phone=phone))
 
         db.session.commit()
@@ -56,13 +54,13 @@ def is_email_and_password_valid(email, password):
     return user is not None
 
 
-def create_event(event_type, event_name, event_date, event_start_time, event_description, event_photo):
+def create_event(event_type, event_name, event_start_date, event_end_date, event_description, event_photo):
     """Create and return a new event."""
 
-    event = Event.query.filter(Event.event_type == event_type, Event.event_name == event_name, Event.event_date == event_date, Event.event_start_time == event_start_time, Event.event_description == event_description, Event.event_photo == event_photo).first()
+    event = Event.query.filter(Event.event_type == event_type, Event.event_name == event_name, Event.event_start_date == event_start_date, Event.event_end_date == event_end_date, Event.event_description == event_description, Event.event_photo == event_photo).first()
 
     if event == None:
-        db.session.add(Event(event_type=event_type, event_name=event_name, event_date=event_date, event_start_time=event_start_time, event_description=event_description, event_photo=event_photo))
+        db.session.add(Event(event_type=event_type, event_name=event_name, event_start_date=event_start_date, event_end_date=event_end_date, event_description=event_description, event_photo=event_photo))
         db.session.commit()
         return True
     else:

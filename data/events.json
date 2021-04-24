@@ -2,120 +2,120 @@
   {
     "event_type": "Entertainment",
     "event_name": "Live Concert",
-    "event_date": "2021-05-08",
-    "event_start_time": "7:00",
+    "event_start_date": "2021-05-08 19:00",
+    "event_end_date": "2021-05-08 21:00",
     "event_description": "Full access to The Weeknd on tour-After Hours World Tour",
     "event_photo": "/static/img/concert-768722_1280.jpg"
   },
   {
     "event_type": "Entertainment",
     "event_name": "Movie Night",
-    "event_date": "2021-05-07",
-    "event_start_time": "8:00",
+    "event_start_date": "2021-05-07 20:00",
+    "event_end_date": "2021-05-07 22:00",
     "event_description": "Grab your popcorn and candy, we're streaming a romantic comedy. Tune in to find out",
     "event_photo": "/static/img/admission-2974645_1280.jpg"
   },
   {
     "event_type": "Activity",
     "event_name": "Mindful Yoga",
-    "event_date": "2021-05-03",
-    "event_start_time": "10:00",
+    "event_start_date": "2021-05-03 10:00",
+    "event_end_date": "2021-05-03 12:00",
     "event_description": "Join us for a relaxing, healthy workout session",
     "event_photo": "/static/img/yoga-2116093_1280.jpg"
   },
   {
     "event_type": "Celebration",
     "event_name": "Wedding Bells",
-    "event_date": "2021-05-15",
-    "event_start_time": "4:00",
+    "event_start_date": "2021-05-15 16:00",
+    "event_end_date": "2021-05-15 21:00",
     "event_description": "Virtual wedding of Alex and Amber Jenkins. Til' death do you part!",
     "event_photo": "/static/img/heart-529607_1280.jpg"
   },
   {
     "event_type": "Educational",
     "event_name": "Learn How to Code in Python",
-    "event_date": "2021-05-11",
-    "event_start_time": "1:00",
+    "event_start_date": "2021-05-11 13:00",
+    "event_end_date": "2021-05-11 14:00",
     "event_description": "An intro to coding in the computer programming language Python",
     "event_photo": "/static/img/code-1084923_1280.png"
   },
   {
     "event_type": "Activity",
     "event_name": "Cooking Class",
-    "event_date": "2021-05-05",
-    "event_start_time": "4:00",
+    "event_start_date": "2021-05-05 17:00",
+    "event_end_date": "2021-05-05 19:00",
     "event_description": "Join us as we make a homemade pizza for dinner. Yum!",
     "event_photo": "/static/img/pizza-2068272_1280.jpg"
   },
   {
     "event_type": "Activity",
     "event_name": "Speed Dating",
-    "event_date": "2021-05-14",
-    "event_start_time": "7:00",
+    "event_start_date": "2021-05-14 19:00",
+    "event_end_date": "2021-05-14 23:00",
     "event_description": "In the climate we're in, it's hard to meet in person. Why not give speed dating a shot? Meet with others truly looking for love",
     "event_photo": "/static/img/couple-1030744_1280.jpg"
   },
   {
     "event_type": "Educational",
     "event_name": "Learn How to Set Up A Financial Budget",
-    "event_date": "2021-05-18",
-    "event_start_time": "7:00",
+    "event_start_date": "2021-05-18 11:00",
+    "event_end_date": "2021-05-18 12:00",
     "event_description": "Racking up your credit cards and don't know how to make a monthly budget? Join us as we teach you how to get a grasp of your spending",
     "event_photo": "/static/img/puzzle-2500328_1280.jpg"
   },
   {
     "event_type": "Celebration",
     "event_name": "Hackbright Graduation",
-    "event_date": "2021-05-13",
-    "event_start_time": "6:00",
+    "event_start_date": "2021-05-13 18:00",
+    "event_end_date": "2021-05-13 20:00",
     "event_description": "Congratulations to cohort 34! Join us as we celebrate the acheivements of our future software engineers",
     "event_photo": "/static/img/dawn-1840298_1280.jpg"
   },
   {
     "event_type": "Activity",
     "event_name": "An Intro to Piano Playing",
-    "event_date": "2021-05-17",
-    "event_start_time": "6:00",
+    "event_start_date": "2021-05-17 18:00",
+    "event_end_date": "2021-05-17 19:30",
     "event_description": "A beginners intro to piano lesson. We will go over Clocks by Coldplay sheet music",
     "event_photo": "/static/img/piano-3957650_1280.jpg"
   },
   {
     "event_type": "Educational",
     "event_name": "Bible Study",
-    "event_date": "2021-05-26",
-    "event_start_time": "7:00",
+    "event_start_date": "2021-05-26 19:00",
+    "event_end_date": "2021-05-26 20:30",
     "event_description": "The Family Bible Study",
     "event_photo": "/static/img/child-945422_1280.jpg"
   },
   {
     "event_type": "Educational",
     "event_name": "Bible Study",
-    "event_date": "2021-05-26",
-    "event_start_time": "7:00",
+    "event_start_date": "2021-05-26 19:00",
+    "event_end_date": "2021-05-26 20:30",
     "event_description": "The Family Bible Study",
     "event_photo": "/static/img/child-945422_1280.jpg"
   },
   {
     "event_type": "Activity",
     "event_name": "Knit Knacks",
-    "event_date": "2021-05-30",
-    "event_start_time": "6:00",
+    "event_start_date": "2021-05-30 15:00",
+    "event_end_date": "2021-05-30 17:00",
     "event_description": "An Intro to crochet knitting. Join us as we make a scarf",
     "event_photo": "/static/img/yarn-2565067_1280.jpg"
   },
   {
     "event_type": "Celebration",
     "event_name": "Baby Shower",
-    "event_date": "2021-05-23",
-    "event_start_time": "2:00",
+    "event_start_date": "2021-05-23 14:00",
+    "event_end_date": "2021-05-23 16:00",
     "event_description": "Pretty in pink. Welcoming our baby girl",
     "event_photo": "/static/img/booties-2047596_1280.jpg"
   },
   {
     "event_type": "Educational",
     "event_name": "Crypto Currency",
-    "event_date": "2021-05-03",
-    "event_start_time": "1:00",
+    "event_start_date": "2021-05-03 13:00",
+    "event_end_date": "2021-05-03 14:00",
     "event_description": "Discussion on Bitcoin, Ethereum, and other digital assests",
     "event_photo": "/static/img/business-3159208_1280.jpg"
   }

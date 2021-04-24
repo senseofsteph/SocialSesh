@@ -56,19 +56,19 @@ class Event(db.Model):
     event_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     event_type = db.Column(db.String(50),nullable=False)
     event_name = db.Column(db.String(100), nullable=False)
-    event_date = db.Column(db.DateTime, nullable=False)
-    event_start_time = db.Column(db.DateTime, nullable=False)
+    event_start_date = db.Column(db.DateTime, nullable=False)
+    event_end_date = db.Column(db.DateTime, nullable=False)
     event_description = db.Column(db.Text, nullable=False)
     event_photo = db.Column(db.String, nullable=False)
 
     # users_events = a list of User_Event objects
 
 
-    def __init__(self, event_type, event_name, event_date, event_start_time, event_description, event_photo):
+    def __init__(self, event_type, event_name, event_start_date, event_end_date, event_description, event_photo):
         self.event_type = event_type
         self.event_name = event_name
-        self.event_date = event_date
-        self.event_start_time = event_start_time
+        self.event_start_date = event_start_date
+        self.event_end_date = event_end_date
         self.event_description = event_description
         self.event_photo = event_photo
 

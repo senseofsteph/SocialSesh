@@ -97,24 +97,39 @@ def calendar():
     return render_template("calendar.html")
 
 
-@app.route("/api/calendar", methods=["POST"])
+
+
+@app.route("/api/calendar")
 def show_events_on_calendar():
     """Display all scheduled events on full calendar"""
 
     # selected_event_type = request.form.get('types')
 
-    events = crud.get_event_by_id(event_id)
+   # crud function by date or all the event
+   # user input - what month? upcoming events   
+
+    events = crud.get_events()
     
-    calendar_list = []
+    # intial date - get the accurate date
+    calendar = {
+        'initialView': 'dayGridMonth',
+        'initialDate': '2021-04-07', 
+        'headerToolbar': {
+                'left': 'prev,next today',
+                'center': 'title',
+                'right': 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+        'events':[]
+    }
 
     for event in events:
-        calendar_list.append({
+        calendar['events'].append({
             "title": event.event_name,
-            "start": event.event_date,
-            "end": event.event_start_time,
+            "start": event.event_start_date.isoformat(),
+            "end": event.event_end_date.isoformat()
             })
 
-    return jsonify(calendar_list)
+    return jsonify(calendar)     
 
 
 @app.route("/category")
@@ -138,8 +153,8 @@ def get_event_by_category():
         category_list.append({
             'event_id': event.event_id,
             'event_name': event.event_name,
-            "event_date": event.event_date,
-            "event_start_time": event.event_start_time,
+            "event_start_date": event.event_start_date,
+            "event_end_date": event.event_end_date,
             "event_description": event.event_description,
             "event_photo": event.event_photo
             })
