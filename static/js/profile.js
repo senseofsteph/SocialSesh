@@ -15,8 +15,7 @@ $("#category").on("submit", (evt) => {
 
     $.post("/api/category", formData, (res) => {
         const eventCategories = [];
-        // console.log("**************")
-        // console.log(res);
+        
         for (const event of res) { 
             eventCategories.push("<li><a href=/events/"+ event.event_id +">" + event.event_name +"</a></li>");
         } 

@@ -17,7 +17,7 @@ client = Client(account_sid, auth_token)
 
 def send_sms_to(phone ='+12099147702'):
   
-  # confirm if input is a qualified number
+  # confirms input is a qualified number
   number = re.search(r'^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$', phone)
   print(type(number.group(0)))
 

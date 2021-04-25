@@ -67,7 +67,7 @@ def create_user_profile():
 
 @app.route("/login")
 def show_login():
-    """Display form for user to login to."""
+    """Display form for user to login."""
  
     return render_template("login.html")
 
@@ -76,13 +76,11 @@ def show_login():
 def login_user():
     """Log user into profile account."""
 
-    # TODO: add a name variable to great user on profile
     email = request.form.get('email')
     password = request.form.get('password')
 
-    # if login credentials valid, log in user by updating 
+   
     if crud.is_email_and_password_valid(email, password):
-        # session['user_id'] and setting it to email
         session['user_id'] = email
         flash("You're logged in.")
         return redirect("/profile")
@@ -99,8 +97,6 @@ def login_user():
 @app.route("/profile")
 def show_profile():
     """Display user profile page."""
-
-     # TODO: find a way to get user name so hello is personalized
 
     return render_template("profile.html")
 
@@ -124,14 +120,14 @@ def show_events_on_calendar():
     events = crud.get_events()
     
     calendar = {
-        'initialView': 'dayGridMonth',
-        'initialDate': '2021-05-01', 
-        'headerToolbar': {
-                'left': 'prev,next today',
-                'center': 'title',
-                'right': 'dayGridMonth,timeGridWeek,timeGridDay'
+        "initialView": "dayGridMonth",
+        "initialDate": "2021-05-01", 
+        "headerToolbar": {
+                "left": "prev,next today",
+                "center": "title",
+                "right": "dayGridMonth,timeGridWeek,timeGridDay"
             },
-        'events':[]
+        "events":[]
     }
 
     for event in events:
@@ -168,10 +164,10 @@ def get_event_by_category():
 
     for event in events:
         category_list.append({
-            'event_id': event.event_id,
-            'event_name': event.event_name,
-            "event_start_date": event.event_start_date,
-            "event_end_date": event.event_end_date,
+            "event_id": event.event_id,
+            "event_name": event.event_name,
+            "event_start_date": event.event_start_date.isoformat(),
+            "event_end_date": event.event_end_date.isoformat(),
             "event_description": event.event_description,
             "event_photo": event.event_photo
             })
