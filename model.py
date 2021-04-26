@@ -22,7 +22,7 @@ class User(db.Model):
     fname = db.Column(db.String(100), nullable=False)
     lname = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(100), nullable=False, unique=True, index=True)
-    password = db.Column(db.String(100), nullable=False)
+    # password = db.Column(db.String(100), nullable=False)
     password_hash = db.Column(db.String(100))
     phone = db.Column(db.String, nullable=False)
 
@@ -44,7 +44,7 @@ class User(db.Model):
         self.fname = fname
         self.lname = lname
         self.email = email
-        self.password = password
+        self.set_password(password)
         self.phone = str(phone)
 
     def __repr__(self): 

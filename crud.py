@@ -19,11 +19,12 @@ def create_user(fname, lname, email, password, phone):
     # if not, add the user
     if user == None:
 
-        db.session.add(User(fname=fname, lname=lname,
-                            email=email, password=password, 
-                            phone=phone))
+        user = User(fname=fname, lname=lname,
+                   email=email, password=password,
+                   phone=phone)
+        db.session.add(user)
 
-        user.set_password(password)
+        # user.set_password(password)
 
         db.session.commit()
         return True
@@ -58,7 +59,11 @@ def is_email_and_password_valid(email, password):
         User.password == password
     ).first()
    
+    user.check_password(password)
+
     return user is not None
+
+   
 
 
 #**** -------- Event queries -------- ****#

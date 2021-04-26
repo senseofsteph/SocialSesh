@@ -31,7 +31,7 @@ with open('data/users.json') as u:
     lname = user['lname']
     email = user['email']
     password = user['password']
-    password_hash = user['password_hash']
+    # password_hash = user['password_hash']
     phone = user['phone']
 
     crud.create_user(fname, lname, email, password, phone)
