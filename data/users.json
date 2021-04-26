@@ -4,7 +4,6 @@
     "lname": "Smith",
     "email": "awalker@test.com",
     "password": "test123",
-    "password_hash": "test123",
     "phone": "+12025550135"
   },
   {
@@ -12,7 +11,6 @@
     "lname": "Williams",
     "email": "nwilliams@test.com",
     "password": "test456",
-    "password_hash": "test456",
     "phone": "+12025550196"
   },
   {
@@ -20,7 +18,6 @@
     "lname": "Johnson",
     "email": "cjohnson@test.com",
     "password": "test789",
-    "password_hash": "test789",
     "phone": "+12025550136"
   },
   {
@@ -28,7 +25,6 @@
     "lname": "George",
     "email": "ageorge@test.com",
     "password": "test110",
-    "password_hash": "test110",
     "phone": "+12025550166"
   },
   {
@@ -36,7 +32,6 @@
     "lname": "Daniels",
     "email": "sdaniels@test.com",
     "password": "test111",
-    "password_hash": "test111",
     "phone": "+12025550167"
   },
   {
@@ -44,7 +39,6 @@
     "lname": "Lopez",
     "email": "elopez@test.com",
     "password": "test112",
-    "password_hash": "test112",
     "phone": "+12025550168"
   },
   {
@@ -52,7 +46,6 @@
     "lname": "Bonds",
     "email": "bnonds@test.com",
     "password": "test113",
-    "password_hash": "test113",
     "phone": "+12025550169"
   },
   {
@@ -60,7 +53,6 @@
     "lname": "Reynolds",
     "email": "areynolds@test.com",
     "password": "test114",
-    "password_hash": "test114",
     "phone": "+12025550171"
   },
   {
@@ -68,7 +60,6 @@
     "lname": "Walters",
     "email": "vwalters@test.com",
     "password": "test115",
-    "password_hash": "test115",
     "phone": "+12025550172"
   },
   {
@@ -76,7 +67,6 @@
     "lname": "Thomas",
     "email": "nthomas@test.com",
     "password": "test116",
-    "password_hash": "test116",
     "phone": "+12025550173"
   }
 ]
