@@ -15,17 +15,17 @@ client = Client(account_sid, auth_token)
 #**** ------------------------------- ****#
 
 
-def send_sms_to(phone ='+12099147702'):
+def send_sms_to(phone):
   
   # confirms input is a qualified number
+  # phone number must start with a +1
   number = re.search(r'^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$', phone)
   print(type(number.group(0)))
-
 
   if phone != None:
     message = client.messages \
       .create(
-        body ='Thank you for registering your social session. Be sure to save the date and time!',
+        body ='Thank you for registering your virtual social session. Be sure to save the date and time!',
         from_ ='+16282004021',
         to = phone 
       )
