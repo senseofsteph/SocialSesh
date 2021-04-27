@@ -196,10 +196,14 @@ def show_event(event_id):
     event = crud.get_event_by_id(event_id)
     
     # TODO: create crud function to get start_date and end_date of event
-    # start_date = '%Y-%m-%d %I:%M'
-    # end_date = '%Y-%m-%d %I:%M'
 
-    return render_template("event_details.html", event=event)
+    # event_start_date = event.event_start_date.strftime('%Y-%m-%d %I:%M %p')
+    # event_end_date = event.event_end_date.strftime('%Y-%m-%d %I:%M %p')
+
+    event_start_date = event.event_start_date.strftime('%a %b-%d-%Y %I:%M %p')
+    event_end_date = event.event_end_date.strftime('%a %b-%d-%Y %I:%M %p')
+
+    return render_template("event_details.html", event=event, event_start_date=event_start_date, event_end_date=event_end_date)
 
 
 @app.route("/events/<event_type>", methods=["GET"])
