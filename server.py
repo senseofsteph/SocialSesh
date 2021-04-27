@@ -195,6 +195,10 @@ def show_event(event_id):
 
     event = crud.get_event_by_id(event_id)
     
+    # TODO: create crud function to get start_date and end_date of event
+    # start_date = '%Y-%m-%d %I:%M'
+    # end_date = '%Y-%m-%d %I:%M'
+
     return render_template("event_details.html", event=event)
 
 
