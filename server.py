@@ -194,7 +194,7 @@ def show_event(event_id):
     """Show details on a particular event."""
 
     event = crud.get_event_by_id(event_id)
-
+    
     return render_template("event_details.html", event=event)
 
 
