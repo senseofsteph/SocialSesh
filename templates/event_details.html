@@ -1,25 +1,20 @@
 {% extends 'base.html' %}
 
-{% block title %}{% endblock %}
+{% block title %} SocialSesh - Event Details {% endblock %}
 
 {% block body %}
 
 <h3>{{ event.event_name }}</h3>
-
   <p>
   {{ event.event_description }}
   </p>
-  
   <p>
    Starts: {{ event_start_date }} 
   </p>
-
   <p>
     Ends: {{ event_end_date }} 
   </p>
-  
   <a href="/register">Register</a>
-
   <p>
     <img src="{{ event.event_photo }}">
   </p>

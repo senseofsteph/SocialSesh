@@ -17,8 +17,7 @@ client = Client(account_sid, auth_token)
 
 def send_sms_to(phone):
   
-  # confirms input is a qualified number
-  # phone number must start with a +1
+  # Regex for phone number
   number = re.search(r'^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$', phone)
   print(type(number.group(0)))
 

@@ -21,7 +21,7 @@ app.jinja_env.undefined = StrictUndefined
 
 @app.route("/")
 def show_homepage():
-    """Display homepage with one button to create profile and another button to log in."""
+    """Display homepage."""
 
     return render_template("index.html")
 
