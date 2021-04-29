@@ -9,23 +9,23 @@
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6">
+  <div class="row my-homepage-row justify-content-center align-items-center">
+    <div class="col">
       <form action="/form">
           <p>
             <button type="submit" class="btn btn-outline-info btn-sm" id="create">Create profile</button>
           </p>
       </form> 
     </div>
+    <div class="col">
+      <form action="/login">
+        <p>
+          <button type="submit" class="btn btn-outline-info btn-sm" id="login">Log in</button>
+        </p>
+      </form> 
+    </div>
   </div>
 </div>
 
-<div class="container">
-  <form action="/login">
-    <p>
-      <button type="submit" class="btn btn-outline-info btn-sm" id="login">Log in</button>
-    </p>
-  </form> 
-</div>
 
 {% endblock %} 
