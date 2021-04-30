@@ -1,7 +1,38 @@
-/* Styling forms and server routes */
+/* CSS for homepage route */
 
-/* .background_img {   
-  background: url("static/img/background/meeting-5804134_1280.png");   
+.background_img {   
+  /* background: url("static/img/background/meeting-5804134_1280.png");    */
   background-repeat: no-repeat;   
-  background-size: 300px 100px; } */
+  width: 100%;
+  height: 65vh; 
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
 
+.background_img img {
+  display: block;
+  width: 100%;
+  margin: -15% 0;
+}
+
+body {
+  background-color: white;
+}
+
+h3 {
+  color: black;
+  /* font-family: ; */
+}
+
+h4 {
+  color: black;
+}
+
+h5 {
+  color: black;
+}
+
+p {
+  color: black;
+}
