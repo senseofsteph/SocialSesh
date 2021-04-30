@@ -4,21 +4,31 @@
 
 {% block body %}
 
-<div class="container header-img">
-  <img img="header-img-base" src="static/img/background/meeting-5804134_1280.png" alt="virtual_meeting">
-</div>
+<!-- <div class="background_img">
+    <div class="container">
+        <img img="homepage_img" src="static/img/background/meeting-5804134_1280.png" alt="virtual_meeting">
+    </div>
+</div> -->
+
+<div class="card bg-dark text-white">
+    <img class="card-img" src="static/img/background/meeting-5804134_1280.png" alt="Card image">
+    <div class="card-img-overlay">
+      <h5 class="card-title">SocialSesh</h5>
+      <p class="card-text">Connect. Create. Contribute</p>
+      <p class="card-text"><em>Through Online Virtual Social Events</em></p>
+    </div>
+  </div>
 
 <div class="container">
-    <em>Through Online Virtual Social Events</em>
     <div class="row my-homepage-row ">
-        <div class="col-2">
+        <div class="col-1">
             <form action="/form">
                 <p>
-                    <button type="submit" class="btn btn-outline-info btn-sm" id="create">Create profile</button>
+                    <button type="submit" class="btn btn-outline-info btn-sm" id="create">Sign-up</button>
                 </p>
             </form>
         </div>
-        <div class="col-2">
+        <div class="col-1">
             <form action="/login">
                 <p>
                     <button type="submit" class="btn btn-outline-info btn-sm" id="login">Log in</button>
@@ -27,5 +37,8 @@
         </div>
     </div>
 </div>
+
+
+
 
 {% endblock %}
