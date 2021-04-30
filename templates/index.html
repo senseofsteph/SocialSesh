@@ -1,28 +1,31 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
-{% block title %} SocialSesh {% endblock %} 
+{% block title %} SocialSesh {% endblock %}
 
-{% block body %} 
+{% block body %}
 
-<div class="container">
-  <em>Through Online Virtual Social Events</em>
-  <div class="row my-homepage-row ">
-    <div class="col">
-      <form action="/form">
-          <p>
-            <button type="submit" class="btn btn-outline-info btn-sm" id="create">Create profile</button>
-          </p>
-      </form> 
-    </div>
-    <div class="col">
-      <form action="/login">
-        <p>
-          <button type="submit" class="btn btn-outline-info btn-sm" id="login">Log in</button>
-        </p>
-      </form> 
-    </div>
-  </div>
+<div class="container header-img">
+  <img img="header-img-base" src="static/img/background/meeting-5804134_1280.png" alt="virtual_meeting">
 </div>
 
-{% endblock %} 
+<div class="container">
+    <em>Through Online Virtual Social Events</em>
+    <div class="row my-homepage-row ">
+        <div class="col-2">
+            <form action="/form">
+                <p>
+                    <button type="submit" class="btn btn-outline-info btn-sm" id="create">Create profile</button>
+                </p>
+            </form>
+        </div>
+        <div class="col-2">
+            <form action="/login">
+                <p>
+                    <button type="submit" class="btn btn-outline-info btn-sm" id="login">Log in</button>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
 
+{% endblock %}
