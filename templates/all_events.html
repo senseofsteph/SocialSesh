@@ -3,8 +3,11 @@
 {% block title %} SocialSesh - All Events {% endblock %}
 
 {% block body %}
-  <h5>All Virtual Events</h5>
-    <ol>
+
+<div id="all-events" class="all-events">
+  <div class="container">
+    <h1>Events</h1>
+    <ul>
       {% for event in events %}
         <li>
           <a href="/events/{{ event.event_id }}">
@@ -12,5 +15,18 @@
           </a>
         </li>
       {% endfor %}
-    </ol>
+    </ul>
+  </div>
+</div>
+
+  <!-- <h5>All Virtual Events</h5>
+    <ul>
+      {% for event in events %}
+        <li>
+          <a href="/events/{{ event.event_id }}">
+            {{ event.event_name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul> -->
 {% endblock %}

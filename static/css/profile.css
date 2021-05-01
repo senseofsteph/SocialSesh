@@ -1,0 +1,53 @@
+/* CSS for profile route */
+
+/* .profile-header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 30px;
+} */
+
+.profile-header h1 {
+
+  margin-top: 20px;
+}
+
+/* EVENT LINKS */
+
+.event-links {
+  padding: 10px 0 0px;
+  text-align: center;
+}
+
+.event-links p {
+  /* color: #737373; */
+  /* font-size: 14px; */
+  padding-bottom: 40px;
+}
+
+.event-links a {
+  background-color: #474954; 
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.event-links a:hover {
+  background-color: #4db1af;
+}
+
+.event-links a:active {
+  background-color: black;
+}
+
+.event-links a:visited {
+  background-color: #ccc;
+}
+
+/* Non-Demo Styles */
+.event-links body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

@@ -4,14 +4,31 @@
 
 {% block body %} 
 
-<h5>Welcome!</h5> 
+<div id="profile-header" class="profile-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6"></div>
+        <h1>Welcome!</h1>
+    </div>
+  </div>
+</div>
 
-<p>As you safely social distance, we have several events to keep you <strong>virtually</strong> close to others.</p> 
+<div id="event-links" class="event-links">
+  <div class="container">
+    <p>As you safely social distance, we have several events to keep you <strong>virtually</strong> close to others.</p> 
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+        <p><a href="/events">All events</a></p>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <p><a href="/category">Event category</a></p>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <p><a href="/calendar">Calendar of events</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p><a href="/events">View list of all events</a></p>
-
-<p><a href="/category">View list of events by category</a></p>
-
-<p><a href="/calendar">View calendar of all events</a></p>
 
 {% endblock %} 
