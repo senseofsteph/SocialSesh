@@ -4,49 +4,27 @@
 
 {% block body %}
 
-<div class="background_img container-fluid">
-    <div class="row">
-        <div class="col">
-        <img img="homepage_img" src="static/img/background/meeting-5804134_1280.png" alt="virtual_meeting">
-    </div>
-        <!-- <div class="col-3">
-            <form action="/form">
-                <p>
-                    <button type="submit" class="btn btn-dark btn-sm" id="create">Sign-up</button>
-                </p>
-            </form>
-            <form action="/login">
-                <p>
-                    <button type="submit" class="btn btn-dark btn-sm" id="login">Log in</button>
-                </p>
-            </form> -->
+<div id="header" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-6">
+                <h1>SocialSesh</h1>
+                <p id="landing-page-description">Through Online Virtual Events...</p>
+                <p id="landing-page-description">Lets Connect. Create. Contribute.</p>
+                <form action="/form">
+                    <p>
+                        <button type="submit" class="btn btn-dark btn-sm" id="create">Sign-up</button>
+                    </p>
+                </form>
+                <form action="/login">
+                    <p>
+                        <button type="submit" class="btn btn-dark btn-sm" id="login">Log in</button>
+                    </p>
+                </form>
+            </div>
         </div>
     </div>
 </div>
-
-<div class="homepage-buttons container">
-    <div class="row my-homepage-row ">
-        <div class="col-1">
-            <form action="/form">
-                <p>
-                    <button type="submit" class="btn btn-dark btn-sm" id="create">Sign-up</button>
-                </p>
-            </form>
-        </div>
-        <div class="col-1">
-            <form action="/login">
-                <p>
-                    <button type="submit" class="btn btn-dark btn-sm" id="login">Log in</button>
-                </p>
-            </form>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-
-</div>
-
 
 
 {% endblock %}
