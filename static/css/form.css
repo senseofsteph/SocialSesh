@@ -2,17 +2,17 @@
 
 div form {
 
-  width: 600px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
 
 }
 .signup_form {
 
-  border: solid 1px black;
+  border: solid 2px black;
 }
 
-#createprofile {
+/* #createprofile {
 
   border: solid 1px black;
-}
+} */
