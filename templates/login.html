@@ -4,9 +4,8 @@
 
 {% block body %}
 
-<h5>To view profile, please log-in:</h5>
 
-<form action="/login" method="POST">
+<!-- <form action="/login" method="POST">
   <p>
     <label for="email">Email</label>
     <input type="text" name="email" required>
@@ -18,6 +17,37 @@
   <p>
     <button type="submit">Submit</button>
   </p>
-</form>
+</form> -->
+
+<div id="form-login" class="form-login">
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <main class="form-login">
+          <form action="/login" id="login" method="POST">
+            <!-- <img class="mb-4" src="../img/background/tablet-6110623_1280.png" alt="" width="72" height="57"> -->
+            <h1 class="h3 mb-3 fw-normal">To view profile, please log-in:</h1>
+            <div class="form-floating">
+              <input type="email" class="form-control" id="floatingEmail" placeholder="jdoe@test.com">
+              <label for="floatingPassword">Email</label>
+            </div>
+            <div class="form-floating">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Password</label>
+            </div>
+        
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+            <button class="btn btn-dark btn-lg" type="submit">Log in</button>
+            <p class="mt-5 mb-3 text-muted">&copy; SocialSesh 2021</p>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
