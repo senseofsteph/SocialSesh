@@ -1,0 +1,33 @@
+/* CSS for event detail route */
+
+.event-details h1 {
+  margin-top: 20px;
+}
+
+.event-details a {
+background-color: #474954; 
+color: white;
+padding: 1em 1.5em;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+.event-details a:hover {
+  background-color: #4db1af;
+}
+
+.event-details a:active {
+  background-color: black;
+}
+
+.event-details a:visited {
+  background-color: #ccc;
+}
+
+
+/* EVENT PHOTO */
+
+.event-photo img {
+  margin: 40px;
+
+}
