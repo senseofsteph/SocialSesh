@@ -24,6 +24,11 @@ app.jinja_env.undefined = StrictUndefined
 def show_homepage():
     """Display homepage."""
 
+    # if user in session 
+        # pass in what is in session
+        # .get(key, None)
+        # pass in in the return statement
+
     return render_template("index.html")
 
 
