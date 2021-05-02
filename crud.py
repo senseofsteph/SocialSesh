@@ -53,16 +53,10 @@ def get_user_by_email(email):
 def is_email_and_password_valid(email, password):
     """Return True if email and password are valid."""
 
-    # print('email: ', email)
-    # print('password: ', password)
-
     user = User.query.filter(User.email == email).first()
-    print("----")
-    print(user)
-    print("----")
    
     if user:
-        print("reached here")
+
         return user.check_password(password)
 
     return user is not None

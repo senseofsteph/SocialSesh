@@ -84,13 +84,6 @@ def login_user():
 
     email = request.form.get('email')
     password = request.form.get('password')
-    
-    
-    #test what is returning from crud.is_email_and_password_valid(email, password)
-    
-    # print(crud.is_email_and_password_valid(email, password))
-    # print("**********")
-
    
     if crud.is_email_and_password_valid(email, password):
         session['user_id'] = email
