@@ -4,6 +4,12 @@
   margin-top: 20px;
 }
 
+.confirmation-header p {
+  /* color: #737373; */
+  /* font-size: 14px; */
+  padding-bottom: 10px;
+}
+
 .confirmation-header a {
   background-color: #474954; 
   color: white;
