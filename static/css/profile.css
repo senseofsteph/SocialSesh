@@ -1,10 +1,8 @@
 /* CSS for profile route */
 
-/* .profile-header h1 {
-  font-size: 40px;
-  font-weight: 700;
-  padding-top: 30px;
-} */
+#event-links {
+  background-color: #a9B3CE;
+}
 
 .profile-header h1 {
 
@@ -21,7 +19,7 @@
 .event-links p {
   /* color: #737373; */
   /* font-size: 14px; */
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 .event-links a {
