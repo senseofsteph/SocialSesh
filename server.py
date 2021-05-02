@@ -83,7 +83,14 @@ def login_user():
     """Log user into profile account."""
 
     email = request.form.get('email')
+    print('does this email work: ', email)
     password = request.form.get('password')
+    print('does this password work: ', password)
+
+    #test what is returning from crud.is_email_and_password_valid(email, password)
+    print("**********")
+    print(crud.is_email_and_password_valid(email, password))
+    print("**********")
 
    
     if crud.is_email_and_password_valid(email, password):
