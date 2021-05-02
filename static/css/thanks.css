@@ -1,0 +1,25 @@
+/* CSS for end of event registration route */
+
+.confirmation-header {
+  margin-top: 20px;
+}
+
+.confirmation-header a {
+  background-color: #474954; 
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.confirmation-header a:hover {
+  background-color: #4db1af;
+}
+
+.confirmation-header a:active {
+  background-color: black;
+}
+
+.confirmation-header a:visited {
+  background-color: #ccc;
+}

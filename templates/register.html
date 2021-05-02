@@ -4,7 +4,31 @@
 
 {% block body %}
 
-<h5>Registration for Event</h5>
+  <div id="form-register" class="form-register">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <main class="form-register">
+            <form action="/register" id="register" method="POST">
+              <!-- <img class="mb-4" src="../img/background/tablet-6110623_1280.png" alt="" width="72" height="57"> -->
+              <h1 class="h3 mb-3 fw-normal">To register for event, enter your phone number:</h1>
+              <div class="form-floating">
+                <input type="text" class="form-control" id="phone" placeholder="Phone">
+                <label for="phone">Phone</label>
+              </div>
+              <button class="btn btn-dark btn-lg" type="submit">Send SMS</button>
+              <p class="mt-5 mb-3 text-muted">&copy; SocialSesh 2021</p>
+            </form>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- <h5>Registration for Event</h5>
 
   <p>Please enter your phone number:</p> 
 
@@ -16,6 +40,6 @@
     <p>
       <button type="submit">Send SMS</button>
     </p>
-  </form> 
+  </form>  -->
 
 {% endblock %}

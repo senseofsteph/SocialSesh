@@ -4,7 +4,28 @@
 
 {% block body %}
 
-<h5>Thank you for registering!</h5>
+<div id="confirmation-header" class="confirmation-header">
+  <div class="container">
+    <h1>Thank you for registering!</h1>
+    <p>We've sent you a text message confirmation</p> 
+    <p>Be safe and remember to enjoy your online virtual social session.</p> 
+    <div class="row">
+      <div class="col-lg-3 col-md-3">
+        <section id="profile">
+          <a href="/profile">Return to profile</a> 
+        </section>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <section id="logout">
+          <a href="/logout">Log Out</a>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <h5>Thank you for registering!</h5>
 
 <p>We've sent you a text message confirmation</p> 
 
@@ -16,6 +37,6 @@
 
 <section id="logout">
   <a href="/logout">Log Out</a>
-</section>
+</section> -->
 
 {% endblock %}
