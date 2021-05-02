@@ -1,5 +1,19 @@
 /* CSS for end of event registration route */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#confirmation-header {
+  background-image: url(../img/background/tablet-6110623_1280.png);
+  height: 620px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .confirmation-header {
   margin-top: 20px;
@@ -41,18 +55,5 @@
   background-color: #ccc;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-#confirmation-header {
-  background-image: url(../img/background/tablet-6110623_1280.png);
-  height: 620px;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 

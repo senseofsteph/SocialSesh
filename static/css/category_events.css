@@ -1,7 +1,48 @@
 /* CSS for events by category route */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#event-category {
+  background-image: url(../img/background/video-call-6076978_1280.jpg);
+  height: 620px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .event-category h1 {
   margin-top: 20px;
+  margin-bottom: 0;
+  background: transparent;
+  background-color: rgb(255, 255, 255);
+  width: 550px
 }
 
+#category {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  background: transparent;
+  background-color: rgb(255, 255, 255);
+  width: 550px;
+}
+
+.event-category select{
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    background: transparent;
+    background-color: rgb(255, 255, 255);
+    width: 550px;
+}
+
+.event-category ul{
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  background: transparent;
+  background-color: rgb(255, 255, 255);
+  width: 550px;
+}
