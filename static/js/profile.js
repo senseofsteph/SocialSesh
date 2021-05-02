@@ -8,7 +8,7 @@ const eventResults = document.querySelector("#event_results");
 
 $("#category").on("submit", (evt) => {
     evt.preventDefault();
-    //  Key and value saved in formData
+    
     const formData = {
         "types" : $("#types").val()
     };

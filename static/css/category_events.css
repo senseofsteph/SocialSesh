@@ -7,7 +7,7 @@
 }
 
 #event-category {
-  background-image: url(../img/background/video-call-6076978_1280.jpg);
+  background-image: url(../img/background/laptop-6110635_1280.png);
   height: 620px;
   position: relative;
   background-position: center;
@@ -20,7 +20,7 @@
   margin-bottom: 0;
   background: transparent;
   background-color: rgb(255, 255, 255);
-  width: 550px
+  width: 480px
 }
 
 #category {
@@ -28,7 +28,7 @@
   padding-bottom: 20px;
   background: transparent;
   background-color: rgb(255, 255, 255);
-  width: 550px;
+  width: 480px;
 }
 
 .event-category select{
@@ -36,7 +36,7 @@
     padding-bottom: 20px;
     background: transparent;
     background-color: rgb(255, 255, 255);
-    width: 550px;
+    width: 480px;
 }
 
 .event-category ul{
@@ -44,5 +44,5 @@
   padding-bottom: 20px;
   background: transparent;
   background-color: rgb(255, 255, 255);
-  width: 550px;
+  width: 480px;
 }

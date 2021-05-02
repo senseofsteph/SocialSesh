@@ -4,7 +4,6 @@
   margin-top: 20px;
 }
 
-
 /* EVENT BUTTONS */
 
 .event-details a {
@@ -33,6 +32,6 @@
 .event-photo img {
   height: 450px;
   width: 850px;
-  margin: 20px 40px 0 40px;
+  margin: 20px 0 0 0;
 
 }

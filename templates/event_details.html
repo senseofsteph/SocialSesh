@@ -11,10 +11,10 @@
     {{ event.event_description }}
     </p>
     <p>
-    <strong>Starts:</strong> {{ event_start_date }} 
+    <u>Starts:</u> {{ event_start_date }} 
     </p>
     <p>
-    <strong>Ends:</strong> {{ event_end_date }} 
+    <u>Ends:</u> {{ event_end_date }} 
     </p>
     <a href="/register">Register</a>
   </div>
@@ -22,26 +22,10 @@
 
 <div id="event-photo" class="event-photo">
   <div class="container">
-    
+    <p>
+      <img src="{{ event.event_photo }}">
+    </p>
   </div>
-  <p>
-    <img src="{{ event.event_photo }}">
-  </p>
 </div>
-
-<!-- <h3>{{ event.event_name }}</h3>
-  <p>
-  {{ event.event_description }}
-  </p>
-  <p>
-   Starts: {{ event_start_date }} 
-  </p>
-  <p>
-    Ends: {{ event_end_date }} 
-  </p>
-  <a href="/register">Register</a>
-  <p>
-    <img src="{{ event.event_photo }}">
-  </p> -->
 
 {% endblock %}

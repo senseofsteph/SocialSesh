@@ -1,5 +1,32 @@
 /* CSS for all events route */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#all-events {
+  background-image: url(../img/background/tablet-6110623_1280.png);
+  height: 620px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .all-events h1 {
   margin-top: 20px;
+  margin-bottom: 0;
+  background: transparent;
+  background-color: rgb(255, 255, 255);
+  width: 480px
+}
+
+.all-events ul{
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  background: transparent;
+  background-color: rgb(255, 255, 255);
+  width: 480px;
 }
