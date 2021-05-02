@@ -45,16 +45,27 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                   {% if session.get("user_id") == None %}
                 <li class="nav-item">
                     <a class="nav-link" href="/form">Signup</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Login</a>
                 </li>
+                {% endif %}
                 </ul>
-                <span class="navbar-text">
-                
+
+                <!-- <div class="flex-grow-1"></div>  -->
+                <span class="nav-item">
+
                 </span>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    {% if session.get("user_id") %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                    {% endif %}     
+                </ul>
             </div>
             </div>
         </nav>
