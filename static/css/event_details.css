@@ -4,12 +4,15 @@
   margin-top: 20px;
 }
 
+
+/* EVENT BUTTONS */
+
 .event-details a {
-background-color: #474954; 
-color: white;
-padding: 1em 1.5em;
-text-decoration: none;
-text-transform: uppercase;
+  background-color: #474954; 
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .event-details a:hover {

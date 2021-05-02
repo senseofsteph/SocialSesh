@@ -1,7 +1,7 @@
 /* CSS for homepage route */
 
 
-/* SERVICES */
+/* HEADER */
 
 .header {
   height: 600px;
@@ -60,9 +60,6 @@
 }
 
 
-/* SOCIAL MEDIA */
-
-
 /* FOOTER */
 
 #my-footer {
@@ -72,43 +69,10 @@
   text-decoration: none;
 }
 
-
-
-/* .background_img {   
-  background: url("static/img/background/meeting-5804134_1280.png");   
-  background-repeat: no-repeat;   
-  width: 100%;
-  height: 65vh; 
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.background_img img {
-  display: block;
-  width: 100%;
-  margin: -15% 0;
-} */
+/* ALL ROUTES */
 
 body {
   background-color: white;
-}
-
-h3 {
-  color: black;
-  
-  /* font-family: ; */
-}
-
-h4 {
-  color: black;
-  
-}
-
-h5 {
-  color: black;
-  text-align: center;
-
 }
 
 p {
