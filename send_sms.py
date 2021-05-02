@@ -1,5 +1,6 @@
 """Script to send Twilio SMS text message."""
 
+
 import os
 import re
 from twilio.rest import Client
@@ -17,7 +18,7 @@ client = Client(account_sid, auth_token)
 
 def send_sms_to(phone):
   
-  # Regex for phone number
+  # Regex to verify phone number
   number = re.search(r'^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$', phone)
   print(type(number.group(0)))
 

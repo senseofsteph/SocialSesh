@@ -13,21 +13,17 @@ from datetime import datetime, date, time
 def create_user(fname, lname, email, password, phone):
     """Create and return a new user."""
 
-    # Check if the email is already being used
     user = User.query.filter(User.email == email).first()
 
-    # if not, add the user
     if user == None:
 
         user = User(fname=fname, lname=lname,
                    email=email, password=password,
                    phone=phone)
         db.session.add(user)
-
-        # user.set_password(password)
-
         db.session.commit()
         return True
+        
     else:
         return False
 
