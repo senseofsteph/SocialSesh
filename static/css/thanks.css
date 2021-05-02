@@ -1,16 +1,27 @@
 /* CSS for end of event registration route */
 
+
 .confirmation-header {
   margin-top: 20px;
 }
 
+.confirmation-header h1{
+  margin-bottom: 0;
+  background: transparent;
+  background-color: rgb(240, 238, 238);
+  width: 450px
+
+}
 .confirmation-header p {
-  /* color: #737373; */
-  /* font-size: 14px; */
-  padding-bottom: 10px;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  background: transparent;
+  background-color: rgb(240, 238, 238);
+  width: 450px;
 }
 
 .confirmation-header a {
+  margin-top: 10px;
   background-color: #474954; 
   color: white;
   padding: 1em 1.5em;
@@ -29,3 +40,19 @@
 .confirmation-header a:visited {
   background-color: #ccc;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#confirmation-header {
+  background-image: url(../img/background/tablet-6110623_1280.png);
+  height: 620px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
