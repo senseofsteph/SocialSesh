@@ -3,3 +3,7 @@
 .form-register h1 {
   margin-top: 20px;
 }
+
+#form-register {
+  background-color: rgb(59, 168, 154);
+}
