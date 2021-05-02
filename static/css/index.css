@@ -43,6 +43,11 @@
   margin: 40px 20px;
 }
 
+.header button:hover {
+  background-color: #fff !important;
+  color: #3c3c3c !important;
+  border: 1px solid #fff !important;
+}
 
 /* SERVICES */
 
