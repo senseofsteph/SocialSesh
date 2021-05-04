@@ -58,8 +58,6 @@ def is_email_and_password_valid(email, password):
     return user is not None
 
    
-
-
 #**** -------- Event queries -------- ****#
 
 #**** ------------------------------- ****#
