@@ -1,4 +1,4 @@
-## SocialSesh - Software Engineering Project Proposal
+## SocialSesh
 
 ### Overview
 
