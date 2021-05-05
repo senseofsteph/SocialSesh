@@ -6,9 +6,9 @@ A web app where users can connect, create, and contribute, through online virtua
 
 ### Technologies required 
 
-Twilio SMS API: https://www.twilio.com/docs/sms/api
+- [Twilio SMS API](https://www.twilio.com/docs/sms/api)
 
-FullCalendar: https://fullcalendar.io
+- [FullCalendar](https://fullcalendar.io)
 
 ### Tech stack
 
@@ -23,7 +23,14 @@ FullCalendar: https://fullcalendar.io
 
 #### Future features
 
-- User can search for a virtual event under a particular category
-- User can search for all virtual events on calendar
+- Slick user interface design
+- Profile customization
+- User can create and store their own events
+- Chat rooms to discuss common interest in events
 - Software deployment
+
+#### Ways to reach out to the developer
+
+- [Github](https://github.com/senseofsteph)
+- [LinkedIn](https://www.linkedin.com/in/senseofsteph/)
 
