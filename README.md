@@ -4,8 +4,6 @@
 
 A full-stack web app where users can connect, create, and contribute, through online virtual events
 
-<img src="https://github.com/senseofsteph/SocialSesh/blob/master/static/img/Screen%20Shot%202021-05-04%20at%2011.09.17%20PM.png" width="400">
-
 #### Technologies and Stack
 **Backend:**
 Python, Flask, SQLAlchemy, PostgreSQL<br>
