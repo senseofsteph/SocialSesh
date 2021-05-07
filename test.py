@@ -1,1 +1,1 @@
-"""Testing the web app functionality"""
+"""Testing the web app functionality."""
