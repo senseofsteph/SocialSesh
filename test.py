@@ -22,5 +22,6 @@ class MyAppIntegrationTestCase(unittest.TestCase):
         self.assertIn(b'<div id="header" class="header">', result.data)
 
 
+
 if __name__ == '__main__':
     unittest.main()
