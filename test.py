@@ -10,7 +10,7 @@ class MyAppIntegrationTestCase(unittest.TestCase):
     def setUp(self):
       """Stuff to do before every test."""
 
-      self.client = app.test_client()
+      self.client = server.app.test_client()
       server.app.config['TESTING'] = True
 
     def tearDown(self):
@@ -20,6 +20,11 @@ class MyAppIntegrationTestCase(unittest.TestCase):
         client = server.app.test_client()
         result = client.get('/')
         self.assertIn(b'<div id="header" class="header">', result.data)
+
+    def test_form(self):
+        client = server.app.test_client()
+        result = client.get('/form')
+        self.assertIn(b'<div id="form-signup" class="form-signup">', result.data)
 
 
 
