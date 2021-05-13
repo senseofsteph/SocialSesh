@@ -26,6 +26,11 @@ class MyAppIntegrationTestCase(unittest.TestCase):
         result = client.get('/form')
         self.assertIn(b'<div id="form-signup" class="form-signup">', result.data)
 
+    def test_login(self):
+        client = server.app.test_client()
+        result = client.get('/login')
+        self.assertIn(b'<div id="form-login" class="form-login">', result.data)
+
 
 
 if __name__ == '__main__':
