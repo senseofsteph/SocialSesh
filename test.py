@@ -30,6 +30,15 @@ class MyAppIntegrationTestCase(unittest.TestCase):
         client = server.app.test_client()
         result = client.get('/login')
         self.assertIn(b'<div id="form-login" class="form-login">', result.data)
+    
+    def test_profile(self):
+        client = server.app.test_client()
+        result = client.get('/profile')
+        self.assertIn(b'<div id="profile-header" class="profile-header">', result.data)
+
+
+    
+
 
 
 
