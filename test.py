@@ -41,6 +41,10 @@ class MyAppIntegrationTestCase(unittest.TestCase):
         result = client.get('/register')
         self.assertIn(b'<div id="form-register" class="form-register">', result.data)
 
+    def test_confirm(self):
+        client = server.app.test_client()
+        result = client.get('/confirmation')
+        self.assertIn(b'<div id="confirmation-header" class="confirmation-header">', result.data)
 
     
 
