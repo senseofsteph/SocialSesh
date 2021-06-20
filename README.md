@@ -74,7 +74,7 @@ python3 server.py
 - Chat rooms to discuss common interests in events
 - Software deployment
 
-#### Connect with the developer
+### Connect with the developer
 
 - [Github](https://github.com/senseofsteph)
 - [LinkedIn](https://www.linkedin.com/in/senseofsteph/)
