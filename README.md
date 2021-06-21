@@ -1,6 +1,6 @@
 ## SocialSesh
 
-#### Overview
+### Overview
 
 A full-stack web app where users can connect, create, and contribute, through online virtual events
 
@@ -8,7 +8,7 @@ A full-stack web app where users can connect, create, and contribute, through on
 
 [Click to view demo video](https://youtu.be/X-m9QDGppNY)
 
-#### Technologies and Stack
+### Technologies and Stack
 **Backend:**
 Python, Flask, SQLAlchemy, PostgreSQL<br>
 **Frontend:**
@@ -16,13 +16,13 @@ HTML5, CSS3, JavaScript, jQuery, Bootstrap, Google Fonts<br>
 **APIs:**
 Twilio and FullCalendar for JavaScript
 
-#### Features
+### Features
 
 - User can browse all virtual events
 - User can register to "attend" a virtual event
 - User receives an event confirmation text message
 
-#### Set-up & Installation
+### Set-up & Installation
 
 Install a code editor such as [VS code](https://code.visualstudio.com/download) or [Sublime Text](https://www.sublimetext.com/)<br>
 Install [Python3](https://www.python.org/downloads/mac-osx/)<br>
@@ -31,7 +31,7 @@ Install [postgreSQL](https://www.postgresql.org/) for the relational database <b
 Make an account to receive [Twilio SMS API](https://www.twilio.com/docs/sms/api) key and token <br>
 Visit [FullCalendar](https://fullcalendar.io) to obtain the necessary JavaScript code
 
-#### Clone or fork this repository
+### Clone or fork this repository
 
 - Create and activate a virtual environment:
 ```shell
@@ -66,7 +66,7 @@ python3 seed.py
 python3 server.py
 ```
 
-#### Future features
+### Future features
 
 - Slick user interface design
 - Profile customization
