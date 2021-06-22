@@ -8,13 +8,13 @@ class MyAppIntegrationTestCase(unittest.TestCase):
     """Examples of integration tests: testing Flask server."""
     
     def setUp(self):
-      """Stuff to do before every test."""
+      """Function to complete before every test."""
 
       self.client = server.app.test_client()
       server.app.config['TESTING'] = True
 
     def tearDown(self):
-      """Stuff to do after each test."""
+      """Function to complete after each test."""
 
     def test_index(self):
         client = server.app.test_client()
@@ -53,7 +53,9 @@ class MyAppIntegrationTestCase(unittest.TestCase):
 
     
 
+#**** ------------------------------- ****#
 
+#**** ------------------------------- ****#
 
 
 if __name__ == '__main__':
