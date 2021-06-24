@@ -48,7 +48,7 @@ class MyAppIntegrationTestCase(unittest.TestCase):
         self.assertIn(b'<title>Full Calendar of Events</title>', result.data)
 
 
-    def test_event_details(self):
+    def test_event_category(self):
         client = server.app.test_client()
         result = client.get('/category')
         self.assertIn(b'<div id="event-category" class="event-category">', result.data)
@@ -58,6 +58,12 @@ class MyAppIntegrationTestCase(unittest.TestCase):
     #     client = server.app.test_client()
     #     result = client.get('/events')
     #     self.asserIn(b'<div id="all-events" class="all-events">', result.data)
+
+
+    # def test_event_details(self):
+    #     client = server.app.test_client()
+    #     result = client.get('/events/<event_id>')
+    #     self.assertIn(b'<div id="event-details" class="event-details">', result.data)
 
     
     def test_register(self):
