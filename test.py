@@ -1,8 +1,8 @@
 """Testing the web app functionality."""
 
+
 import server
 import unittest
-
 
 class MyAppIntegrationTestCase(unittest.TestCase):
     """Examples of integration tests: testing Flask server."""
