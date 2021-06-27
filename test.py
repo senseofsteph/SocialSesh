@@ -78,8 +78,6 @@ class MyAppIntegrationTestCase(unittest.TestCase):
         self.assertIn(b'<div id="confirmation-header" class="confirmation-header">', result.data)
 
     
-
-
 #**** ------------------------------- ****#
 
 #**** ------------------------------- ****#
