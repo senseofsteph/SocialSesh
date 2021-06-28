@@ -8,10 +8,11 @@ class MyAppIntegrationTestCase(unittest.TestCase):
     """Examples of integration tests: testing Flask server."""
     
     def setUp(self):
-      """Function to complete before every test."""
+      """Function to complete before each test."""
 
       self.client = server.app.test_client()
       server.app.config['TESTING'] = True
+    #   server.app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 
     def tearDown(self):
@@ -56,7 +57,7 @@ class MyAppIntegrationTestCase(unittest.TestCase):
     
     # def test_all_events(self):
     #     client = server.app.test_client()
-    #     result = client.get('/events')
+    #     result = client.get('/events' )
     #     self.asserIn(b'<div id="all-events" class="all-events">', result.data)
 
 
