@@ -12,8 +12,7 @@ class MyAppIntegrationTestCase(unittest.TestCase):
 
       self.client = server.app.test_client()
       server.app.config['TESTING'] = True
-    #   server.app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-
+    
 
     def tearDown(self):
       """Function to complete after each test."""
