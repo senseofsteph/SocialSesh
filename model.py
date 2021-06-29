@@ -7,6 +7,21 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 db = SQLAlchemy()
 
+#**** ----- Connect to Database ----- ****#
+
+#**** ------------------------------- ****#
+
+
+def connect_to_db(flask_app, db_uri='postgresql:///socialsesh', echo=True):
+    flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
+    flask_app.config['SQLALCHEMY_ECHO'] = False
+    flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+    db.app = flask_app
+    db.init_app(flask_app)
+
+    print('Connected to the db!')
+
 
 #**** -------- User Models --------- ****#
 
@@ -117,22 +132,6 @@ class User_Event(db.Model):
         """Show info about events created by users."""
 
         return f'<User_Event users_events_id={self.user_events_id} user_id={self.user_id} event_id={self.event_id}>'
-
-
-#**** ----- Connect to Database ----- ****#
-
-#**** ------------------------------- ****#
-
-
-def connect_to_db(flask_app, db_uri='postgresql:///socialsesh', echo=True):
-    flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
-    flask_app.config['SQLALCHEMY_ECHO'] = False
-    flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-    db.app = flask_app
-    db.init_app(flask_app)
-
-    print('Connected to the db!')
 
 
 #**** ------------------------------- ****#
