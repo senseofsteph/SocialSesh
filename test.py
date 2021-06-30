@@ -1,4 +1,4 @@
-"""Testing the web app functionality."""
+"""Testing Flask routes and server."""
 
 
 import server
