@@ -78,6 +78,10 @@
   text-decoration: none;
 }
 
+a {
+  color: black;
+}
+
 /* ALL ROUTES */
 
 body {
