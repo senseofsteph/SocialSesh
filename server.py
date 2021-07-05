@@ -82,7 +82,7 @@ def login_user():
    
     if crud.is_email_and_password_valid(email, password):
         session['user_id'] = email
-        # pass in user first name to pass into flash
+        # pass in user first name to use in flash message
         flash("You're logged in.")
         return redirect("/profile")
     else:
