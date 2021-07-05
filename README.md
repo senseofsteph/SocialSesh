@@ -12,7 +12,7 @@ A full-stack web app where users can connect, create, and contribute, through on
 **Backend:**
 Python, Flask, SQLAlchemy, PostgreSQL<br>
 **Frontend:**
-HTML5, CSS3, JavaScript, jQuery, Bootstrap, Google Fonts<br>
+HTML5, CSS3, JavaScript, Bootstrap<br>
 **APIs:**
 Twilio and FullCalendar for JavaScript
 
