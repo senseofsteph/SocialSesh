@@ -68,9 +68,8 @@ python3 server.py
 
 ### Future features
 
-- Slick user interface design
 - Profile customization
-- User can create and store their own events
+- Ability to create and save events
 - Chat rooms to discuss common interests in events
 - Software deployment
 
