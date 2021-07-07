@@ -4,7 +4,7 @@
 
 A full-stack web app where users can connect, create, and contribute, through online virtual events
 
-<img src="https://github.com/senseofsteph/SocialSesh/blob/master/static/img/social_sesh_gif.gif" width="500">
+<img src="https://github.com/senseofsteph/SocialSesh/blob/master/static/img/social_sesh_gif.gif" width="600">
 
 [Click to view demo video](https://youtu.be/X-m9QDGppNY)
 
