@@ -16,7 +16,7 @@ HTML5, CSS3, JavaScript, Bootstrap<br>
 **APIs:**
 Twilio and FullCalendar for JavaScript
 
-### Features
+### MVP Features
 
 - User can browse all virtual events
 - User can register to "attend" a virtual event
