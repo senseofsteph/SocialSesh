@@ -1,4 +1,4 @@
-"""Server for social sessions app."""
+"""Script to run server for virtual events app."""
 
 
 from flask import (Flask, flash, jsonify, render_template, request, redirect, session)
