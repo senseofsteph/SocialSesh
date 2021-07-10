@@ -1,4 +1,4 @@
-"""Models for social session app."""
+"""Script to connect to database and create data models."""
 
 
 from flask_sqlalchemy import SQLAlchemy 

@@ -1,4 +1,4 @@
-"""CRUD (create, read, update, delete) operations."""
+"""Script to run CRUD (create, read, update, delete) operations."""
 
 
 from model import db, User, Event, User_Event, connect_to_db

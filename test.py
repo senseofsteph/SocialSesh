@@ -1,4 +1,4 @@
-"""Testing Flask routes and server."""
+"""Script to test Flask routes and server."""
 
 
 import server
