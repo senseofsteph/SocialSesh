@@ -40,6 +40,12 @@ def get_user_by_id(user_id):
     return User.query.get(user_id)
 
 
+def get_user_by_fname(fname):
+    """Return a user by first name."""
+
+    return User.query.filter(User.fname)
+
+
 def get_user_by_email(email):
     """Return a user by email."""
 
