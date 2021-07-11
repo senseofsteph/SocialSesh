@@ -260,14 +260,10 @@ def send_confirmation():
 def logout():
     """Log user out of profile account."""
 
-    # session.pop('user_id', None) 
-    # session.pop('user_name', None) 
+    session.pop('user_id', None) 
+    session.pop('user_name', None) 
 
-    # flash("You've been logged out. See you soon!")
-
-    del session['user_id']
-    del session['user_name']
-    flash(f"{user_name} you've been logged out. See you soon!")
+    flash("You've been logged out. See you soon!") 
 
     return redirect("/")
 
