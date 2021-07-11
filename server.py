@@ -79,11 +79,16 @@ def login_user():
 
     email = request.form.get('email')
     password = request.form.get('password')
+
+    user = crud.get_user_by_email(email)
+
    
-    if crud.is_email_and_password_valid(email, password):
+    # if crud.is_email_and_password_valid(email, password):
+    if crud.is_email_and_password_valid(email, password) and user:
         session['user_id'] = email
+        session['user_name'] = user.fname
         # pass in user first name to use in flash message
-        flash("You're logged in.")
+        flash(f"{user.fname}, you're logged in!")
         return redirect("/profile")
     else:
         flash("Invalid email and/or password")
