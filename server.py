@@ -81,13 +81,12 @@ def login_user():
     password = request.form.get('password')
 
     user = crud.get_user_by_email(email)
-
    
-    # if crud.is_email_and_password_valid(email, password):
-    if crud.is_email_and_password_valid(email, password) and user:
+    if crud.is_email_and_password_valid(email, password):
+    # if crud.is_email_and_password_valid(email, password) and user:
         session['user_id'] = email
         session['user_name'] = user.fname
-        flash(f"{user.fname}, you're logged in!")
+        flash(f"Welcome {user.fname}, you're logged in!")
         return redirect("/profile")
     else:
         flash("Invalid email and/or password")
@@ -261,9 +260,14 @@ def send_confirmation():
 def logout():
     """Log user out of profile account."""
 
-    session.pop('user_id', None) 
+    # session.pop('user_id', None) 
+    # session.pop('user_name', None) 
 
-    flash("You've been logged out. See you soon!")
+    # flash("You've been logged out. See you soon!")
+
+    del session['user_id']
+    del session['user_name']
+    flash(f"{user_name} you've been logged out. See you soon!")
 
     return redirect("/")
 
