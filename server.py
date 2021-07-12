@@ -83,7 +83,7 @@ def login_user():
     user = crud.get_user_by_email(email)
    
     if crud.is_email_and_password_valid(email, password):
-    # if crud.is_email_and_password_valid(email, password) and user:
+
         session['user_id'] = email
         session['user_name'] = user.fname
         flash(f"Welcome {user.fname}, you're logged in!")
