@@ -53,9 +53,9 @@ def create_user_profile():
 
     if user:
         crud.create_user(firstname,lastname,email,password,phone)
-        flash('Account created! Please log in')
+        flash("Account created! Please log in")
     else:
-        flash('Invalid entry. Please fill out entire form to create an account')
+        flash("Invalid entry. Please fill out entire form")
         return redirect("/form")
     
     return redirect("/login")
