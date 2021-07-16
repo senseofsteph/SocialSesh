@@ -17,7 +17,8 @@
 
 .event-links p {
   font-size: 16px;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
+  padding-bottom: 150px;
 }
 
 .event-links a {
