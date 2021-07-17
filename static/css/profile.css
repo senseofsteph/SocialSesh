@@ -1,7 +1,7 @@
 /* CSS for profile route */
 
 #event-links {
-  background-color: #9ebcc5;
+  background-color: #a0bec7;
 }
 
 .profile-header h1 {
@@ -18,7 +18,7 @@
 .event-links p {
   font-size: 16px;
   /* padding-bottom: 60px; */
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 
 .event-links a {
