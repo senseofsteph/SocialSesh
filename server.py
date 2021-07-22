@@ -48,7 +48,9 @@ def create_user_profile():
     email = request.form.get('email')
     password = request.form.get('password')
     phone = request.form.get('phone')
-    # add profile photo for user account
+    # add default profile photo to users json file
+    # eventually give user an option to upload their own photo
+    
     
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
