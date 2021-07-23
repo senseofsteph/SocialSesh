@@ -50,6 +50,8 @@ def create_user_profile():
     phone = request.form.get('phone')
     # add default profile photo to users json file
     # eventually give user an option to upload their own photo
+    # style profile page to diplay default image unless user uploads their own image
+    # add section for bio or user profile account
     
     
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
