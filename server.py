@@ -48,7 +48,9 @@ def create_user_profile():
     email = request.form.get('email')
     password = request.form.get('password')
     phone = request.form.get('phone')
-    # add default profile photo to users json file
+    # image = request.form.get('image')
+
+    # add default image to users json file
     # eventually give user an option to upload their own photo
     # style profile page to diplay default image unless user uploads their own image
     # add section for bio or user profile account
