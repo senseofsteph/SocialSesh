@@ -58,6 +58,8 @@ def create_user_profile():
     
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
+    # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
+
     if user:
         crud.create_user(firstname,lastname,email,password,phone)
         flash("Account created! Please log in")
