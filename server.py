@@ -62,6 +62,7 @@ def create_user_profile():
 
     if user:
         crud.create_user(firstname,lastname,email,password,phone)
+        # crud.create_user(firstname,lastname,email,password,phone,image)
         flash("Account created! Please log in")
     else:
         flash("Invalid entry. Please fill out entire form")
