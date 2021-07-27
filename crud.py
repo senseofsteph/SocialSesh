@@ -20,6 +20,9 @@ def create_user(fname, lname, email, password, phone):
         user = User(fname=fname, lname=lname,
                    email=email, password=password,
                    phone=phone)
+        # user = User(fname=fname, lname=lname,
+        #            email=email, password=password,
+        #            phone=phone, image=image)
         db.session.add(user)
         db.session.commit()
         return True
