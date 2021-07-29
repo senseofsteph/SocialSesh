@@ -32,8 +32,9 @@ with open('data/users.json') as u:
     email = user['email']
     password = user['password']
     phone = user['phone']
+    image = user['image']
 
-    crud.create_user(fname, lname, email, password, phone)
+    crud.create_user(fname, lname, email, password, phone, image)
 
 
 #**** --------- Events Data --------- ****#
