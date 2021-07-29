@@ -48,7 +48,7 @@ def create_user_profile():
     email = request.form.get('email')
     password = request.form.get('password')
     phone = request.form.get('phone')
-    # image = request.form.get('image')
+    image = request.form.get('image')
 
     # add default image to users json file
     # eventually give user an option to upload their own photo
@@ -56,13 +56,13 @@ def create_user_profile():
     # add section for bio or user profile account
     
     
-    user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
+    # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
-    # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
+    user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
 
     if user:
-        crud.create_user(firstname,lastname,email,password,phone)
-        # crud.create_user(firstname,lastname,email,password,phone,image)
+        # crud.create_user(firstname,lastname,email,password,phone)
+        crud.create_user(firstname,lastname,email,password,phone,image)
         flash("Account created! Please log in")
     else:
         flash("Invalid entry. Please fill out entire form")
