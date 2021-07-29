@@ -39,7 +39,7 @@ class User(db.Model):
     email = db.Column(db.String(100), nullable=False, unique=True, index=True)
     password_hash = db.Column(db.String(100))
     phone = db.Column(db.String, nullable=False)
-    # image = db.Column(db.Text)
+    image = db.Column(db.Text)
 
     # users_events = a list of User_Event objects
     
@@ -55,17 +55,18 @@ class User(db.Model):
         return check_password_hash(self.password_hash, password)
     
 
-    def __init__(self, fname, lname, email, password, phone):
+    def __init__(self, fname, lname, email, password, phone, image):
         self.fname = fname
         self.lname = lname
         self.email = email
         self.set_password(password)
         self.phone = str(phone)
+        self.image = image
 
     def __repr__(self): 
         """Show info about user."""
 
-        return f'<User user_id={self.user_id} fname={self.fname} lname={self.lname} email={self.email} phone={self.phone}>'
+        return f'<User user_id={self.user_id} fname={self.fname} lname={self.lname} email={self.email} phone={self.phone} image={self.image}>'
 
 
 #**** -------- Event Model --------- ****#
