@@ -52,6 +52,9 @@ def create_user_profile():
     
     # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
+    if image == "":
+        image == "static/img/default-profile-picture.png"
+
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
 
     if user:
