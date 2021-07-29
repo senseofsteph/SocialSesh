@@ -4,69 +4,79 @@
     "lname": "Walker",
     "email": "awalker@test.com",
     "password": "test123",
-    "phone": "+12025550135"
+    "phone": "+12025550135",
+    "image": "static/img/default-profile-picture.png"
   },
   {
     "fname": "Nadine",
     "lname": "Williams",
     "email": "nwilliams@test.com",
     "password": "test456",
-    "phone": "+12025550196"
+    "phone": "+12025550196",
+    "image": "static/img/default-profile-picture.png"
   },
   {
     "fname": "Chris",
     "lname": "Johnson",
     "email": "cjohnson@test.com",
     "password": "test789",
-    "phone": "+12025550136"
+    "phone": "+12025550136",
+    "image": "static/img/default-profile-picture.png"
   },
   {
     "fname": "Aaron",
     "lname": "George",
     "email": "ageorge@test.com",
     "password": "test110",
-    "phone": "+12025550166"
+    "phone": "+12025550166",
+    "image": "static/img/default-profile-picture.png"
   },
   {
     "fname": "Sharon",
     "lname": "Daniels",
     "email": "sdaniels@test.com",
     "password": "test111",
-    "phone": "+12025550167"
+    "phone": "+12025550167",
+    "image": "static/img/default-profile-picture.png"
   },
   {
     "fname": "Edgar",
     "lname": "Lopez",
     "email": "elopez@test.com",
     "password": "test112",
-    "phone": "+12025550168"
+    "phone": "+12025550168",
+    "image": "static/img/default-profile-picture.png"
   },
   {
     "fname": "Benjamin",
     "lname": "Bonds",
     "email": "bnonds@test.com",
     "password": "test113",
-    "phone": "+12025550169"
+    "phone": "+12025550169",
+    "image": "static/img/default-profile-picture.png"
   },
   {
     "fname": "Angela",
     "lname": "Reynolds",
     "email": "areynolds@test.com",
     "password": "test114",
-    "phone": "+12025550171"
+    "phone": "+12025550171",
+    "image": "static/img/default-profile-picture.png"
   },
   {
     "fname": "Vicky",
     "lname": "Walters",
     "email": "vwalters@test.com",
     "password": "test115",
-    "phone": "+12025550172"
+    "phone": "+12025550172",
+    "image": "static/img/default-profile-picture.png"
   },
   {
     "fname": "Noah",
     "lname": "Thomas",
     "email": "nthomas@test.com",
     "password": "test116",
-    "phone": "+12025550173"
+    "phone": "+12025550173",
+    "image": "static/img/default-profile-picture.png"
   }
 ]
