@@ -95,6 +95,7 @@ def login_user():
         session['user_name'] = user.fname
         flash(f"Welcome {user.fname}, you're logged in!")
         return redirect("/profile")
+        # return redirect("/profile", user=user)
     else:
         flash("Invalid email and/or password")
         return redirect("/login")
