@@ -52,14 +52,15 @@ def create_user_profile():
     
     # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
-    if image == "":
-        image == "static/img/default-profile-picture.png"
 
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
 
     if user:
         # crud.create_user(firstname,lastname,email,password,phone)
         crud.create_user(firstname,lastname,email,password,phone,image)
+        # if image == "":
+        #     image == "static/img/default-profile-picture.png"
+        # user = crud.create_user(fname, lname, email, password, phone, image)
         flash("Account created! Please log in")
     else:
         flash("Invalid entry. Please fill out entire form")
