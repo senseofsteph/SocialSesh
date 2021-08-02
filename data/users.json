@@ -28,55 +28,48 @@
     "lname": "George",
     "email": "ageorge@test.com",
     "password": "test110",
-    "phone": "+12025550166",
-    "image": "static/img/default-profile-picture.png"
+    "phone": "+12025550166"
   },
   {
     "fname": "Sharon",
     "lname": "Daniels",
     "email": "sdaniels@test.com",
     "password": "test111",
-    "phone": "+12025550167",
-    "image": "static/img/default-profile-picture.png"
+    "phone": "+12025550167"
   },
   {
     "fname": "Edgar",
     "lname": "Lopez",
     "email": "elopez@test.com",
     "password": "test112",
-    "phone": "+12025550168",
-    "image": "static/img/default-profile-picture.png"
+    "phone": "+12025550168"
   },
   {
     "fname": "Benjamin",
     "lname": "Bonds",
     "email": "bnonds@test.com",
     "password": "test113",
-    "phone": "+12025550169",
-    "image": "static/img/default-profile-picture.png"
+    "phone": "+12025550169"
   },
   {
     "fname": "Angela",
     "lname": "Reynolds",
     "email": "areynolds@test.com",
     "password": "test114",
-    "phone": "+12025550171",
-    "image": "static/img/default-profile-picture.png"
+    "phone": "+12025550171"
   },
   {
     "fname": "Vicky",
     "lname": "Walters",
     "email": "vwalters@test.com",
     "password": "test115",
-    "phone": "+12025550172",
-    "image": "static/img/default-profile-picture.png"
+    "phone": "+12025550172"
   },
   {
     "fname": "Noah",
     "lname": "Thomas",
     "email": "nthomas@test.com",
     "password": "test116",
-    "phone": "+12025550173",
-    "image": "static/img/default-profile-picture.png"
+    "phone": "+12025550173"
   }
 ]
