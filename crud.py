@@ -10,8 +10,10 @@ from datetime import datetime, date, time
 #**** ------------------------------- ****#
 
 
-def create_user(fname, lname, email, password, phone, image=None):
+def create_user(fname, lname, email, password, phone, image):
     """Create and return a new user."""
+
+    # does the image parameter need to be set to none?
 
     user = User.query.filter(User.email == email).first()
 
