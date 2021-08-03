@@ -48,7 +48,9 @@ def create_user_profile():
     email = request.form.get('email')
     password = request.form.get('password')
     phone = request.form.get('phone')
-    image = request.form.get('image')
+    # image = request.form.get('image')
+
+    image = "static/img/default-profile-picture.png"
     
     # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
@@ -88,6 +90,8 @@ def login_user():
     email = request.form.get('email')
     password = request.form.get('password')
 
+    image = "static/img/default-profile-picture.png"
+
     user = crud.get_user_by_email(email)
    
     if crud.is_email_and_password_valid(email, password):
@@ -96,7 +100,7 @@ def login_user():
         session['user_name'] = user.fname
         # session['user_image'] = user.image
         flash(f"Welcome {user.fname}, you're logged in!")
-        return redirect("/profile")
+        return redirect("/profile", image=image)
         # return redirect("/profile", user=user)
     else:
         flash("Invalid email and/or password")
