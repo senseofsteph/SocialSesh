@@ -39,7 +39,7 @@ class User(db.Model):
     email = db.Column(db.String(100), nullable=False, unique=True, index=True)
     password_hash = db.Column(db.String(100))
     phone = db.Column(db.String, nullable=False)
-    image = db.Column(db.Text)
+    image = db.Column(db.String, nullable=False, default='default-profile-picture.png')
 
     # users_events = a list of User_Event objects
     
