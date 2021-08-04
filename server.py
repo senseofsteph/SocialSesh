@@ -91,6 +91,9 @@ def login_user():
 
     image = "static/img/default-profile-picture.png"
 
+    # image variable may not be needed here. Since the image is hardcoded when a user creates an account confirm is the server route runs correctly
+    # user.image may be used in jinja templating
+
     user = crud.get_user_by_email(email)
    
     if crud.is_email_and_password_valid(email, password):
