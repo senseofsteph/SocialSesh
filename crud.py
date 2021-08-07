@@ -19,9 +19,6 @@ def create_user(fname, lname, email, password, phone, image):
 
     if user == None:
 
-        # user = User(fname=fname, lname=lname,
-        #            email=email, password=password,
-        #            phone=phone)
         user = User(fname=fname, lname=lname,
                    email=email, password=password,
                    phone=phone, image=image)
