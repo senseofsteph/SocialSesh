@@ -10,10 +10,11 @@ from datetime import datetime, date, time
 #**** ------------------------------- ****#
 
 
-def create_user(fname, lname, email, password, phone, image):
+def create_user(fname, lname, email, password, phone):
     """Create and return a new user."""
 
     # image parameter set to none or passed in as a regular variable?
+    # removed image post req for create user, set default on profile
 
     user = User.query.filter(User.email == email).first()
 
@@ -21,7 +22,7 @@ def create_user(fname, lname, email, password, phone, image):
 
         user = User(fname=fname, lname=lname,
                    email=email, password=password,
-                   phone=phone, image=image)
+                   phone=phone)
         db.session.add(user)
         db.session.commit()
         return True
