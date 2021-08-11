@@ -50,13 +50,15 @@ def create_user_profile():
     phone = request.form.get('phone')
     # image = request.form.get('image') --  add upload feature?
 
-    image = "static/img/default-profile-picture.png"
+    # image = "static/img/default-profile-picture.png"
 
-    user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
+    # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
+
+    user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
     if user:
-        # crud.create_user(firstname,lastname,email,password,phone)
-        crud.create_user(firstname,lastname,email,password,phone,image)
+        crud.create_user(firstname,lastname,email,password,phone)
+        # crud.create_user(firstname,lastname,email,password,phone,image)
         flash("Account created! Please log in")
     else:
         flash("Invalid entry. Please fill out entire form")
