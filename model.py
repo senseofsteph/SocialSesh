@@ -40,7 +40,7 @@ class User(db.Model):
     password_hash = db.Column(db.String(100))
     phone = db.Column(db.String, nullable=False)
     image = db.Column(db.String, nullable=False, default='default-profile-picture.png')
-    # conifirm if this is the correct way to set a default image
+    # confirm if this is the correct way to set a default image
 
     # users_events = a list of User_Event objects
     
