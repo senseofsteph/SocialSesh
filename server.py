@@ -1,7 +1,7 @@
 """Script to run server for virtual events app."""
 
 
-from flask import (Flask, flash, jsonify, render_template, request, redirect, session)
+from flask import (Flask, flash, jsonify, render_template, request, redirect, session, url_for)
 from twilio.rest import Client
 from twilio.twiml.messaging_response import MessagingResponse
 
@@ -112,7 +112,12 @@ def login_user():
 def show_profile():
     """Display user profile page."""
 
-    return render_template("profile.html")
+    # re-work this conditonal to get user from login
+    if user in session:
+    
+        image_file = url_for("static", filename="img/" + user.image)
+
+    return render_template("profile.html", image_file=image_file)
 
 
 #**** -- Events on Calendar Routes -- ****#
