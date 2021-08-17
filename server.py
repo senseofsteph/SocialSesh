@@ -113,6 +113,10 @@ def show_profile():
     """Display user profile page."""
 
     # re-work this conditonal to get user from login
+    # may need to redo login to pass in user image
+
+    user = crud.get_user_by_email(email)
+
     if user in session:
     
         image_file = url_for("static", filename="img/" + user.image)
