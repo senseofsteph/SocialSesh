@@ -86,9 +86,8 @@ def login_user():
 
     image = "static/img/default-profile-picture.png"
 
-    # image variable may not be needed here. Since the image is hardcoded when a user creates an account confirm is the server route runs correctly
-    # user.image may be used in jinja templating
-
+    # on this post request pass in the image variable to be utilized by the profile template once a user is logged in
+   
     user = crud.get_user_by_email(email)
    
     if crud.is_email_and_password_valid(email, password):
@@ -112,8 +111,7 @@ def login_user():
 def show_profile():
     """Display user profile page."""
 
-    # re-work this conditonal to get user from login
-    # may need to redo login to pass in user image
+    # re-work this conditonal to get user image from login
 
     user = crud.get_user_by_email(email)
 
