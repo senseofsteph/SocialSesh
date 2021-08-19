@@ -84,11 +84,11 @@ def login_user():
     email = request.form.get('email')
     password = request.form.get('password')
 
-    image = "static/img/default-profile-picture.png"
-
-    # on this post request pass in the image variable to be utilized by the profile template once a user is logged in
+    # image = "static/img/default-profile-picture.png"
    
     user = crud.get_user_by_email(email)
+
+    image_file = url_for("static", filename="img/" + user.image)
    
     if crud.is_email_and_password_valid(email, password):
 
@@ -96,7 +96,7 @@ def login_user():
         session['user_name'] = user.fname
         flash(f"Welcome {user.fname}, you're logged in!")
         return redirect("/profile")
-        # return redirect("/profile", user=user)
+        # return redirect("/profile", image_file=image_file)
     else:
         flash("Invalid email and/or password")
         return redirect("/login")
@@ -113,13 +113,13 @@ def show_profile():
 
     # re-work this conditonal to get user image from login
 
-    user = crud.get_user_by_email(email)
+    # user = crud.get_user_by_email(email)
 
-    if user in session:
+    # if user in session:
     
-        image_file = url_for("static", filename="img/" + user.image)
+    #     image_file = url_for("static", filename="img/" + user.image)
 
-    return render_template("profile.html", image_file=image_file)
+    return render_template("profile.html")
 
 
 #**** -- Events on Calendar Routes -- ****#
