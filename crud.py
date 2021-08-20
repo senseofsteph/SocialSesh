@@ -13,9 +13,6 @@ from datetime import datetime, date, time
 def create_user(fname, lname, email, password, phone):
     """Create and return a new user."""
 
-    # image parameter set to none or passed in as a regular variable?
-    # removed image post req for create user, set default on profile
-
     user = User.query.filter(User.email == email).first()
 
     if user == None:
