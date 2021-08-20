@@ -10,7 +10,7 @@ from datetime import datetime, date, time
 #**** ------------------------------- ****#
 
 
-def create_user(fname, lname, email, password, phone):
+def create_user(fname, lname, email, password, phone, image):
     """Create and return a new user."""
 
     user = User.query.filter(User.email == email).first()
@@ -19,7 +19,7 @@ def create_user(fname, lname, email, password, phone):
 
         user = User(fname=fname, lname=lname,
                    email=email, password=password,
-                   phone=phone)
+                   phone=phone, image=image)
         db.session.add(user)
         db.session.commit()
         return True
