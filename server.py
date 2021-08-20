@@ -88,7 +88,7 @@ def login_user():
    
     user = crud.get_user_by_email(email)
 
-    image_file = url_for("static", filename="img/" + user.image)
+    # image_file = url_for("static", filename="img/" + user.image)
    
     if crud.is_email_and_password_valid(email, password):
 
@@ -111,15 +111,15 @@ def login_user():
 def show_profile():
     """Display user profile page."""
 
-    # re-work this conditonal to get user image from login
-
-    # user = crud.get_user_by_email(email)
-
-    # if user in session:
+    #TODO: User is undefined
+    # if user is logged in
+        # display default image on profile template
     
-    #     image_file = url_for("static", filename="img/" + user.image)
+    # image_file = "static/img/default-profile-picture.png
 
-    return render_template("profile.html")
+    image_file = url_for("static", filename="img/" + user.image)
+
+    return render_template("profile.html", image_file=image_file)
 
 
 #**** -- Events on Calendar Routes -- ****#
