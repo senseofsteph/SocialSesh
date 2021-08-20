@@ -34,6 +34,7 @@ with open('data/users.json') as u:
     phone = user['phone']
     image = user['image']
 
+
     crud.create_user(fname, lname, email, password, phone, image)
 
 
