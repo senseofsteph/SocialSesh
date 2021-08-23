@@ -5,7 +5,7 @@
     "email": "awalker@test.com",
     "password": "test123",
     "phone": "+12025550135",
-    "image": ""
+    "image": "/static/img/default-profile-picture.png"
   },
   {
     "fname": "Nadine",
@@ -13,7 +13,7 @@
     "email": "nwilliams@test.com",
     "password": "test456",
     "phone": "+12025550196",
-    "image": ""
+    "image": "/static/img/default-profile-picture.png"
   },
   {
     "fname": "Chris",
@@ -21,7 +21,7 @@
     "email": "cjohnson@test.com",
     "password": "test789",
     "phone": "+12025550136",
-    "image": ""
+    "image": "/static/img/default-profile-picture.png"
   },
   {
     "fname": "Aaron",
@@ -29,7 +29,7 @@
     "email": "ageorge@test.com",
     "password": "test110",
     "phone": "+12025550166",
-    "image": ""
+    "image": "/static/img/default-profile-picture.png"
   },
   {
     "fname": "Sharon",
@@ -37,7 +37,7 @@
     "email": "sdaniels@test.com",
     "password": "test111",
     "phone": "+12025550167",
-    "image": ""
+    "image": "/static/img/default-profile-picture.png"
   },
   {
     "fname": "Edgar",
@@ -45,7 +45,7 @@
     "email": "elopez@test.com",
     "password": "test112",
     "phone": "+12025550168",
-    "image": ""
+    "image": "/static/img/default-profile-picture.png"
   },
   {
     "fname": "Benjamin",
@@ -53,7 +53,7 @@
     "email": "bnonds@test.com",
     "password": "test113",
     "phone": "+12025550169",
-    "image": ""
+    "image": "/static/img/default-profile-picture.png"
   },
   {
     "fname": "Angela",
@@ -61,7 +61,7 @@
     "email": "areynolds@test.com",
     "password": "test114",
     "phone": "+12025550171",
-    "image": ""
+    "image": "/static/img/default-profile-picture.png"
   },
   {
     "fname": "Vicky",
@@ -69,7 +69,7 @@
     "email": "vwalters@test.com",
     "password": "test115",
     "phone": "+12025550172",
-    "image": ""
+    "image": "/static/img/default-profile-picture.png"
   },
   {
     "fname": "Noah",
@@ -77,6 +77,6 @@
     "email": "nthomas@test.com",
     "password": "test116",
     "phone": "+12025550173",
-    "image": ""
+    "image": "/static/img/default-profile-picture.png"
   }
 ]
