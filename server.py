@@ -89,13 +89,16 @@ def login_user():
     password = request.form.get('password')
    
     user = crud.get_user_by_email(email)
+    image_file = user.image
    
     if crud.is_email_and_password_valid(email, password):
 
         session['user_id'] = email
         session['user_name'] = user.fname
         flash(f"Welcome {user.fname}, you're logged in!")
-        return redirect("/profile")
+        # return redirect("/profile")
+        return redirect("/profile", image_file=image_file)
+        # TODO: Test if this passes in correctly
     else:
         flash("Invalid email and/or password")
         return redirect("/login")
@@ -282,8 +285,6 @@ def send_confirmation():
     """Display redirect options to user."""
 
     return redirect("/confirmation")
-
-
 
 
 #**** ------------------------------- ****#
