@@ -69,7 +69,7 @@ def create_user_profile():
     return redirect("/login")
 
 
-#**** -------- Log-in Routes -------- ****#
+#**** ---- Log-in & Logout Routes ---- ****#
 
 #**** ------------------------------- ****#
 
@@ -87,12 +87,8 @@ def login_user():
 
     email = request.form.get('email')
     password = request.form.get('password')
-
-    # image = "static/img/default-profile-picture.png"
    
     user = crud.get_user_by_email(email)
-
-    # image_file = url_for("static", filename="img/" + user.image)
    
     if crud.is_email_and_password_valid(email, password):
 
@@ -100,10 +96,21 @@ def login_user():
         session['user_name'] = user.fname
         flash(f"Welcome {user.fname}, you're logged in!")
         return redirect("/profile")
-        # return redirect("/profile", image_file=image_file)
     else:
         flash("Invalid email and/or password")
         return redirect("/login")
+
+
+@app.route("/logout")
+def logout():
+    """Log user out of profile account."""
+
+    session.pop('user_id', None) 
+    session.pop('user_name', None) 
+
+    flash("You've been logged out. See you soon!") 
+
+    return redirect("/")
 
 
 #**** ---- Profile Account Route ---- ****#
@@ -277,16 +284,6 @@ def send_confirmation():
     return redirect("/confirmation")
 
 
-@app.route("/logout")
-def logout():
-    """Log user out of profile account."""
-
-    session.pop('user_id', None) 
-    session.pop('user_name', None) 
-
-    flash("You've been logged out. See you soon!") 
-
-    return redirect("/")
 
 
 #**** ------------------------------- ****#
