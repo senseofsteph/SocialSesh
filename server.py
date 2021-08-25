@@ -129,11 +129,9 @@ def show_profile():
     # if user is logged in
         # display default image on profile template
     
-    # image_file = "static/img/default-profile-picture.png
+    # or create users jsonify file to pass user image in
 
-    image_file = url_for("static", filename="img/" + user.image)
-
-    return render_template("profile.html", image_file=image_file)
+    return render_template("profile.html")
 
 
 #**** -- Events on Calendar Routes -- ****#
