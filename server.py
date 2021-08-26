@@ -89,16 +89,14 @@ def login_user():
     password = request.form.get('password')
    
     user = crud.get_user_by_email(email)
-    image_file = user.image
    
     if crud.is_email_and_password_valid(email, password):
 
         session['user_id'] = email
         session['user_name'] = user.fname
+        # image_file = user.image
         flash(f"Welcome {user.fname}, you're logged in!")
-        # return redirect("/profile")
-        return redirect("/profile", image_file=image_file)
-        # TODO: Test if this passes in correctly
+        return redirect("/profile")
     else:
         flash("Invalid email and/or password")
         return redirect("/login")
@@ -129,7 +127,8 @@ def show_profile():
     # if user is logged in
         # display default image on profile template
     
-    # or create users jsonify file to pass user image in
+    # if session['user_name']:
+    #     image_file = user.image
 
     return render_template("profile.html")
 
