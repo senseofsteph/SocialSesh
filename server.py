@@ -48,11 +48,11 @@ def create_user_profile():
     email = request.form.get('email')
     password = request.form.get('password')
     phone = request.form.get('phone')
-    # image = request.form.get('image') --  add upload feature?
 
     #TODO: set image input
     # if user doesn't upload/enter image
     # set user image to default
+    # should image be passed in on line 57 & 63? Test to confirm
 
     # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
 
