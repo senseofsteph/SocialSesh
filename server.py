@@ -123,13 +123,6 @@ def logout():
 def show_profile():
     """Display user profile page."""
 
-    #TODO: User is undefined
-    # if user is logged in
-        # display default image on profile template
-    
-    # if session['user_name']:
-    #     image_file = user.image
-
     return render_template("profile.html")
 
 
