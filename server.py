@@ -49,10 +49,10 @@ def create_user_profile():
     password = request.form.get('password')
     phone = request.form.get('phone')
 
-    #TODO: set image input
-    # if user doesn't upload/enter image
+    #TODO: user image
     # set user image to default
-    # should image be passed in on line 57 & 63? Test to confirm
+    # passed in image under user variable? 
+    # Test to confirm
 
     # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
 
