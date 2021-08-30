@@ -54,13 +54,13 @@ def create_user_profile():
     # passed in image under user variable? 
     # Test to confirm
 
-    # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
+    user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
 
-    user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
+    # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
     if user:
-        crud.create_user(firstname,lastname,email,password,phone)
-        # crud.create_user(firstname,lastname,email,password,phone,image)
+        # crud.create_user(firstname,lastname,email,password,phone)
+        crud.create_user(firstname,lastname,email,password,phone,image)
         flash("Account created! Please log in")
     else:
         flash("Invalid entry. Please fill out entire form")
@@ -94,7 +94,7 @@ def login_user():
 
         session['user_id'] = email
         session['user_name'] = user.fname
-        # image_file = user.image
+        # session['user_image'] = user.image
         flash(f"Welcome {user.fname}, you're logged in!")
         return redirect("/profile")
     else:
@@ -122,6 +122,8 @@ def logout():
 @app.route("/profile")
 def show_profile():
     """Display user profile page."""
+
+    #TODO: Determine if this is where the user image is displayed
 
     return render_template("profile.html")
 
