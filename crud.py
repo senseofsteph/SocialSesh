@@ -52,6 +52,12 @@ def get_user_by_email(email):
     return User.query.filter(User.email == email).first()
 
 
+def get_user_image(image):
+    """Return a user's image."""
+
+    return User.query.filter(User.image)
+
+
 def is_email_and_password_valid(email, password):
     """Return True if email and password are valid."""
 
