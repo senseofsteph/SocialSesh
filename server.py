@@ -94,7 +94,6 @@ def login_user():
 
         session['user_id'] = email
         session['user_name'] = user.fname
-        # session['user_image'] = user.image
         flash(f"Welcome {user.fname}, you're logged in!")
         return redirect("/profile")
     else:
@@ -125,7 +124,9 @@ def show_profile():
 
     #TODO: Determine if this is where the user image is displayed
 
-    return render_template("profile.html")
+    image_file = crud.get_user_image()
+
+    return render_template("profile.html", image_file=image_file)
 
 
 #**** -- Events on Calendar Routes -- ****#
