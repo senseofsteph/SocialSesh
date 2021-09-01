@@ -91,7 +91,7 @@ def login_user():
     user = crud.get_user_by_email(email)
    
     if crud.is_email_and_password_valid(email, password):
-
+    # TODO: How to pass in image at log in
         session['user_id'] = email
         session['user_name'] = user.fname
         flash(f"Welcome {user.fname}, you're logged in!")
@@ -122,9 +122,14 @@ def logout():
 def show_profile():
     """Display user profile page."""
 
-    #TODO: Determine if this is where the user image is displayed
+    #TODO: get user by id once logged in 
 
-    image_file = crud.get_user_image()
+    # image_file = crud.get_user_image(image)
+    
+    user = crud.get_user_by_id(user_id)
+
+    if user:
+        image_file = user.image
 
     return render_template("profile.html", image_file=image_file)
 
