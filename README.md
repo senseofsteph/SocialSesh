@@ -14,7 +14,7 @@ Python, Flask, SQLAlchemy, PostgreSQL<br>
 **Frontend:**
 HTML5, CSS3, JavaScript, Bootstrap<br>
 **APIs:**
-Twilio and FullCalendar for JavaScript
+Twilio and FullCalendar
 
 ### MVP Features
 
@@ -68,7 +68,7 @@ python3 server.py
 
 ### Future features
 
-- Profile customization
+- User profile customization
 - Ability to create and save events
 - Chat rooms to discuss common interests in events
 - Software deployment
