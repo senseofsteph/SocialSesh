@@ -94,7 +94,9 @@ def login_user():
     # TODO: How to pass in image at log in
         session['user_id'] = email
         session['user_name'] = user.fname
+        image_file = user.image
         flash(f"Welcome {user.fname}, you're logged in!")
+        # return redirect("/profile")
         return redirect("/profile")
     else:
         flash("Invalid email and/or password")
@@ -122,16 +124,16 @@ def logout():
 def show_profile():
     """Display user profile page."""
 
-    #TODO: get user by id once logged in 
+    #TODO: check is user_id in session
 
-    # image_file = crud.get_user_image(image)
-    
-    user = crud.get_user_by_id(user_id)
+    # if so:
+        # return default image file from data
 
-    if user:
-        image_file = user.image
+    # if user:
+    #     image_file = user.image
+    # return image_file to display
 
-    return render_template("profile.html", image_file=image_file)
+    return render_template("profile.html")
 
 
 #**** -- Events on Calendar Routes -- ****#
