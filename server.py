@@ -49,10 +49,6 @@ def create_user_profile():
     password = request.form.get('password')
     phone = request.form.get('phone')
 
-    #TODO: user image
-    # set user image to default
-    # passed in image under user variable? 
-    # Test to confirm
 
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
 
@@ -124,14 +120,11 @@ def logout():
 def show_profile():
     """Display user profile page."""
 
-    #TODO: check is user_id in session
+    #TODO: check if user_id in session
 
-    # if so:
-        # return default image file from data
-
-    # if user:
-    #     image_file = user.image
-    # return image_file to display
+    # if 'user_id' in session:
+        # image_file = user.image
+        # return default image file from user data
 
     return render_template("profile.html")
 
