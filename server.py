@@ -120,11 +120,11 @@ def logout():
 def show_profile():
     """Display user profile page."""
 
-    #TODO: check if user_id in session
+    logged_in = session.get('user_id', None)
 
-    # if 'user_id' in session:
-        # image_file = user.image
-        # return default image file from user data
+    if logged_in:
+        user = crud.get_user_by_email(session['user_id'])
+        return render_template("profile.html", user=user)
 
     return render_template("profile.html")
 
