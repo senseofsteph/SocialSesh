@@ -52,6 +52,8 @@ def create_user_profile():
 
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
 
+    #TODO: Determine is this psedocode approach is accurate; delete when confirmed
+
     # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
     if user:
@@ -87,12 +89,10 @@ def login_user():
     user = crud.get_user_by_email(email)
    
     if crud.is_email_and_password_valid(email, password):
-    # TODO: How to pass in image at log in
         session['user_id'] = email
         session['user_name'] = user.fname
         image_file = user.image
         flash(f"Welcome {user.fname}, you're logged in!")
-        # return redirect("/profile")
         return redirect("/profile")
     else:
         flash("Invalid email and/or password")
@@ -125,6 +125,7 @@ def show_profile():
     if logged_in:
         user = crud.get_user_by_email(session['user_id'])
         return render_template("profile.html", user=user)
+    #TODO: refactor the return statement
 
     return render_template("profile.html")
 
