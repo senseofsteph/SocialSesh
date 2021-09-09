@@ -52,7 +52,7 @@ def create_user_profile():
 
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
 
-    #TODO: Determine is this psedocode approach is accurate; delete when confirmed
+    #TODO: Determine is this pseudocode approach is accurate; delete when confirmed
 
     # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
@@ -123,11 +123,10 @@ def show_profile():
     logged_in = session.get('user_id', None)
 
     if logged_in:
-        user = crud.get_user_by_email(session['user_id'])
-        return render_template("profile.html", user=user)
-    #TODO: refactor the return statement
 
-    return render_template("profile.html")
+        user = crud.get_user_by_email(session['user_id'])
+
+    return render_template("profile.html", user=user)
 
 
 #**** -- Events on Calendar Routes -- ****#
