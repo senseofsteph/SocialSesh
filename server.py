@@ -53,7 +53,6 @@ def create_user_profile():
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
 
     #TODO: Determine if approach is needed; delete when confirmed
-
     # user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone)
 
     if user:
