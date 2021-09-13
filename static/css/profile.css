@@ -8,9 +8,10 @@
   margin-top: 20px;
 }
 
-/* .profile-image {
-  display:
-} */
+.profile-image {
+  justify-content: right;
+  height: 10px
+}
 
 /* EVENT LINKS */
 
