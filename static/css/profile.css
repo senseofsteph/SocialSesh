@@ -9,7 +9,9 @@
 }
 
 .profile-image {
-  justify-content: right;
+  /* justify-content: right; */
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* EVENT LINKS */
