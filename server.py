@@ -49,7 +49,6 @@ def create_user_profile():
     password = request.form.get('password')
     phone = request.form.get('phone')
 
-
     user = crud.create_user(fname=firstname, lname=lastname, email=email, password=password, phone=phone, image=image)
 
     if user:
