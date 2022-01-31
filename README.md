@@ -19,7 +19,7 @@ Twilio and FullCalendar
 ### MVP Features
 
 - User can browse all virtual events
-- User can register to "attend" a virtual event
+- User can register to attend a virtual event
 - User receives an event confirmation text message
 
 ### Set-up & Installation
