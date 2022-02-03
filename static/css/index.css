@@ -47,6 +47,18 @@
   border: 1px solid #fff !important;
 }
 
+/* @media screen and (max-width: 768px) {
+  .header h1
+  .header p
+  .header .btn 
+}
+
+@media screen and (max-width: 420px) {
+  .header h1
+  .header p
+  .header .btn 
+} */
+
 /* SERVICES */
 
 .services {
